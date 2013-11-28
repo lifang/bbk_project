@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   def management
     @task_tags = TaskTag.task_tag_stats(params[:status])
   end
-  #上传照片
+  #上传ppt
   def upload
     FileUtils.mkdir_p "#{File.expand_path(Rails.root)}/public/accessories" if !(File.exist?("#{File.expand_path(Rails.root)}/public/accessories"))
     file_upload = params[:file_upload]
@@ -49,10 +49,23 @@ class UsersController < ApplicationController
       f.write(file_upload.read)
     end
     @successornot = '上传成功'
-    FileUtils.mkdir_p "#{File.expand_path(Rails.root)}/public/accessories/#{filename_body}" if !(File.exist?("#{File.expand_path(Rails.root)}/public/accessories/#{filename_body}"))
     begin
-      Archive::Zip.extract("#{zip_url}.zip","#{zip_url}")
+      Archive::Zip.extract("#{zip_url}.zip","#{Rails.root}/public/accessories")
       File.delete "#{zip_url}.zip"
+      task_tags = TaskTag.create(:name => filename_body, :status => 0)
+      newfilename = "task_tag_" << task_tags.id.to_s
+      FileUtils.mkdir_p "#{File.expand_path(Rails.root)}/public/accessories/#{newfilename}" if !(File.exist?("#{File.expand_path(Rails.root)}/public/accessories/#{newfilename}"))
+      Dir.foreach(zip_url) do |file|
+        suffix = file.split(".")[1].to_s
+        ppt_name = file.split(".")[0].to_s
+        if suffix.eql?("ppt")
+          file_old_url = zip_url + '/' + file
+          origin_ppt_url = "/" + newfilename +"/" + file
+          FileUtils.mv file_old_url,"#{File.expand_path(Rails.root)}/public/accessories/#{newfilename}",:force => true
+          Task.create(:name => ppt_name,:types => 0,:origin_ppt_url => origin_ppt_url,:status => 0,:task_tag_id => task_tags.id)
+        end
+      end
+      FileUtils.rm_rf "#{zip_url}"
     rescue
       @successornot = '上传失败'
       File.delete "#{zip_url}.zip"
