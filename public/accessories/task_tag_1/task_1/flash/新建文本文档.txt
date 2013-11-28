@@ -1,0 +1,7 @@
+﻿用户表：id 用户名 uname   密码 pwd  姓名 name  地址 adress  电话    状态status  类型 type
+ppt 表：id  名称 name 时间time  质检id  ppt制作id  领取时间  状态status  任务包id  存放路径 url
+ppt版本表：id 版本名 上传时间  上传人id  url
+动画表：id  名称 name 动画制作人id 时间长度  ppt_id  状态status
+动画版本表：id  版本名 上传时间 上传人id url
+任务包表：id  name   上传时间  存放路径 url status
+消息表：id 内容 content  ppt版本表id  创建时间

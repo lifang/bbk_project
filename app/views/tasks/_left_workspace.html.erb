@@ -1,6 +1,8 @@
 <div class="files_list_panel">
     <%= render :partial => "files_list"%>
 </div>
+<% if @user.types == User::TYPES[:PPT] %>
 <div class="file_uploadfile_panel">
     <%= render :partial => "upload_file"%>
 </div>
+<% end %>

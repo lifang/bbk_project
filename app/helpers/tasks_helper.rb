@@ -9,16 +9,16 @@ module TasksHelper
   end
 
   #上传文件
-  def uploadfile zipfile, zip_dir
+  def upload uploadfile, file_url
     #创建目录
-    url = "/"
+    root_url = "/"
     count = 0
-    path.split("/").each_with_index  do |e,i|
+    file_url.split("/").each_with_index  do |e,i|
       if i > 0 && e.size > 0
-        url = url + "/" if count > 0
-        url = url + "#{e}"
-        if !Dir.exist? url
-          Dir.mkdir url
+        root_url = root_url + "/" if count > 0
+        root_url = root_url + "#{e}"
+        if !Dir.exist? root_url
+          Dir.mkdir root_url
         end
         count = count +1
       end
@@ -26,17 +26,26 @@ module TasksHelper
 
     #重命名zip压缩包为“年-月-日_时-分-秒”
     #zipfile.original_filename = zip_dir + "." +  zipfile.original_filename.split(".").to_a[1]
-    file_url = "#{path}/#{zipfile.original_filename}"
+    file_path = "#{file_url}/#{uploadfile.original_filename}"
     #上传文件
     begin
-      if File.open(file_url, "wb") do |file|
-        file.write(zipfile.read)
+      if File.open(file_path, "wb") do |file|
+        file.write(uploadfile.read)
       end
         return true
       end
     rescue
-      File.delete file_url
+      File.delete file_path
       return false
+    end
+  end
+
+  def update_task_status task_id, task_status
+    case task_status
+      when Task::STATUS[:WAIT_UPLOAD_PPT]
+        task = Task.find task_id
+        checker = User.find_by_status_and_types(User::STATUS[:NORMAL], User::TYPES[:CHECKER])
+        task.update_attributes(:status => Task::STATUS[:WAIT_FIRST_CHECK], :checker => checker.id)
     end
   end
 end

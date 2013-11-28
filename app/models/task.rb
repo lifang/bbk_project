@@ -1,6 +1,7 @@
 #encoding: utf-8
 class Task < ActiveRecord::Base
   belongs_to :task_tag
+  has_many :accessories
   STATUS = {:NEW => 0, :WAIT_UPLOAD_PPT => 1, :WAIT_FIRST_CHECK => 2, :WAIT_PUB_FLASH => 3,
             :WAIT_ASSIGN_FLASH => 4, :WAIT_UPLOAD_FLASH => 5, :WAIT_PPT_DEAL => 6,
             :WAIT_SECOND_CHECK => 7, :WAIT_FINAL_CHECK => 8, :FINAL_CHECK_COMPLETE => 9}
@@ -42,7 +43,7 @@ class Task < ActiveRecord::Base
       end if(!undeal_tasks.nil? || undeal_tasks.length != 0)
     elsif user_types == User::TYPES[:FLASH]
       #当前持有的任务
-      owner_tasks = Task.count.where("status=#{Task::STATUS[:WAIT_UPLOAD_FLASH]} and flash_doer = #{user_id}")
+      owner_tasks = Task.where("status=#{Task::STATUS[:WAIT_UPLOAD_FLASH]} and flash_doer = #{user_id}")
       assign_task_num = assign_task_num-owner_tasks.length
       undeal_tasks = Task.where "status=#{Task::STATUS[:WAIT_ASSIGN_FLASH]}"
       count = 0

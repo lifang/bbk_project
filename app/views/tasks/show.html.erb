@@ -7,13 +7,13 @@
 <div class="task_details_container">
   <%= render :partial => "task_details_list"%>
 </div>
-<div class="task_data_list" style="border: none;">
+<div class="workspaces_panel" style="border: none;">
   <%= render :partial => "workspaces"%>
 </div>
 
 <script>
     $(document).ready(function(){
-        $("#workspace_left").find("div").find("[id='types']").val("ppt");
-        $("#workspace_right").find("div").find("[id='types']").val("flash");
+        $("#workspace_left").find("div").find("[id='file_type']").val("ppt");
+        $("#workspace_right").find("div").find("[id='file_type']").val("flash");
     })
 </script>

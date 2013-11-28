@@ -1,1 +1,3 @@
-asdadsadas
+<% @ppt_files.each do |ppt| %>
+<div><a href="<%= ppt.accessory_url %>" target="_blank" title="点击链接下载"><%= ppt.name %></a></div>
+<% end %>
