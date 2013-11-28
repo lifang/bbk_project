@@ -6,7 +6,7 @@ function get_tasks(user_id)
 {
     $.ajax({
 //        async : true,
-        url : "/tasks/get_tasks",
+        url : "/tasks/assign_tasks",
         type:'get',
         dataType : 'script',
         data : {

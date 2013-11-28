@@ -6,7 +6,8 @@ BbkProject::Application.routes.draw do
     end
 
     collection do
-      get :get_tasks
+      get :assign_tasks
+      post :uploadfile
     end
   end
   resources :task_tags do
