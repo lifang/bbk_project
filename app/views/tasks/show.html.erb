@@ -10,3 +10,10 @@
 <div class="task_data_list" style="border: none;">
   <%= render :partial => "workspaces"%>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $("#workspace_left").find("div").find("[id='types']").val("ppt");
+        $("#workspace_right").find("div").find("[id='types']").val("flash");
+    })
+</script>

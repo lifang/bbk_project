@@ -3,5 +3,6 @@
     <%= file_field_tag 'file', :onchange => "handleUpload(this);file_validate(this);"%>
     <button id="btn_upload" type="submit"  onchange="file_validate(this)" >上 传</button>
   </div>
-  <input type="hidden" name="course_id" value="<%= @user.id %>" />
+  <input type="hidden" name="user_id" value="<%= @user.id %>" />
+  <input id="types" type="hidden" name="types" value="" />
 <% end %>

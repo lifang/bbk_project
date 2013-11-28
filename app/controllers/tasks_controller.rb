@@ -26,6 +26,6 @@ class TasksController < ApplicationController
   end
 
   def uploadfile
-
+    @user = User.find params[:user_id]
   end
 end

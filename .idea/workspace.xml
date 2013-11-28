@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7204189c-761c-46a1-9fab-0abf23a7641e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/_upload_form.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/_upload_panel.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/tasks/get_tasks.js.erb" afterPath="$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/_files_data_table.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/_upload_file.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/tasks/_upload_panel.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_files_list.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bbk_project.iml" afterPath="$PROJECT_DIR$/.idea/bbk_project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/task.rb" afterPath="$PROJECT_DIR$/app/models/task.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_upload_form.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_upload_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/show.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/tasks.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/tasks.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/tasks_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/tasks_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bbk_project.iws" />
@@ -31,7 +30,7 @@
     <file path="$USER_HOME$/lantan_BAM/app/helpers/constant.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385185793402" ignored="false" />
     <file path="$USER_HOME$/lantan_BAM/app/controllers/market_manages_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385185926177" ignored="false" />
     <file path="/market_manages_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385185912616" ignored="false" />
-    <file path="/tasks_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385622189826" ignored="false" />
+    <file path="/tasks_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385630432168" ignored="false" />
     <file path="/routes.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385622219005" ignored="false" />
     <file path="/index.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385441013804" ignored="false" />
     <file path="/_header.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385368152006" ignored="false" />
@@ -41,7 +40,7 @@
     <file path="/abandon_task.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385189848995" ignored="false" />
     <file path="/user.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385192369974" ignored="false" />
     <file path="/_title.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385448924039" ignored="false" />
-    <file path="/tasks.css" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385623327514" ignored="false" />
+    <file path="/tasks.css" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385631139306" ignored="false" />
     <file path="/users_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385363255328" ignored="false" />
     <file path="/users.css" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385198473906" ignored="false" />
     <file path="/temp.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385198775225" ignored="false" />
@@ -50,7 +49,7 @@
     <file path="/20131125063309_remove_taks_tag_id_from_tasks.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385361328618" ignored="false" />
     <file path="/_task_list.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385541553932" ignored="false" />
     <file path="/a.dummy" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385450708350" ignored="false" />
-    <file path="/show.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385454688110" ignored="false" />
+    <file path="/show.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385628891025" ignored="false" />
     <file path="/_task_details_list.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385370780874" ignored="false" />
     <file path="/task_tags_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385617773189" ignored="false" />
     <file path="/_task_tag_list.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385448589462" ignored="false" />
@@ -58,14 +57,17 @@
     <file path="/tasks.js" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385452636958" ignored="false" />
     <file path="/get_tasks.js.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385520953303" ignored="false" />
     <file path="/_task_workspace.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385455276045" ignored="false" />
-    <file path="/_workspaces.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385455270161" ignored="false" />
+    <file path="/_workspaces.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385629117580" ignored="false" />
     <file path="/tasks.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385519406797" ignored="false" />
-    <file path="/_left_workspace.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385623095611" ignored="false" />
-    <file path="/_right_workspace.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385454816043" ignored="false" />
+    <file path="/_left_workspace.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385626514957" ignored="false" />
+    <file path="/_right_workspace.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385629261547" ignored="false" />
     <file path="/tasks_helper.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385618009800" ignored="false" />
     <file path="/upload.js.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385525350243" ignored="false" />
-    <file path="/_upload_panel.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385623271613" ignored="false" />
+    <file path="/_upload_panel.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385630409541" ignored="false" />
     <file path="/_upload_form.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385623272430" ignored="false" />
+    <file path="/_files_list.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385626218899" ignored="false" />
+    <file path="/_files_data_table.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385625932725" ignored="false" />
+    <file path="/uploadfile.js.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385630319034" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,40 +90,11 @@
       <file leaf-file-name="tasks_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="30" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0">
+            <state line="10" column="78" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#284#430#0" expanded="true" />
                 <element signature="e#434#626#0" expanded="true" />
-                <element signature="e#630#651#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_left_workspace.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="35" selection-start="67" selection-end="67" vertical-scroll-proportion="-0.65384614">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_upload_panel.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/_upload_panel.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="31" selection-start="66" selection-end="66" vertical-scroll-proportion="-1.3076923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_upload_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/_upload_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="22" selection-start="105" selection-end="105" vertical-scroll-proportion="-0.65384614">
-              <folding>
-                <element signature="tag#div#0" expanded="true" />
+                <element signature="e#630#689#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,16 +103,82 @@
       <file leaf-file-name="tasks.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tasks.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="168" column="15" selection-start="2983" selection-end="2983" vertical-scroll-proportion="0.7860781">
+            <state line="182" column="55" selection-start="3157" selection-end="3157" vertical-scroll-proportion="0.47574627">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <file leaf-file-name="uploadfile.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="23" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0">
+            <state line="1" column="25" selection-start="20" selection-end="41" vertical-scroll-proportion="-0.65384614">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="31" selection-start="357" selection-end="357" vertical-scroll-proportion="-3.9230769">
+              <folding>
+                <element signature="tag#div#2" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="tag#script#0" expanded="true" />
+                <element signature="e#415#573#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_workspaces.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="44" selection-start="220" selection-end="220" vertical-scroll-proportion="-1.9615384">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="tag#div#1;tag#div#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_left_workspace.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="33" selection-start="92" selection-end="113" vertical-scroll-proportion="-1.9615384">
+              <folding>
+                <element signature="tag#div#0" expanded="true" />
+                <element signature="tag#div#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_upload_file.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/_upload_file.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="32" selection-start="67" selection-end="67" vertical-scroll-proportion="-1.3076923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_upload_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/_upload_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="36" selection-start="329" selection-end="329" vertical-scroll-proportion="-1.3076923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_right_workspace.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="40" selection-start="76" selection-end="76" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -168,21 +207,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/tasks.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/tasks/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/tasks/get_tasks.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/upload.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/tasks/_task_list.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/task_tags_controller.rb" />
         <option value="$PROJECT_DIR$/app/helpers/tasks_helper.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/tasks.js" />
         <option value="$PROJECT_DIR$/app/models/task.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_upload_panel.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/_files_data_table.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/_files_list.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_upload_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" />
       </list>
     </option>
@@ -196,9 +235,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="48" />
-    <option name="y" value="24" />
+    <option name="y" value="-3" />
     <option name="width" value="1319" />
-    <option name="height" value="745" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -715,7 +754,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="24" width="1319" height="745" extended-state="7" />
+    <frame x="48" y="-3" width="1319" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -801,45 +840,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/tasks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="255" selection-end="267" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#403#437#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/tasks_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="36" selection-start="323" selection-end="323" vertical-scroll-proportion="0.46915585">
-          <folding>
-            <element signature="e#38#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="22" selection-start="695" selection-end="702" vertical-scroll-proportion="0.44155845">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_task_list.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="41" selection-start="294" selection-end="294" vertical-scroll-proportion="0.11525424">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="15" selection-start="15" selection-end="15" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/task.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="72" selection-start="2611" selection-end="2611" vertical-scroll-proportion="1.4907252">
@@ -866,11 +866,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="23" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_files_list.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="22" selection-start="57" selection-end="57" vertical-scroll-proportion="0.059964728">
+          <folding>
+            <element signature="tag#div#0;tag#fieldset#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_files_data_table.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="33" selection-start="92" selection-end="113" vertical-scroll-proportion="-1.9615384">
+          <folding>
+            <element signature="tag#div#0" expanded="true" />
+            <element signature="tag#div#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_upload_file.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="32" selection-start="67" selection-end="67" vertical-scroll-proportion="-1.3076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="78" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#284#430#0" expanded="true" />
+            <element signature="e#434#626#0" expanded="true" />
+            <element signature="e#630#689#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="41" selection-start="217" selection-end="217" vertical-scroll-proportion="0.086440675">
+        <state line="3" column="44" selection-start="220" selection-end="220" vertical-scroll-proportion="-1.9615384">
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="tag#div#1;tag#div#0" expanded="true" />
             <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="true" />
           </folding>
@@ -879,59 +937,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="30" selection-start="356" selection-end="356" vertical-scroll-proportion="0.23050848">
+        <state line="10" column="31" selection-start="357" selection-end="357" vertical-scroll-proportion="-3.9230769">
           <folding>
-            <element signature="tag#div#0" expanded="true" />
             <element signature="tag#div#2" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="tag#script#0" expanded="true" />
+            <element signature="e#415#573#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="23" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="30" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#284#430#0" expanded="true" />
-            <element signature="e#434#626#0" expanded="true" />
-            <element signature="e#630#651#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="35" selection-start="67" selection-end="67" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_upload_panel.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="31" selection-start="66" selection-end="66" vertical-scroll-proportion="-1.3076923">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_upload_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="22" selection-start="105" selection-end="105" vertical-scroll-proportion="-0.65384614">
-          <folding>
-            <element signature="tag#div#0" expanded="true" />
-          </folding>
+        <state line="5" column="36" selection-start="329" selection-end="329" vertical-scroll-proportion="-1.3076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="40" selection-start="76" selection-end="76" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="25" selection-start="20" selection-end="41" vertical-scroll-proportion="-0.65384614">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tasks.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="15" selection-start="2983" selection-end="2983" vertical-scroll-proportion="0.7860781">
+        <state line="182" column="55" selection-start="3157" selection-end="3157" vertical-scroll-proportion="0.47574627">
           <folding />
         </state>
       </provider>
