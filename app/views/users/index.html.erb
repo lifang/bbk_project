@@ -1,0 +1,18 @@
+<div class = "tishi"><p id="notice"><%= notice %></p></div>
+<div class="login">
+  <div class="login_box">
+    <%= form_for :user, :url => { :action => :login, :controller => :users } do |f| %>
+      <div class="login_item">
+        <%= f.label :用户名： %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="login_item">
+        <%= f.label :密码： %>
+        <%= f.password_field :password %>
+      </div>
+      <div class="login_btn">
+        <%= f.submit "登录" %>
+      </div>
+    <% end %>
+  </div>
+</div>

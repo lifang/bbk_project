@@ -1,0 +1,14 @@
+<div class="task_details_list">
+    <div class="item">
+        <label>任务名称:</label><%= @task.name %>
+    </div>
+    <div class="item">
+        <label>任务批次:</label><%= @task.task_tag.name %>
+    </div>
+    <div class="item">
+        <label>任务资料:</label><%= @task.origin_ppt_url %>
+    </div>
+    <div class="item">
+        <label>任务状态:</label><%= Task::STATUS_NAME[@task.status] %>
+    </div>
+</div>

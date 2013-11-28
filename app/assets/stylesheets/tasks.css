@@ -1,0 +1,140 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+*{ padding: 0px; }
+.header{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+
+.header a{
+    float: right;
+    margin: 0 10% auto auto;
+}
+
+.summary{
+    margin: 0 auto;
+    width: 100%;
+    height: 30px;
+    /*background-color: beige;*/
+    display: inline-block;
+}
+.container{
+    margin: 0 auto;
+    width: 90%;
+    height: 40px;
+    vertical-align: middle;
+    background-color: beige;
+}
+
+.item{
+    margin: 0 auto 0 4%;
+    width: 28%;
+    height: 30px;
+    float: left;
+    vertical-align: middle;
+    /*background-color: orangered;*/
+}
+label{
+    font-family: courier;
+    font-size: 18px;
+    font-style: oblique;
+}
+
+.data_list{
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    /*background-color: gold;*/
+    display: inline-block;
+}
+
+.task_data_list{
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px darkgrey solid;
+    margin: 0 auto;
+    /*background-color: chocolate;*/
+}
+
+.task_data_list table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task_data_list table thead{
+    position: relative;
+    width: 100%;
+}
+.task_data_list table thead th{
+    padding: 0px;
+    height: 35px;
+    width: auto;
+    /*border-right: 1px white solid;*/
+    background-color: grey;
+    border-bottom: 1px grey solid;
+}
+
+.task_data_list table tbody tr td{
+    height: 30px;
+    width: auto;
+    text-align: center;
+    border-bottom: 1px grey dashed;
+    /*border-left: 1px grey dashed;*/
+    /*border: 1px gray solid;*/
+}
+
+.task_details_container{
+    margin: 0 auto;
+    width: 100%;
+    height: 120px;
+    display: inline-block;
+}
+
+.task_details_list{
+    margin: 0 auto;
+    width: 90%;
+    height: 120px;
+    border: 1px darkgrey solid;
+    background-color: beige;
+}
+
+.task_details_list .item{
+    margin: 1% auto auto 12%;
+    width: 30%;
+    height: 30px;
+    float: left;
+    text-align: left;
+    /*background-color: orangered;*/
+}
+
+
+.task_data_list .data_list *{padding: 0px;}
+.task_data_list .data_list .left{
+    width: 49%;
+    height: 400px;
+    float: left;
+    /*background-color: blueviolet;*/
+}
+
+.task_data_list .data_list .right{
+    width: 49%;
+    height: 400px;
+    float: right;
+    /*background-color: blue;*/
+}
+
+.workspaces{
+    margin: 0 auto;
+    width: 80%;
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: brown;
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= set_title %></title>
+  <%= stylesheet_link_tag    "tasks" %>
+  <%= javascript_include_tag "application","tasks"%>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

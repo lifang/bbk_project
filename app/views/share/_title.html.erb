@@ -1,0 +1,14 @@
+<% if @user.types == User::TYPES[:CHECKER]%>
+<div class="container">
+    <div class="item"><label>待一检任务：</label></div>
+    <div class="item"><label>待二检任务：</label></div>
+    <div class="item"><label>待终检任务：</label></div>
+</div>
+<% elsif @user.types == User::TYPES[:PPT] || @user.types == User::TYPES[:FLASH] %>
+<div class="container">
+    <div class="item"><label>进行中任务：</label></div>
+    <div class="item"><label>超时任务：</label></div>
+    <div class="item"><label>任务领取：</label><button onclick="get_tasks(<%= @user.id%>);">领取任务</button></div>
+</div>
+<% else %>
+<% end %>

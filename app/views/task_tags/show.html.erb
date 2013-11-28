@@ -1,0 +1,9 @@
+<div id="header">
+  <%= render :partial => "share/header"%>
+</div>
+<div class="task_list" style="height: 30px; border: none;">
+  <label style="margin: 0 auto auto 10%;">任务批次:<%= @task_tag.name%></label>
+</div>
+<div class="data_list">
+  <%= render :partial => "task_tag_list" %>
+</div>

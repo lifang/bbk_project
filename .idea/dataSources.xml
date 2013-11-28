@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3846777642">
+    <data-source source="LOCAL" name="Rails bbk_project: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="032e25c4-30e8-4ac0-8167-2e10ce992bb0">
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/bbk_project_test</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc9dfc5dfc7dfcedfc5df98df9adf9bdf98</user-password>
+      <libraries>
+        <library>
+          <url>file://</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails bbk_project: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="1cbb57c7-9ebd-4ccb-a1c5-f2b189c22938">
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/bbk_project</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc9dfc5dfc7dfcedfc5df98df9adf9bdf98</user-password>
+      <libraries>
+        <library>
+          <url>file://</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails bbk_project: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="36306a33-f725-45f0-8108-ba38d8277ebe">
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/bbk_project_production</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc9dfc5dfc7dfcedfc5df98df9adf9bdf98</user-password>
+      <libraries>
+        <library>
+          <url>file://</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+
