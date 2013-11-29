@@ -63,6 +63,25 @@ label{
     /*background-color: chocolate;*/
 }
 
+.workspaces_panel{
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px darkgrey solid;
+    margin: 0 auto;
+}
+.workspace_left div{
+    width: 100%;
+    height: auto;
+}
+
+.workspace_right div{
+    width: 100%;
+    height: auto;
+}
+
 .task_data_list table{
     width: 100%;
     border-collapse: collapse;
@@ -114,19 +133,28 @@ label{
     /*background-color: orangered;*/
 }
 
-
+.task_data_list .data_list{
+    margin: 0 auto;
+}
 .task_data_list .data_list *{padding: 0px;}
-.task_data_list .data_list .left{
+
+.left{
+    margin: 0 auto;
     width: 49%;
     height: 400px;
     float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
     /*background-color: blueviolet;*/
 }
 
-.task_data_list .data_list .right{
+.right{
+    margin: 0 auto;
     width: 49%;
     height: 400px;
     float: right;
+    overflow-y: auto;
+    overflow-x: hidden;
     /*background-color: blue;*/
 }
 
@@ -134,43 +162,72 @@ label{
     margin: 0 auto;
     width: 80%;
     height: 400px;
-    overflow-y: auto;
-    overflow-x: hidden;
     /*background-color: brown;*/
 }
 
-.file_upload_panel{
+.files_list_panel{
+    margin: 0 auto 5px auto;
     width: 100%;
-    height: 60px;
+    height: auto;
+    display: inline-block;
+}
+
+.files_list_panel fieldset{
+    margin: 5px auto;
+    width: 98%;
+    height: auto;
+    /*background-color: cadetblue;*/
+}
+
+.files_list_panel fieldset .list_div{
+    margin: 5px 10px 5px 10px;
+    width: auto;
+    height: auto;
+    background-color: white;
+}
+.files_list_panel fieldset .list_div div{
+    margin:0 5px 5px 5px;
+    width: auto;
+    height: 30px;
+    border: 2px grey dashed;
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
+.files_list_panel fieldset .list_div div a{
+    margin: 5px auto auto auto;
+    width: 100%;
+}
+
+.file_uploadfile_panel{
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
     /*background-color: cornflowerblue;*/
 }
 
-.file_upload_panel fieldset{
+.file_uploadfile_panel fieldset{
+    margin: 0 auto;
     width: 98%;
-    height: 50px;
-    background-color: gold;
+    height: auto;
+    /*background-color: gold;*/
 }
 
-.file_upload_panel fieldset legend{
-    font-size: 18px;
-    font-style: normal;
+.file_uploadfile_panel fieldset input{
+    width: 200px;
+    height: auto;
 }
-
-.file_upload_panel fieldset input{
-    width: auto;
-    height: 20px;
-}
-.file_upload_panel fieldset form{
+.file_uploadfile_panel fieldset form{
     width: 100%;
     height: 30px;
 }
 
-.file_upload_panel fieldset .form_div{
+.file_uploadfile_panel fieldset .form_div{
     margin: 0 30px;
     width: auto;
-    height: 100%;
+    height: auto;
 }
 
-.file_upload_panel fieldset #btn_upload{
+.file_uploadfile_panel fieldset #btn_upload{
     float: right;
 }

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131125063309) do
+ActiveRecord::Schema.define(:version => 20131128134804) do
 
   create_table "abandon_tasks", :force => true do |t|
     t.integer  "task_id"
@@ -29,11 +29,11 @@ ActiveRecord::Schema.define(:version => 20131125063309) do
     t.integer  "types"
     t.integer  "task_id"
     t.integer  "user_id"
-    t.integer  "accessory_url"
     t.integer  "status"
     t.integer  "longness"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "accessory_url"
   end
 
   add_index "accessories", ["task_id"], :name => "index_accessories_on_task_id"

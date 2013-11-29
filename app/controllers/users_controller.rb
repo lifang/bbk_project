@@ -4,6 +4,7 @@ require 'archive/zip'
 class UsersController < ApplicationController
   #登录页面
   def index
+    session[:user_id] =nil
     if session[:user_id]
       user = User.find_by_id(session[:user_id].to_i)
       if user.nil?
@@ -26,7 +27,15 @@ class UsersController < ApplicationController
       render :index
     else
       session[:user_id] = user.id
-      redirect_to  "/users/management"
+      if user.types == User::TYPES[:ADMIN]
+        redirect_to  "/users/management"
+      elsif user.types == User::TYPES[:CHECKER] || user.types == User::TYPES[:PPT] || user.types == User::TYPES[:FLASH]
+        redirect_to :controller => :tasks, :action => :index
+      else
+        session[:user_id] = nil
+        flash.now[:notice] = "错误的用户类型，请输入正确的用户"
+        render :index
+      end
     end
   end
   #注销登录
