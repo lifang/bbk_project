@@ -2,37 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7204189c-761c-46a1-9fab-0abf23a7641e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_files_data_table.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_files_data_table.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_files_list.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_files_list.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_upload_form.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_upload_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/accessory.rb" afterPath="$PROJECT_DIR$/app/models/accessory.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb" afterPath="$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bbk_project.iml" afterPath="$PROJECT_DIR$/.idea/bbk_project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/show.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/task.rb" afterPath="$PROJECT_DIR$/app/models/task.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/tasks_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/tasks_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb" afterPath="$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bbk_project.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/database.yml" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385104002616" ignored="false" />
     <file path="/20131123035548_create_users.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385179571004" ignored="false" />
-    <file path="/Dummy.txt" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385642313349" ignored="false" />
+    <file path="/Dummy.txt" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385689400984" ignored="false" />
     <file path="/20131123040711_create_task_tags.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385179742382" ignored="false" />
     <file path="/20131123041400_create_tasks.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385361021687" ignored="false" />
     <file path="/20131123044624_create_abandon_tasks.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385184721673" ignored="false" />
     <file path="/20131123045948_create_accessories.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385184462729" ignored="false" />
     <file path="/20131123050454_create_messages.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385183953037" ignored="false" />
     <file path="/20131123050509_create_calculations.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385184624436" ignored="false" />
-    <file path="/.gitignore" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385184864124" ignored="false" />
+    <file path="/.gitignore" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385695053862" ignored="false" />
     <file path="$USER_HOME$/lantan_BAM/app/helpers/constant.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385185793402" ignored="false" />
     <file path="$USER_HOME$/lantan_BAM/app/controllers/market_manages_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385185926177" ignored="false" />
     <file path="/market_manages_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385185912616" ignored="false" />
@@ -99,10 +83,11 @@
       <file leaf-file-name="tasks_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="14" selection-start="703" selection-end="703" vertical-scroll-proportion="0.77272725">
+            <state line="12" column="43" selection-start="266" selection-end="266" vertical-scroll-proportion="0.33009708">
               <folding>
                 <element signature="e#82#254#0" expanded="true" />
                 <element signature="e#258#630#0" expanded="true" />
+                <element signature="e#634#826#0" expanded="true" />
                 <element signature="e#830#1987#0" expanded="true" />
               </folding>
             </state>
@@ -112,7 +97,7 @@
       <file leaf-file-name="tasks.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tasks.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="202" column="41" selection-start="3589" selection-end="3589" vertical-scroll-proportion="-24.438597">
+            <state line="202" column="41" selection-start="3589" selection-end="3589" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -121,7 +106,7 @@
       <file leaf-file-name="uploadfile.js.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="35" selection-start="663" selection-end="663" vertical-scroll-proportion="-5.8846154">
+            <state line="9" column="35" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -131,10 +116,7 @@
         <entry file="file://$PROJECT_DIR$/app/helpers/tasks_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="44" column="41" selection-start="1006" selection-end="1006" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#38#130#0" expanded="true" />
-                <element signature="e#142#896#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -142,14 +124,8 @@
       <file leaf-file-name="_workspaces.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="21" selection-start="82" selection-end="82" vertical-scroll-proportion="-0.65384614">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="tag#div#0;tag#div#0" expanded="true" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="true" />
-                <element signature="tag#div#1;tag#div#0" expanded="true" />
-                <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="true" />
-              </folding>
+            <state line="1" column="21" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,11 +134,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="38" column="5" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#115#401#0" expanded="true" />
-                <element signature="e#1230#1307#0" expanded="true" />
-                <element signature="e#1319#2892#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -190,7 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_upload_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb" />
         <option value="$PROJECT_DIR$/app/models/accessory.rb" />
@@ -206,6 +177,7 @@
         <option value="$PROJECT_DIR$/app/models/task.rb" />
         <option value="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -236,7 +208,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="Scope" currentSubView="All" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -248,8 +220,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -282,276 +252,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="RailsProjectView" />
+      <pane id="Scope">
+        <subPane subId="All">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accessories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task_tag_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ppt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accessories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task_tag_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="bbk_project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -566,7 +279,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="/var/www/qxg_manage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="118" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="905" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="905" />
@@ -882,11 +595,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32972136" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940991" sideWeight="0.6708075" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2147915" sideWeight="0.6708075" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22187254" sideWeight="0.6708075" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.51086956" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="73" y="243" width="1271" height="334" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.5108359" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="73" y="243" width="1271" height="334" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -961,23 +674,9 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20131128134804_modify_accessory_url_from_accessory.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="87" selection-start="302" selection-end="302" vertical-scroll-proportion="0.3153457">
-          <folding>
-            <element signature="e#66#178#0" expanded="true" />
-            <element signature="e#182#297#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131123045948_create_accessories.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="103" selection-start="349" selection-end="349" vertical-scroll-proportion="0.43001688">
-          <folding>
-            <element signature="e#52#344#2" expanded="true" />
-          </folding>
-        </state>
+        <state line="15" column="103" selection-start="349" selection-end="349" vertical-scroll-proportion="0.43001688" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/accessory.rb">
@@ -989,99 +688,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="77" selection-start="427" selection-end="496" vertical-scroll-proportion="0.26984128">
-          <folding>
-            <element signature="tag#div#3" expanded="true" />
-          </folding>
-        </state>
+        <state line="15" column="77" selection-start="427" selection-end="496" vertical-scroll-proportion="0.26984128" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_upload_file.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="tag#fieldset#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_files_list.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="63" selection-start="98" selection-end="98" vertical-scroll-proportion="0.059964728">
-          <folding>
-            <element signature="tag#div#1;tag#fieldset#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="2" column="63" selection-start="98" selection-end="98" vertical-scroll-proportion="0.059964728" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="80" selection-end="121" vertical-scroll-proportion="0.029982364">
-          <folding>
-            <element signature="tag#div#1" expanded="true" />
-          </folding>
-        </state>
+        <state line="3" column="0" selection-start="80" selection-end="121" vertical-scroll-proportion="0.029982364" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_files_data_table.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="13" selection-start="4" selection-end="13" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
+        <state line="0" column="13" selection-start="4" selection-end="13" vertical-scroll-proportion="-0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tasks.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="202" column="41" selection-start="3589" selection-end="3589" vertical-scroll-proportion="-24.438597">
+        <state line="202" column="41" selection-start="3589" selection-end="3589" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="663" selection-end="663" vertical-scroll-proportion="-5.8846154">
+        <state line="9" column="35" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="0.027597403">
-          <folding />
-        </state>
+        <state line="1" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="0.027597403" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="82" selection-end="82" vertical-scroll-proportion="-0.65384614">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="tag#div#0;tag#div#0" expanded="true" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="true" />
-            <element signature="tag#div#1;tag#div#0" expanded="true" />
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="true" />
-          </folding>
+        <state line="1" column="21" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="5" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#115#401#0" expanded="true" />
-            <element signature="e#1230#1307#0" expanded="true" />
-            <element signature="e#1319#2892#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/tasks_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="41" selection-start="1006" selection-end="1006" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#38#130#0" expanded="true" />
-            <element signature="e#142#896#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1092,12 +758,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="71" selection-start="531" selection-end="531" vertical-scroll-proportion="0.74271846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="14" selection-start="703" selection-end="703" vertical-scroll-proportion="0.77272725">
+        <state line="12" column="43" selection-start="266" selection-end="266" vertical-scroll-proportion="0.33009708">
           <folding>
             <element signature="e#82#254#0" expanded="true" />
             <element signature="e#258#630#0" expanded="true" />
+            <element signature="e#634#826#0" expanded="true" />
             <element signature="e#830#1987#0" expanded="true" />
           </folding>
         </state>
