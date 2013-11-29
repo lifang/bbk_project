@@ -6,11 +6,11 @@
     <td>下载任务</td>
     <td>确认终检</td>
   </tr>
-  <%@task_tags.each do |task_tag| %>
+  <%@task_tags_arr.each do |task_tag| %>
     <tr>
-      <td><%= task_tag.name%></td>
-      <td><%= task_tag.time%></td>
-      <td><%= task_tag.scc%>|<%= task_tag.suu%></td>
+      <td><%= task_tag[:name]%></td>
+      <td><%= task_tag[:created_at]%></td>
+      <td><%= task_tag[:complet_count]%>|<%= task_tag[:unfinish_count]%></td>
       <td><input type="button" value="下载任务"/></td>
       <td><input type="button" value="确认终检"/></td>
     </tr>
