@@ -41,11 +41,12 @@ module TasksHelper
   end
 
   def update_task_status task_id, task_status
+    task = Task.find task_id
+    checker = User.find_by_status_and_types(User::STATUS[:NORMAL], User::TYPES[:CHECKER])
     case task_status
       when Task::STATUS[:WAIT_UPLOAD_PPT]
-        task = Task.find task_id
-        checker = User.find_by_status_and_types(User::STATUS[:NORMAL], User::TYPES[:CHECKER])
         task.update_attributes(:status => Task::STATUS[:WAIT_FIRST_CHECK], :checker => checker.id)
     end
+    task
   end
 end

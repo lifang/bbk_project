@@ -116,7 +116,7 @@ label{
     display: inline-block;
 }
 
-.task_details_list{
+.task_details_data{
     margin: 0 auto;
     width: 90%;
     height: 120px;
@@ -124,7 +124,7 @@ label{
     background-color: beige;
 }
 
-.task_details_list .item{
+.task_details_data .item{
     margin: 1% auto auto 12%;
     width: 30%;
     height: 30px;
