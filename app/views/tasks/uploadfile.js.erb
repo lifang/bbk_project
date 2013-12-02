@@ -2,11 +2,11 @@ alert("<%= @notice %>");
 $("#task_details").html('<%= escape_javascript(render :partial => "task_details_list")%>');
 <% if @status == true %>
     <% if @file_type == "ppt" %>
-    $("#workspace_left").find("[class='files_list_panel']").find("[class='list_div']").html('<%= escape_javascript(render :partial => "files_data_table")%>');
-    $("#workspace_left").find("[class='file_uploadfile_panel']").html('<%= escape_javascript(render :partial => "upload_file")%>');
+    $("#workspace_left").find("[class='files_list_panel']").find("[class='list_div']").html('<%= escape_javascript(render :partial => "ppt_versions")%>');
+    $("#workspace_left").find("[class='file_uploadfile_panel']").html('<%= escape_javascript(render :partial => "upload_flash_source")%>');
     $("#workspace_left").find("div").find("[id='file_type']").val("ppt");
     <% elsif @file_type == "flash" %>
-    $("#workspace_right").find("[class='file_uploadfile_panel']").html('<%= escape_javascript(render :partial => "upload_file")%>');
+    $("#workspace_right").find("[class='file_uploadfile_panel']").html('<%= escape_javascript(render :partial => "upload_flash_source")%>');
     $("#workspace_right").find("div").find("[id='file_type']").val("flash");
     <% else %>
     <% end %>

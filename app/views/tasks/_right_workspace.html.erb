@@ -1,3 +1,17 @@
-<div class="file_uploadfile_panel">
-  <%= render :partial => "upload_file"%>
+<% if @user.types == User::TYPES[:PPT] && @task.status == Task::STATUS[:WAIT_PUB_FLASH] %>
+<div id="pub_flash_task" class="file_uploadfile_panel">
+  <%= render :partial => "publish_flash"%>
 </div>
+<% end %>
+
+<% if @flash_files.length != 0 %>
+<div id="flash_list" class="files_list_panel">
+  <%= render :partial => "flash_list"%>
+</div>
+<% end %>
+
+<% if @user.types == User::TYPES[:FLASH] %>
+<div id="upload_flash" class="file_uploadfile_panel">
+  <%= render :partial => "upload_flash"%>
+</div>
+<% end %>

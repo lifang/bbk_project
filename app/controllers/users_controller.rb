@@ -4,16 +4,15 @@ require 'archive/zip'
 class UsersController < ApplicationController
   #登录页面
   def index
-    session[:user_id] =nil
-    if session[:user_id]
-      user = User.find_by_id(session[:user_id].to_i)
-      if user.nil?
+    user = User.find_by_id(session[:user_id].to_i)
+    if user.nil?
         render :index
-      else
-        redirect_to  :controller => :users, :action => :management
-      end
     else
-      render :index
+        if user.types == User::TYPES[:ADMIN]
+          redirect_to  :controller => :users, :action => :management
+        else
+          redirect_to  :controller => :tasks, :action => :index
+        end
     end
   end
   #登录

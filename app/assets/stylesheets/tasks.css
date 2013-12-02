@@ -189,9 +189,9 @@ label{
     margin:0 5px 5px 5px;
     width: auto;
     height: 30px;
-    border: 2px grey dashed;
+    border: 1px grey dashed;
     text-align: center;
-    background-color: cornflowerblue;
+    /*background-color: cornflowerblue;*/
 }
 
 .files_list_panel fieldset .list_div div a{

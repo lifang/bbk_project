@@ -5,7 +5,7 @@ class TasksController < ApplicationController
     @title = "任务中心"
     user_id = session[:user_id]
     @user = User.find_by_id(user_id)
-    if !@user.nil?
+    if !@user.nil? && @user.types != User::TYPES[:ADMIN]
       @tasks = Task.list @user.id, @user.types
     else
       redirect_to root_url
@@ -21,10 +21,8 @@ class TasksController < ApplicationController
       if !@task.nil? && (@task.ppt_doer == @user.id || @task.checker == @user.id || @task.flash_doer == @user.id)
         @title = "任务详情-#{@task.name}"
         @task_tag_id = @task.task_tag.id
-        @ppt_files = @task.accessories.where("types = 'ppt'").order("created_at")
-        @ppt_files.each do |ppt|
-          p ppt
-        end
+        @ppt_files = @task.accessories.where("types = '#{Accessory::TYPES[:PPT]}'").order("created_at")
+        @flash_files = @task.accessories.where("types = '#{Accessory::TYPES[:FLASH]}'").order("created_at")
       else
         redirect_to :action => :index
       end
