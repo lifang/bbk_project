@@ -11,8 +11,18 @@
       <td><%= task_tag[:name]%></td>
       <td><%= task_tag[:created_at]%></td>
       <td><%= task_tag[:complet_count]%>|<%= task_tag[:unfinish_count]%></td>
-      <td><input type="button" value="下载任务"/></td>
-      <td><input type="button" value="确认终检"/></td>
+      <td><input type="button" value="下载任务" name="ajax_download" task_tag_id="<%= task_tag[:id] %>" /></td>
+      <td>
+        <% if  task_tag[:unfinish_count] >0 %>
+          <input type="button" value="不可终检" name="ajax_final" task_tag_id="<%= task_tag[:id] %>" />
+        <% else %>
+          <% if task_tag[:status].eql?(TaskTag::STATUS[:COMPLETE]) %>
+            <input type="button" value="终检完成" name="ajax_final" task_tag_id="<%= task_tag[:id] %>" />
+          <% else %>
+            <input type="button" value="确认终检" name="ajax_final" task_tag_id="<%= task_tag[:id] %>" />
+          <% end %>
+        <% end %>
+      </td>
     </tr>
   <% end %>
 </table>
