@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7204189c-761c-46a1-9fab-0abf23a7641e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/_publish_flash.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/_upload_flash.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/_upload_ppt.html.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/tasks/_upload_form.html.erb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/tasks/_files_data_table.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_flash_data_table.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/tasks/_files_list.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_flash_list.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/tasks/_upload_file.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_upload_flash_source.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/show.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb" afterPath="$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bbk_project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,7 +89,7 @@
       <file leaf-file-name="tasks_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="8" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
+            <state line="10" column="26" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#338#968#0" expanded="true" />
               </folding>
@@ -116,8 +100,10 @@
       <file leaf-file-name="users_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="26" selection-start="151" selection-end="151" vertical-scroll-proportion="0.17142858">
-              <folding />
+            <state line="22" column="19" selection-start="614" selection-end="614" vertical-scroll-proportion="0.6">
+              <folding>
+                <element signature="e#115#428#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -967,7 +953,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="8" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
+        <state line="10" column="26" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#338#968#0" expanded="true" />
           </folding>
@@ -976,8 +962,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="151" selection-end="151" vertical-scroll-proportion="0.17142858">
-          <folding />
+        <state line="22" column="19" selection-start="614" selection-end="614" vertical-scroll-proportion="0.6">
+          <folding>
+            <element signature="e#115#428#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

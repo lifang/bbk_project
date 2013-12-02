@@ -6,13 +6,13 @@ class UsersController < ApplicationController
   def index
     user = User.find_by_id(session[:user_id].to_i)
     if user.nil?
-        render :index
+      render :index
     else
-        if user.types == User::TYPES[:ADMIN]
-          redirect_to  :controller => :users, :action => :management
-        else
-          redirect_to  :controller => :tasks, :action => :index
-        end
+      if user.types == User::TYPES[:ADMIN]
+        redirect_to  :controller => :users, :action => :management
+      else
+        redirect_to  :controller => :tasks, :action => :index
+      end
     end
   end
   #登录
