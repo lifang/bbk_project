@@ -28,7 +28,7 @@ class Task < ActiveRecord::Base
     assign_task_num = 5  #默认分配任务的总数
     if user_types == User::TYPES[:PPT]
       #当前持有的任务
-      owner_tasks = Task.where("status=#{Task::STATUS[:WAIT_UPLOAD_PPT]} and ppt_doer = #{user_id}")
+      owner_tasks = Task.where("status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and ppt_doer = #{user_id}")
       assign_task_num = assign_task_num-owner_tasks.length
       undeal_tasks = Task.where "status=#{Task::STATUS[:NEW]}"
       count = 1
@@ -43,7 +43,7 @@ class Task < ActiveRecord::Base
       end if(!undeal_tasks.nil? || undeal_tasks.length != 0)
     elsif user_types == User::TYPES[:FLASH]
       #当前持有的任务
-      owner_tasks = Task.where("status=#{Task::STATUS[:WAIT_UPLOAD_FLASH]} and flash_doer = #{user_id}")
+      owner_tasks = Task.where("status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and flash_doer = #{user_id}")
       assign_task_num = assign_task_num-owner_tasks.length
       undeal_tasks = Task.where "status=#{Task::STATUS[:WAIT_ASSIGN_FLASH]}"
       count = 0
