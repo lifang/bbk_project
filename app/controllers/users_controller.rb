@@ -50,13 +50,15 @@ class UsersController < ApplicationController
     @task_tags_arr = []
     task_tags.each do |task_tag|
       task_tag_id = task_tag.id
-      complet_count = Task.find_by_sql("select count(*) count from tasks where tasks.`status` in (8,9) and tasks.task_tag_id=#{task_tag_id}")
-      unfinish_count = Task.find_by_sql("select count(*) count from tasks where tasks.`status` not in (8,9) and tasks.task_tag_id=#{task_tag_id}")
+      complet_count = Task.find_by_sql("select count(*) count from tasks where tasks.`status` in (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and tasks.task_tag_id=#{task_tag_id}")
+      unfinish_count = Task.find_by_sql("select count(*) count from tasks where tasks.`status` not in (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and tasks.task_tag_id=#{task_tag_id}")
       task_tags_list = task_tag.attributes
+      task_tags_list[:id] = task_tag.id
       task_tags_list[:name] = task_tag.name
       task_tags_list[:created_at] = task_tag.created_at
       task_tags_list[:complet_count] = complet_count[0].count
       task_tags_list[:unfinish_count] = unfinish_count[0].count
+      task_tags_list[:status] = task_tag.status
       @task_tags_arr << task_tags_list
     end
   end
@@ -94,4 +96,45 @@ class UsersController < ApplicationController
       FileUtils.rm_rf "#{zip_url}"
     end
   end
+  #下载任务
+  def download
+    params[:task_tag_id]
+    tasks = Task.find_by_sql("select * from tasks where tasks.`status` in (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and tasks.task_tag_id = #{params[:task_tag_id]}")
+    zip_url = "#{Rails.root}/public/accessories/"
+    tasks.each do |task|
+      task_id = task.id
+      accessory = Accessory.find_by_sql("SELECT  * from accessories where task_id = #{task_id} ORDER BY created_at DESC limit 1")
+      if !accessory.blank?
+        accessory_url = accessory[0].accessory_url
+        file_url = "#{Rails.root}/public" + accessory_url
+        Archive::Zip.archive("#{zip_url}1234.zip","#{file_url}")
+      end
+    end
+    render :json => {:status => 1}
+  end
+  #下载
+  def ajax_download
+    file_path = "#{Rails.root}/public/accessories/1234.zip"
+    if file_path
+      send_file file_path, :filename => '12345.zip'
+    end
+  end
+  #确认终检
+  def confirm_final  
+    task_tag = TaskTag.find_by_id(params[:task_tag_id])
+    TaskTag.transaction do
+      @task = Task.where(:task_tag_id => params[:task_tag_id])
+      @task.each do |task|
+        task.update_attributes(:status => 9)
+      end
+      task_tag.update_attributes( :status => 2 )
+    end
+    render :json => {:status => 0}
+    #    if !task_tag.status.eql?(TaskTag::STATUS[:COMPLETE])
+    #      render :json => {:status => 0}
+    #    else
+    #      render :json => {:status => 1}
+    #    end
+  end
+
 end

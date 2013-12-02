@@ -23,7 +23,7 @@ BbkProject::Application.routes.draw do
     end
     collection do
       post 'login','destroy','upload'
-      get 'management'
+      get 'management','confirm_final','download','ajax_download'
     end
   end
 
