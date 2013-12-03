@@ -48,3 +48,15 @@ function reload_tasks()
         }
     });
 }
+
+//显示或隐藏聊天栏
+function chat(obj)
+{
+    display_val = $(obj).parents().parents().next().css('display');
+    div_id = $(obj).parents().parents().next().attr('id');
+    $(obj).parents().parents().parents().find("[class='chat_bar']").hide();
+    if(display_val == 'none')
+        $(obj).parents().parents().next().show();
+    else
+        $(obj).parents().parents().next().find("[id=div_id]");
+}

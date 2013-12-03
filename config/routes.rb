@@ -27,7 +27,14 @@ BbkProject::Application.routes.draw do
       get 'management','confirm_final','download','ajax_download',"wage_settlement",'user_management'
     end
   end
+  resources :messages do
+    member do
+    end
 
+    collection do
+      post :send
+    end
+  end
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
