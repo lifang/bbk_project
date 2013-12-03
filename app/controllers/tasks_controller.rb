@@ -3,8 +3,7 @@ class TasksController < ApplicationController
   layout 'tasks'
   def index
     @title = "任务中心"
-    user_id = session[:user_id]
-    @user = User.find_by_id(user_id)
+    @user = User.find_by_id session[:user_id]
     if !@user.nil? && @user.types != User::TYPES[:ADMIN]
       @tasks = Task.list @user.id, @user.types
     else
@@ -29,11 +28,33 @@ class TasksController < ApplicationController
     end
   end
 
+  #领取任务
   def assign_tasks
     user = User.find_by_id params[:user_id]
     Task.get_tasks user.id, user.types
     @tasks = Task.list user.id, user.types
     @info = {:notice => notice, :tasks => @tasks}
+  end
+
+  #审核任务
+  def verify_task
+    user = User.find_by_id params[:user_id]
+    task = Task.find_by_id params[:task_id]
+    if !user.nil?
+      if user.types == User::TYPES[:CHECKER]
+        if task.nil?
+          notice = "非法操作:任务不存在"
+        else
+          if task
+
+          end
+        end
+      else
+        notice = "非法操作:用户没有权限"
+      end
+    else
+      notice = "非法操作:用户不存在"
+    end
   end
 
   def uploadfile

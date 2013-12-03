@@ -2,8 +2,85 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+a { text-decoration: none;}
+
 .login {
     width: 504px;
     height: 370px;
     margin: 80px auto 0 auto;
+}
+
+.guanliyuan{
+    width: 100%;
+    height: 60px;
+    margin: 0 10% 0 10%;
+}
+
+.tou{
+    width: 120px;
+    height: 60px;
+    margin: 0 auto 0 1px;
+    float: left;
+    font: 18px oblique;
+    text-align: center;
+    vertical-align: middle;
+    background-color: cornflowerblue;
+}
+
+.tou_label{
+    margin: 20px auto 10px auto;
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+
+.ol_menus{
+    margin: 0 auto;
+    height: 60px;
+    width: auto;
+}
+
+.ol_menus li{
+    margin: 0 auto;
+    float: left;
+    height: 60px;
+    list-style: none;
+}
+
+.manager_body{
+    margin: 0 auto;
+    height: 500px;
+    width: 80%;
+    background-color: cornflowerblue;
+}
+.upload{
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+}
+
+.upload_bar{
+    height: 30px;
+    margin: 5px auto;
+    background-color: blueviolet;
+}
+
+.list_file{
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    border: 2px solid darkgrey;
+}
+.contain{
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    border: 2px solid darkgrey;
+}
+
+.list_file table {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }

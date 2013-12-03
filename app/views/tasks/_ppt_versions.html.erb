@@ -1,3 +1,10 @@
 <% @ppt_files.each do |ppt| %>
-<div><a href="<%= ppt.accessory_url %>" target="_blank" title="<%= ppt.name%>-点击链接下载"><%= ppt.name.size>40?"#{ppt.name[0,40]}...":ppt.name %></a></div>
+<div class="ppt_list_item">
+  <a href="<%= ppt.accessory_url %>" target="_blank" title="<%= ppt.name%>-点击链接下载"><%= ppt.name.size>40?"#{ppt.name[0,40]}...":ppt.name %></a>
+  <% if ppt.id == @ppt_files.last.id %>
+    <div style="width: 100px; height: 100%; float: right; margin: 0 0 0 auto; z-index: 4;">
+      <input type="button" value="审 核" onclick="verify(<%= @user.id %>,<%= @task.id %>);" style="margin:0 auto">
+    </div>
+  <% end %>
+</div>
 <% end %>

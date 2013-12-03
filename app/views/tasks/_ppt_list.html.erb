@@ -1,3 +1,4 @@
+<% if @ppt_files.length != 0 %>
 <fieldset>
   <legend>PPT列表</legend>
   <!--<div style="height: 25px; background-color: gray; margin: 0 10px; width: auto; text-align: center">文件名</div>-->
@@ -5,3 +6,4 @@
     <%= render :partial => "ppt_versions"%>
   </div>
 </fieldset>
+<% end %>

@@ -1,9 +1,6 @@
-<% if @ppt_files.length != 0 %>
 <div class="files_list_panel">
   <%= render :partial => "ppt_list"%>
 </div>
-<% end %>
-
 <% if @user.types == User::TYPES[:PPT] %>
 <div class="file_uploadfile_panel">
     <%= render :partial => "upload_ppt"%>

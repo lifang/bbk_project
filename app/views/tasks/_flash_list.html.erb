@@ -1,3 +1,4 @@
+<% if @flash_files.length != 0 %>
 <fieldset>
   <legend>FLASH列表</legend>
   <!--<div style="height: 25px; background-color: gray; margin: 0 10px; width: auto; text-align: center">文件名</div>-->
@@ -5,3 +6,4 @@
     <%= render :partial => "flash_data_table"%>
   </div>
 </fieldset>
+<% end %>

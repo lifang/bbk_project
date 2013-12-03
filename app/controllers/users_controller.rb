@@ -44,21 +44,26 @@ class UsersController < ApplicationController
   end
   #管理员页面
   def management
-    status = params[:status].nil? || params[:status].strip.blank? ? "1=1" : ["url = ?", params[:status].strip]
-    task_tags = TaskTag.task_tag_stats(status)
-    @task_tags_arr = []
-    task_tags.each do |task_tag|
-      task_tag_id = task_tag.id
-      complet_count = Task.find_by_sql("select count(*) count from tasks where tasks.`status` in (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and tasks.task_tag_id=#{task_tag_id}")
-      unfinish_count = Task.find_by_sql("select count(*) count from tasks where tasks.`status` not in (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and tasks.task_tag_id=#{task_tag_id}")
-      task_tags_list = task_tag.attributes
-      task_tags_list[:id] = task_tag.id
-      task_tags_list[:name] = task_tag.name
-      task_tags_list[:created_at] = task_tag.created_at
-      task_tags_list[:complet_count] = complet_count[0].count
-      task_tags_list[:unfinish_count] = unfinish_count[0].count
-      task_tags_list[:status] = task_tag.status
-      @task_tags_arr << task_tags_list
+    @user = User.find_by_id session[:user_id]
+    if !@user.nil? && @user.types == User::TYPES[:ADMIN]
+      status = params[:status].nil? || params[:status].strip.blank? ? "1=1" : ["url = ?", params[:status].strip]
+      task_tags = TaskTag.task_tag_stats(status)
+      @task_tags_arr = []
+      task_tags.each do |task_tag|
+        task_tag_id = task_tag.id
+        complet_count = Task.find_by_sql("select count(*) count from tasks where tasks.`status` in (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and tasks.task_tag_id=#{task_tag_id}")
+        unfinish_count = Task.find_by_sql("select count(*) count from tasks where tasks.`status` not in (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and tasks.task_tag_id=#{task_tag_id}")
+        task_tags_list = task_tag.attributes
+        task_tags_list[:id] = task_tag.id
+        task_tags_list[:name] = task_tag.name
+        task_tags_list[:created_at] = task_tag.created_at
+        task_tags_list[:complet_count] = complet_count[0].count
+        task_tags_list[:unfinish_count] = unfinish_count[0].count
+        task_tags_list[:status] = task_tag.status
+        @task_tags_arr << task_tags_list
+      end
+    else
+      redirect_to "/"
     end
   end
   #上传ppt

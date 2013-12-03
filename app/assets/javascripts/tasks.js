@@ -17,3 +17,20 @@ function get_tasks(user_id)
         }
     });
 }
+
+function verify(user_id,task_id)
+{
+    $.ajax({
+//        async : true,
+        url : "/tasks/verify_task",
+        type:'get',
+        dataType : 'script',
+        data : {
+            user_id : user_id,
+            task_id : task_id
+        },
+        success:function(){
+//           alert(2);
+        }
+    });
+}
