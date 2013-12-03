@@ -12,28 +12,19 @@ class TasksController < ApplicationController
   end
 
   def show
-    @user = User.find(session[:user_id])
-    @task = Task.find_by_id(params[:id])
-    if !@task.nil? && (@task.ppt_doer == @user.id || @task.checker == @user.id || @task.flash_doer == @user.id)
-      @title = "任务详情-#{@task.name}"
-      @task_tag_id = @task.task_tag.id
-      @ppt_files = @task.accessories.where("types = 'ppt'").order("created_at")
-      @ppt_files.each do |ppt|
-        p ppt
-      end
-      @user = User.find_by_id(session[:user_id])
-      if @user.nil?
-        redirect_to root_url
+    @user = User.find_by_id session[:user_id]
+    @task = Task.find_by_id params[:id]
+    if @user.nil?
+      redirect_to root_url
+    else
+      @task = Task.find_by_id(params[:id])
+      if !@task.nil? && (@task.ppt_doer == @user.id || @task.checker == @user.id || @task.flash_doer == @user.id)
+        @title = "任务详情-#{@task.name}"
+        @task_tag_id = @task.task_tag.id
+        @ppt_files = @task.accessories.where("types = '#{Accessory::TYPES[:PPT]}'").order("created_at")
+        @flash_files = @task.accessories.where("types = '#{Accessory::TYPES[:FLASH]}'").order("created_at")
       else
-        @task = Task.find_by_id(params[:id])
-        if !@task.nil? && (@task.ppt_doer == @user.id || @task.checker == @user.id || @task.flash_doer == @user.id)
-          @title = "任务详情-#{@task.name}"
-          @task_tag_id = @task.task_tag.id
-          @ppt_files = @task.accessories.where("types = '#{Accessory::TYPES[:PPT]}'").order("created_at")
-          @flash_files = @task.accessories.where("types = '#{Accessory::TYPES[:FLASH]}'").order("created_at")
-        else
-          redirect_to :action => :index
-        end
+        redirect_to :action => :index
       end
     end
   end
@@ -84,6 +75,7 @@ class TasksController < ApplicationController
     @info = {:notice => notice, :task => task, :user_id => user.id, :status => status}
   end
 
+  #上传文件（PPT 、FLASH、flash源码文件）
   def uploadfile
     uploadfile = params[:file]
     @file_type = params[:file_type]
@@ -120,7 +112,13 @@ class TasksController < ApplicationController
 
   #刷新任务数据
   def reload_tasks
-
+    @user = User.find_by_id session[:user_id]
+    if !@user.nil?
+      @tasks = Task.list @user.id, @user.types
+    else
+      @task = nil
+    end
+    @task
   end
   #private
   #

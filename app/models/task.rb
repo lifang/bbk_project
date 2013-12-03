@@ -96,7 +96,9 @@ class Task < ActiveRecord::Base
             else
             end
           end
+        else
         end
+        count+=1
       end
     end
   end

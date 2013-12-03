@@ -7,3 +7,10 @@
 <div class="data_list">
   <%= render :partial => "task_list" %>
 </div>
+
+<script>
+
+    $(document).ready(function(){
+        setInterval(reload_tasks,60000);// 注意函数名没有引号和括弧
+    });
+</script>

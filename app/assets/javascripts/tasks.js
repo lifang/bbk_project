@@ -18,6 +18,7 @@ function get_tasks(user_id)
     });
 }
 
+//审核任务（一检、二检）
 function verify(obj, user_id, task_id)
 {
     $(obj).remove();
@@ -32,6 +33,18 @@ function verify(obj, user_id, task_id)
         },
         success:function(){
 //           alert(2);
+        }
+    });
+}
+
+//刷新任务数据
+function reload_tasks()
+{
+    $.ajax({
+        url : "/tasks/reload_tasks",
+        type:'get',
+        dataType : 'script',
+        success:function(){
         }
     });
 }

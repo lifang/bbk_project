@@ -2,20 +2,137 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7204189c-761c-46a1-9fab-0abf23a7641e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/verify_task.js.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/reload_tasks.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/.gitkeep" afterPath="$PROJECT_DIR$/app/mailers/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/.gitkeep" afterPath="$PROJECT_DIR$/app/models/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/assets/.gitkeep" afterPath="$PROJECT_DIR$/lib/assets/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/.gitkeep" afterPath="$PROJECT_DIR$/lib/tasks/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/.gitkeep" afterPath="$PROJECT_DIR$/log/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/.gitkeep" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/plugins/.gitkeep" afterPath="$PROJECT_DIR$/vendor/plugins/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/rails.png" afterPath="$PROJECT_DIR$/app/assets/images/rails.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131123035548_create_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20131123035548_create_users.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131123040711_create_task_tags.rb" afterPath="$PROJECT_DIR$/db/migrate/20131123040711_create_task_tags.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131123041400_create_tasks.rb" afterPath="$PROJECT_DIR$/db/migrate/20131123041400_create_tasks.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131123044624_create_abandon_tasks.rb" afterPath="$PROJECT_DIR$/db/migrate/20131123044624_create_abandon_tasks.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131123045948_create_accessories.rb" afterPath="$PROJECT_DIR$/db/migrate/20131123045948_create_accessories.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131123050454_create_messages.rb" afterPath="$PROJECT_DIR$/db/migrate/20131123050454_create_messages.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131123050509_create_calculations.rb" afterPath="$PROJECT_DIR$/db/migrate/20131123050509_create_calculations.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131125063309_remove_taks_tag_id_from_tasks.rb" afterPath="$PROJECT_DIR$/db/migrate/20131125063309_remove_taks_tag_id_from_tasks.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131128134804_modify_accessory_url_from_accessory.rb" afterPath="$PROJECT_DIR$/db/migrate/20131128134804_modify_accessory_url_from_accessory.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/404.html" afterPath="$PROJECT_DIR$/public/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/422.html" afterPath="$PROJECT_DIR$/public/422.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/500.html" afterPath="$PROJECT_DIR$/public/500.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_flash_data_table.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_flash_data_table.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_flash_list.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_flash_list.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/share/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/share/_header.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_list_file.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_list_file.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_nav_menus.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_nav_menus.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_ppt_list.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_ppt_list.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_publish_flash.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_publish_flash.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_salary_list.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_salary_list.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_task_details_list.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_task_details_list.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_task_list.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_task_list.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/task_tags/_task_tag_list.html.erb" afterPath="$PROJECT_DIR$/app/views/task_tags/_task_tag_list.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/share/_title.html.erb" afterPath="$PROJECT_DIR$/app/views/share/_title.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_upload_filetag.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_upload_filetag.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_upload_flash.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_upload_flash.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_upload_flash_source.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_upload_flash_source.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_upload_ppt.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_upload_ppt.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_user_management.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_user_management.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_wage_settlement.erb" afterPath="$PROJECT_DIR$/app/views/users/_wage_settlement.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/abandon_task.rb" afterPath="$PROJECT_DIR$/app/models/abandon_task.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/accessory.rb" afterPath="$PROJECT_DIR$/app/models/accessory.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb" afterPath="$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bbk_project.iml" afterPath="$PROJECT_DIR$/.idea/bbk_project.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/boot.rb" afterPath="$PROJECT_DIR$/config/boot.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/calculation.rb" afterPath="$PROJECT_DIR$/app/models/calculation.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.ru" afterPath="$PROJECT_DIR$/config.ru" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/index.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/inflections.rb" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/management.html.erb" afterPath="$PROJECT_DIR$/app/views/users/management.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/message.rb" afterPath="$PROJECT_DIR$/app/models/message.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/private/private.properties" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/private/private.xml" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/project.properties" afterPath="$PROJECT_DIR$/nbproject/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/project.xml" afterPath="$PROJECT_DIR$/nbproject/project.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/rails" afterPath="$PROJECT_DIR$/script/rails" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/private/rake-d.txt" afterPath="$PROJECT_DIR$/nbproject/private/rake-d.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/secret_token.rb" afterPath="$PROJECT_DIR$/config/initializers/secret_token.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/session_store.rb" afterPath="$PROJECT_DIR$/config/initializers/session_store.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/task_tags/show.html.erb" afterPath="$PROJECT_DIR$/app/views/task_tags/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/show.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/task.rb" afterPath="$PROJECT_DIR$/app/models/task.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/task_tag.rb" afterPath="$PROJECT_DIR$/app/models/task_tag.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/task_tags.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/task_tags.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/task_tags.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/task_tags.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/task_tags_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/task_tags_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/task_tags_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/task_tags_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/tasks.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/tasks.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/tasks.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/tasks.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/tasks_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/tasks_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/tasktag_pptlist.js.erb" afterPath="$PROJECT_DIR$/app/views/tasks/tasktag_pptlist.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/test.rb" afterPath="$PROJECT_DIR$/config/environments/test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/upload.js.erb" afterPath="$PROJECT_DIR$/app/views/users/upload.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb" afterPath="$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/user_management.js.erb" afterPath="$PROJECT_DIR$/app/views/users/user_management.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/users.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/users.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/users.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/users.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/users_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/users_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/verify_task.js.erb" afterPath="$PROJECT_DIR$/app/views/tasks/verify_task.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/wage_settlement.js.erb" afterPath="$PROJECT_DIR$/app/views/users/wage_settlement.js.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" />
     </list>
     <ignored path="bbk_project.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/database.yml" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385104002616" ignored="false" />
     <file path="/20131123035548_create_users.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385179571004" ignored="false" />
-    <file path="/Dummy.txt" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386033955775" ignored="false" />
+    <file path="/Dummy.txt" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386059638061" ignored="false" />
     <file path="/20131123040711_create_task_tags.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385179742382" ignored="false" />
     <file path="/20131123041400_create_tasks.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385361021687" ignored="false" />
     <file path="/20131123044624_create_abandon_tasks.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385184721673" ignored="false" />
@@ -26,21 +143,21 @@
     <file path="$USER_HOME$/lantan_BAM/app/helpers/constant.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385185793402" ignored="false" />
     <file path="$USER_HOME$/lantan_BAM/app/controllers/market_manages_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385185926177" ignored="false" />
     <file path="/market_manages_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385185912616" ignored="false" />
-    <file path="/tasks_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386047897440" ignored="false" />
+    <file path="/tasks_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386060610887" ignored="false" />
     <file path="/routes.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385622219005" ignored="false" />
-    <file path="/index.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385441013804" ignored="false" />
+    <file path="/index.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386058405779" ignored="false" />
     <file path="/_header.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385709664172" ignored="false" />
     <file path="/application.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385187835207" ignored="false" />
-    <file path="/task.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386047597651" ignored="false" />
+    <file path="/task.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386058918241" ignored="false" />
     <file path="/task_tag.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385189465720" ignored="false" />
     <file path="/abandon_task.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385189848995" ignored="false" />
     <file path="/user.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385192369974" ignored="false" />
-    <file path="/_title.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385448924039" ignored="false" />
+    <file path="/_title.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386058384078" ignored="false" />
     <file path="/tasks.css" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386040754823" ignored="false" />
-    <file path="/users_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385993574691" ignored="false" />
+    <file path="/users_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386056800582" ignored="false" />
     <file path="/users.css" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385992948331" ignored="false" />
     <file path="/temp.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385198775225" ignored="false" />
-    <file path="/seeds.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385365447994" ignored="false" />
+    <file path="/seeds.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386057474336" ignored="false" />
     <file path="/20131125062612_removetaks_tag_id_from_tasks.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385360870113" ignored="false" />
     <file path="/20131125063309_remove_taks_tag_id_from_tasks.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385361328618" ignored="false" />
     <file path="/_task_list.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385541553932" ignored="false" />
@@ -50,7 +167,7 @@
     <file path="/task_tags_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385993997045" ignored="false" />
     <file path="/_task_tag_list.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385448589462" ignored="false" />
     <file path="/application.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385448119214" ignored="false" />
-    <file path="/tasks.js" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386046308183" ignored="false" />
+    <file path="/tasks.js" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386061170654" ignored="false" />
     <file path="/get_tasks.js.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385520953303" ignored="false" />
     <file path="/_task_workspace.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385455276045" ignored="false" />
     <file path="/_workspaces.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385652481942" ignored="false" />
@@ -72,13 +189,14 @@
     <file path="/_upload_ppt.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385969489040" ignored="false" />
     <file path="/_flash_list.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385975146738" ignored="false" />
     <file path="/_flash_data_table.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385969063708" ignored="false" />
-    <file path="/_ppt_list.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385975111469" ignored="false" />
+    <file path="/_ppt_list.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386054210770" ignored="false" />
     <file path="/management.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385990305738" ignored="false" />
     <file path="/_list_file.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385990577060" ignored="false" />
     <file path="/_upload_filetag.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385992076896" ignored="false" />
     <file path="/_nav_menus.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385992625456" ignored="false" />
     <file path="/_ppt_versions.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386046647811" ignored="false" />
     <file path="/verify_task.js.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386047158868" ignored="false" />
+    <file path="/reload_tasks.js.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386061018973" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,75 +216,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tasks_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="49" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
+            <state line="14" column="14" selection-start="316" selection-end="316" vertical-scroll-proportion="0.28716215">
               <folding>
-                <element signature="e#82#311#0" expanded="true" />
-                <element signature="e#315#945#0" expanded="true" />
-                <element signature="e#957#1155#0" expanded="true" />
-                <element signature="e#1167#2215#0" expanded="true" />
-                <element signature="e#2219#3476#0" expanded="true" />
-                <element signature="e#3490#3513#0" expanded="true" />
+                <element signature="tag#div#2" expanded="true" />
+                <element signature="e#251#314#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <file leaf-file-name="reload_tasks.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/reload_tasks.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="48" selection-start="5370" selection-end="5370" vertical-scroll-proportion="0.6857143">
+            <state line="0" column="59" selection-start="59" selection-end="59" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_ppt_versions.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb">
+      <file leaf-file-name="_ppt_list.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="127" selection-start="329" selection-end="329" vertical-scroll-proportion="-1.9615384">
+            <state line="8" column="9" selection-start="305" selection-end="305" vertical-scroll-proportion="-1.3076923">
               <folding>
-                <element signature="e#414#495#0" expanded="true" />
-                <element signature="tag#div#0;tag#div#0" expanded="true" />
-                <element signature="e#593#614#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="verify_task.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/verify_task.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="24" selection-start="69" selection-end="69" vertical-scroll-proportion="-1.3076923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tasks_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/tasks_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#142#896#0" expanded="true" />
-                <element signature="e#900#1247#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="43" selection-start="265" selection-end="282" vertical-scroll-proportion="-4.576923">
-              <folding>
-                <element signature="tag#div#0" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="tag#div#1" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="tag#div#3" expanded="true" />
+                <marker date="1386054228110" expanded="false" signature="61:294" placeholder="..." />
+                <marker date="1386054228110" expanded="false" signature="229:282" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -175,25 +252,8 @@
       <file leaf-file-name="_workspaces.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="41" selection-start="178" selection-end="178" vertical-scroll-proportion="-1.9615384">
-              <folding>
-                <element signature="tag#div#1;tag#div#0" expanded="true" />
-                <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tasks.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/tasks.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="33" selection-start="570" selection-end="581" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="n#!!block;n#get_tasks#0" expanded="true" />
-                <element signature="e#648#720#0" expanded="true" />
-                <element signature="e#748#782#0" expanded="true" />
-              </folding>
+            <state line="3" column="42" selection-start="179" selection-end="179" vertical-scroll-proportion="-1.9615384">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -221,22 +281,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/users/_nav_menus.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/users.css" />
-        <option value="$PROJECT_DIR$/app/controllers/task_tags_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_flash_list.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/tasks.js" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/verify_task.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/app/views/share/_title.html.erb" />
         <option value="$PROJECT_DIR$/app/models/task.rb" />
         <option value="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/tasks.js" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/log/development.log" />
+        <option value="$PROJECT_DIR$/app/views/tasks/reload_tasks.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/index.html.erb" />
       </list>
     </option>
   </component>
@@ -274,11 +334,40 @@
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource ProjectPane="false" />
+      <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="All">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="bbk_project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="bbk_project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -307,7 +396,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="log" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -378,42 +467,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -450,10 +503,6 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -477,69 +526,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="All">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bbk_project">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bbk_project">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="public">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="105" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="113" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="105" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="118" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="905" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="905" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="905" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="118" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="113" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -553,9 +555,9 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="options.lastSelected" value="editor.preferences.tabs" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="js.erb" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -872,7 +874,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32972136" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940991" sideWeight="0.6708075" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25727773" sideWeight="0.6718266" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27065304" sideWeight="0.6718266" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32919255" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -951,149 +953,142 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_flash_list.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="35" selection-start="250" selection-end="250" vertical-scroll-proportion="0.17926186">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tasks.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="0" selection-start="3543" selection-end="3543" vertical-scroll-proportion="0.33277312">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/tasks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="33" selection-start="570" selection-end="581" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#!!block;n#get_tasks#0" expanded="true" />
-            <element signature="e#648#720#0" expanded="true" />
-            <element signature="e#748#782#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="29" selection-start="179" selection-end="186" vertical-scroll-proportion="0.14285715">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="29" selection-start="60" selection-end="60" vertical-scroll-proportion="0.029876977">
-          <folding>
-            <element signature="tag#div#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="37" selection-start="228" selection-end="228" vertical-scroll-proportion="0.22857143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="33" selection-start="244" selection-end="244" vertical-scroll-proportion="0.17926186">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="127" selection-start="329" selection-end="329" vertical-scroll-proportion="-1.9615384">
-          <folding>
-            <element signature="e#414#495#0" expanded="true" />
-            <element signature="tag#div#0;tag#div#0" expanded="true" />
-            <element signature="e#593#614#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="41" selection-start="178" selection-end="178" vertical-scroll-proportion="-1.9615384">
-          <folding>
-            <element signature="tag#div#1;tag#div#0" expanded="true" />
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="43" selection-start="265" selection-end="282" vertical-scroll-proportion="-4.576923">
+        <state line="24" column="10" selection-start="394" selection-end="775" vertical-scroll-proportion="0.47803164">
           <folding>
-            <element signature="tag#div#0" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="tag#div#1" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="tag#div#3" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_task_details_list.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="37" selection-start="257" selection-end="261" vertical-scroll-proportion="0.23901582">
-          <folding>
-            <element signature="tag#div#0;tag#div#0" expanded="true" />
-            <element signature="tag#div#1;tag#div#0" expanded="true" />
-            <element signature="tag#div#3;tag#div#0" expanded="true" />
+            <element signature="e#436#763#0" expanded="false" />
+            <element signature="e#620#659#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/tasks_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#142#896#0" expanded="true" />
-            <element signature="e#900#1247#0" expanded="true" />
-          </folding>
+        <state line="42" column="0" selection-start="898" selection-end="898" vertical-scroll-proportion="0.2">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/verify_task.js.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/share/_title.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="24" selection-start="69" selection-end="69" vertical-scroll-proportion="-1.3076923">
+        <state line="10" column="61" selection-start="486" selection-end="493" vertical-scroll-proportion="0.17926186">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/task.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="47" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.6">
+        <state line="100" column="16" selection-start="4903" selection-end="4903" vertical-scroll-proportion="0.74285716">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="43" selection-start="212" selection-end="212" vertical-scroll-proportion="0.14938489">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="45" selection-end="131" vertical-scroll-proportion="0.059753954">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_task_list.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="64" selection-start="394" selection-end="394" vertical-scroll-proportion="0.17926186">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="52" selection-start="231" selection-end="243" vertical-scroll-proportion="0.13568774">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="49" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
+        <state line="120" column="9" selection-start="3734" selection-end="3734" vertical-scroll-proportion="0.6386555">
           <folding>
             <element signature="e#82#311#0" expanded="true" />
-            <element signature="e#315#945#0" expanded="true" />
-            <element signature="e#957#1155#0" expanded="true" />
-            <element signature="e#1167#2215#0" expanded="true" />
-            <element signature="e#2219#3476#0" expanded="true" />
-            <element signature="e#3490#3513#0" expanded="true" />
+            <element signature="e#315#984#0" expanded="true" />
+            <element signature="e#996#1194#0" expanded="true" />
+            <element signature="e#1206#2254#0" expanded="true" />
+            <element signature="e#2288#3547#0" expanded="true" />
+            <element signature="e#3848#4761#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+    <entry file="file://$PROJECT_DIR$/log/development.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="48" selection-start="5370" selection-end="5370" vertical-scroll-proportion="0.6857143">
+        <state line="186415" column="0" selection-start="10514022" selection-end="10514022" vertical-scroll-proportion="-0.011326861">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/tasks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="9" selection-start="826" selection-end="826" vertical-scroll-proportion="0.5873786">
+          <folding>
+            <element signature="n#!!block;n#get_tasks#0" expanded="false" />
+            <element signature="n#!!block;n#verify#0" expanded="false" />
+            <element signature="e#536#802#0" expanded="false" />
+            <element signature="e#662#734#0" expanded="false" />
+            <element signature="e#762#796#0" expanded="false" />
+            <element signature="n#!!block;n#reload_tasks#0" expanded="false" />
+            <element signature="e#854#985#0" expanded="false" />
+            <element signature="e#968#979#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="42" selection-start="179" selection-end="179" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="9" selection-start="305" selection-end="305" vertical-scroll-proportion="-1.3076923">
+          <folding>
+            <marker date="1386054228110" expanded="false" signature="61:294" placeholder="..." />
+            <marker date="1386054228110" expanded="false" signature="229:282" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/reload_tasks.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="59" selection-start="59" selection-end="59" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1195" column="0" selection-start="18486" selection-end="18486" vertical-scroll-proportion="0.4158576">
+          <folding>
+            <element signature="e#18486#18561#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="14" selection-start="316" selection-end="316" vertical-scroll-proportion="0.28716215">
+          <folding>
+            <element signature="tag#div#2" expanded="true" />
+            <element signature="e#251#314#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
