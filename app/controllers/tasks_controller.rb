@@ -38,23 +38,40 @@ class TasksController < ApplicationController
 
   #审核任务
   def verify_task
+    status = -1
     user = User.find_by_id params[:user_id]
     task = Task.find_by_id params[:task_id]
     if !user.nil?
       if user.types == User::TYPES[:CHECKER]
         if task.nil?
           notice = "非法操作:任务不存在"
+          status = -1
         else
-          if task
-
+          if task.checker == user.id
+            if task.status == Task::STATUS[:WAIT_FIRST_CHECK]
+              task.update_attributes(:status => Task::STATUS[:WAIT_PUB_FLASH])
+              status = 0
+            elsif task.status == Task::STATUS[:WAIT_SECOND_CHECK]
+              task.update_attributes(:status => Task::STATUS[:WAIT_FINAL_CHECK])
+              status = 0
+            else
+              status = -1
+            end
+          else
+            notice = "非法操作:该任务不是属于当前用户"
+            status = -1
           end
         end
       else
         notice = "非法操作:用户没有权限"
+        status = -1
       end
     else
       notice = "非法操作:用户不存在"
+      status = -1
     end
+    p task
+    @info = {:notice => notice, :task => task, :user_id => user.id, :status => status}
   end
 
   def uploadfile

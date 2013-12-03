@@ -18,8 +18,9 @@ function get_tasks(user_id)
     });
 }
 
-function verify(user_id,task_id)
+function verify(obj, user_id, task_id)
 {
+    $(obj).remove();
     $.ajax({
 //        async : true,
         url : "/tasks/verify_task",

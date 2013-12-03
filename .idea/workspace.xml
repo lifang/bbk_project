@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7204189c-761c-46a1-9fab-0abf23a7641e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/_nav_menus.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_flash_list.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_flash_list.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_list_file.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_list_file.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/verify_task.js.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_upload_filetag.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_upload_filetag.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/management.html.erb" afterPath="$PROJECT_DIR$/app/views/users/management.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/task.rb" afterPath="$PROJECT_DIR$/app/models/task.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/task_tags_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/task_tags_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/tasks.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/tasks.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb" afterPath="$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/users.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/users.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -36,12 +26,12 @@
     <file path="$USER_HOME$/lantan_BAM/app/helpers/constant.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385185793402" ignored="false" />
     <file path="$USER_HOME$/lantan_BAM/app/controllers/market_manages_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385185926177" ignored="false" />
     <file path="/market_manages_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385185912616" ignored="false" />
-    <file path="/tasks_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386041933369" ignored="false" />
+    <file path="/tasks_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386047897440" ignored="false" />
     <file path="/routes.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385622219005" ignored="false" />
     <file path="/index.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385441013804" ignored="false" />
     <file path="/_header.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385709664172" ignored="false" />
     <file path="/application.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385187835207" ignored="false" />
-    <file path="/task.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386044562672" ignored="false" />
+    <file path="/task.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386047597651" ignored="false" />
     <file path="/task_tag.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385189465720" ignored="false" />
     <file path="/abandon_task.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385189848995" ignored="false" />
     <file path="/user.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385192369974" ignored="false" />
@@ -60,7 +50,7 @@
     <file path="/task_tags_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385993997045" ignored="false" />
     <file path="/_task_tag_list.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385448589462" ignored="false" />
     <file path="/application.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385448119214" ignored="false" />
-    <file path="/tasks.js" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386041312629" ignored="false" />
+    <file path="/tasks.js" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386046308183" ignored="false" />
     <file path="/get_tasks.js.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385520953303" ignored="false" />
     <file path="/_task_workspace.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385455276045" ignored="false" />
     <file path="/_workspaces.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385652481942" ignored="false" />
@@ -77,7 +67,6 @@
     <file path="/application_controller.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385641488501" ignored="false" />
     <file path="/accessory.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385645994222" ignored="false" />
     <file path="/20131128134804_modify_accessory_url_from_accessory.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385646559675" ignored="false" />
-    <file path="$PROJECT_DIR$/config/routes.rb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385960494064" ignored="false" />
     <file path="/_upload_flash.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385969527833" ignored="false" />
     <file path="/_upload_flash_source.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385967780504" ignored="false" />
     <file path="/_upload_ppt.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385969489040" ignored="false" />
@@ -88,7 +77,8 @@
     <file path="/_list_file.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385990577060" ignored="false" />
     <file path="/_upload_filetag.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385992076896" ignored="false" />
     <file path="/_nav_menus.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1385992625456" ignored="false" />
-    <file path="/_ppt_versions.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386041293290" ignored="false" />
+    <file path="/_ppt_versions.html.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386046647811" ignored="false" />
+    <file path="/verify_task.js.erb" changelist="7204189c-761c-46a1-9fab-0abf23a7641e" time="1386047158868" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,20 +101,45 @@
       <file leaf-file-name="tasks_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="12" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0">
+            <state line="12" column="49" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1167#1547#0" expanded="true" />
-                <element signature="e#1551#2808#0" expanded="true" />
-                <element signature="e#2822#2845#0" expanded="true" />
+                <element signature="e#82#311#0" expanded="true" />
+                <element signature="e#315#945#0" expanded="true" />
+                <element signature="e#957#1155#0" expanded="true" />
+                <element signature="e#1167#2215#0" expanded="true" />
+                <element signature="e#2219#3476#0" expanded="true" />
+                <element signature="e#3490#3513#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/task.rb">
+      <file leaf-file-name="users_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="10" selection-start="4957" selection-end="4957" vertical-scroll-proportion="0.6857143">
+            <state line="135" column="48" selection-start="5370" selection-end="5370" vertical-scroll-proportion="0.6857143">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_ppt_versions.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="127" selection-start="329" selection-end="329" vertical-scroll-proportion="-1.9615384">
+              <folding>
+                <element signature="e#414#495#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#0" expanded="true" />
+                <element signature="e#593#614#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verify_task.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/verify_task.js.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="24" selection-start="69" selection-end="69" vertical-scroll-proportion="-1.3076923">
               <folding />
             </state>
           </provider>
@@ -133,7 +148,7 @@
       <file leaf-file-name="tasks_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/tasks_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="25" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#142#896#0" expanded="true" />
                 <element signature="e#900#1247#0" expanded="true" />
@@ -145,52 +160,25 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/tasks/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="31" selection-start="377" selection-end="377" vertical-scroll-proportion="-3.9230769">
+            <state line="7" column="43" selection-start="265" selection-end="282" vertical-scroll-proportion="-4.576923">
               <folding>
                 <element signature="tag#div#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_left_workspace.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="30" selection-start="61" selection-end="61" vertical-scroll-proportion="-0.65384614">
-              <folding>
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="tag#div#1" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="tag#div#3" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_ppt_list.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb">
+      <file leaf-file-name="_workspaces.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="22" selection-start="200" selection-end="208" vertical-scroll-proportion="-2.6153846">
+            <state line="3" column="41" selection-start="178" selection-end="178" vertical-scroll-proportion="-1.9615384">
               <folding>
-                <element signature="tag#div#0;tag#fieldset#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tasks.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tasks.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="14" selection-start="3400" selection-end="3400" vertical-scroll-proportion="-4.9298244">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_ppt_versions.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="52" selection-start="386" selection-end="386" vertical-scroll-proportion="-3.2692308">
-              <folding>
-                <element signature="e#251#332#0" expanded="true" />
-                <element signature="e#424#445#0" expanded="true" />
+                <element signature="tag#div#1;tag#div#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -199,11 +187,12 @@
       <file leaf-file-name="tasks.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/tasks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="30" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0">
+            <state line="25" column="33" selection-start="570" selection-end="581" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="n#!!block;n#get_tasks#0" expanded="true" />
-                <element signature="e#721#755#0" expanded="true" />
+                <element signature="e#648#720#0" expanded="true" />
+                <element signature="e#748#782#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -232,11 +221,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/users/management.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/_upload_filetag.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/_nav_menus.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/users.css" />
-        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/task_tags_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb" />
@@ -244,10 +230,13 @@
         <option value="$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" />
-        <option value="$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/tasks.js" />
-        <option value="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/verify_task.js.erb" />
         <option value="$PROJECT_DIR$/app/models/task.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
       </list>
     </option>
   </component>
@@ -319,6 +308,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bbk_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bbk_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -948,106 +951,28 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_upload_ppt.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="tag#fieldset#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/uploadfile.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="65" selection-start="607" selection-end="628" vertical-scroll-proportion="0.29876977">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="30" selection-start="285" selection-end="285" vertical-scroll-proportion="0.20913884">
-          <folding>
-            <element signature="tag#div#0" expanded="true" />
-            <element signature="tag#div#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="42" selection-start="418" selection-end="418" vertical-scroll-proportion="0.14938489">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_flash_list.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="71" selection-start="262" selection-end="262" vertical-scroll-proportion="0.1722973">
+        <state line="5" column="35" selection-start="250" selection-end="250" vertical-scroll-proportion="0.17926186">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="31" selection-start="377" selection-end="377" vertical-scroll-proportion="-3.9230769">
-          <folding>
-            <element signature="tag#div#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="30" selection-start="61" selection-end="61" vertical-scroll-proportion="-0.65384614">
-          <folding>
-            <element signature="tag#div#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_flash_data_table.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="9" selection-start="206" selection-end="206" vertical-scroll-proportion="0.08963093">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="200" selection-end="208" vertical-scroll-proportion="-2.6153846">
-          <folding>
-            <element signature="tag#div#0;tag#fieldset#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tasks.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="14" selection-start="3400" selection-end="3400" vertical-scroll-proportion="-4.9298244">
+        <state line="203" column="0" selection-start="3543" selection-end="3543" vertical-scroll-proportion="0.33277312">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="52" selection-start="386" selection-end="386" vertical-scroll-proportion="-3.2692308">
-          <folding>
-            <element signature="e#251#332#0" expanded="true" />
-            <element signature="e#424#445#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/tasks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="30" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0">
+        <state line="25" column="33" selection-start="570" selection-end="581" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!block;n#get_tasks#0" expanded="true" />
-            <element signature="e#721#755#0" expanded="true" />
+            <element signature="e#648#720#0" expanded="true" />
+            <element signature="e#748#782#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1059,9 +984,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_workspace.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="29" selection-start="60" selection-end="60" vertical-scroll-proportion="0.029876977">
+          <folding>
+            <element signature="tag#div#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="37" selection-start="228" selection-end="228" vertical-scroll-proportion="0.22857143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="33" selection-start="244" selection-end="244" vertical-scroll-proportion="0.17926186">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="127" selection-start="329" selection-end="329" vertical-scroll-proportion="-1.9615384">
+          <folding>
+            <element signature="e#414#495#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#0" expanded="true" />
+            <element signature="e#593#614#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="41" selection-start="178" selection-end="178" vertical-scroll-proportion="-1.9615384">
+          <folding>
+            <element signature="tag#div#1;tag#div#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="43" selection-start="265" selection-end="282" vertical-scroll-proportion="-4.576923">
+          <folding>
+            <element signature="tag#div#0" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="tag#div#1" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="tag#div#3" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_task_details_list.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="37" selection-start="257" selection-end="261" vertical-scroll-proportion="0.23901582">
+          <folding>
+            <element signature="tag#div#0;tag#div#0" expanded="true" />
+            <element signature="tag#div#1;tag#div#0" expanded="true" />
+            <element signature="tag#div#3;tag#div#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/tasks_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="25" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#142#896#0" expanded="true" />
             <element signature="e#900#1247#0" expanded="true" />
@@ -1069,20 +1062,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/verify_task.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="12" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1167#1547#0" expanded="true" />
-            <element signature="e#1551#2808#0" expanded="true" />
-            <element signature="e#2822#2845#0" expanded="true" />
-          </folding>
+        <state line="2" column="24" selection-start="69" selection-end="69" vertical-scroll-proportion="-1.3076923">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/task.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="10" selection-start="4957" selection-end="4957" vertical-scroll-proportion="0.6857143">
+        <state line="19" column="47" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="49" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#82#311#0" expanded="true" />
+            <element signature="e#315#945#0" expanded="true" />
+            <element signature="e#957#1155#0" expanded="true" />
+            <element signature="e#1167#2215#0" expanded="true" />
+            <element signature="e#2219#3476#0" expanded="true" />
+            <element signature="e#3490#3513#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="48" selection-start="5370" selection-end="5370" vertical-scroll-proportion="0.6857143">
           <folding />
         </state>
       </provider>
