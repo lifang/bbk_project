@@ -3,6 +3,8 @@
   They will automatically be included in application.css.
 */
 
+a { text-decoration: none;}
+
 *{ padding: 0px; }
 .header{
     width: 100%;
@@ -24,7 +26,7 @@
 }
 .container{
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     height: 40px;
     vertical-align: middle;
     background-color: beige;
@@ -39,7 +41,6 @@
     /*background-color: orangered;*/
 }
 label{
-    font-family: courier;
     font-size: 18px;
     font-style: oblique;
 }
@@ -54,18 +55,18 @@ label{
 
 .task_data_list{
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    border: 1px darkgrey solid;
+    border: 2px darkgrey solid;
     margin: 0 auto;
     /*background-color: chocolate;*/
 }
 
 .workspaces_panel{
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -118,7 +119,7 @@ label{
 
 .task_details_data{
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     height: 120px;
     border: 1px darkgrey solid;
     background-color: beige;
@@ -185,13 +186,14 @@ label{
     height: auto;
     background-color: white;
 }
-.files_list_panel fieldset .list_div div{
+.ppt_list_item{
     margin:0 5px 5px 5px;
     width: auto;
     height: 30px;
-    border: 2px grey dashed;
+    border: 1px grey dashed;
     text-align: center;
-    background-color: cornflowerblue;
+    z-index: 3;
+    /*background-color: cornflowerblue;*/
 }
 
 .files_list_panel fieldset .list_div div a{

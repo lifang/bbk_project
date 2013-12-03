@@ -23,42 +23,81 @@ class Task < ActiveRecord::Base
   end
 
   #领取任务
+  #def self.get_tasks user_id,user_types
+  #  time_now = Time.now #任务开始时间
+  #  assign_task_num = 5  #默认分配任务的总数
+  #  if user_types == User::TYPES[:PPT]
+  #    #当前持有的任务
+  #    owner_tasks = Task.where("status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and ppt_doer = #{user_id}")
+  #    assign_task_num = assign_task_num-owner_tasks.length
+  #    undeal_tasks = Task.where "status=#{Task::STATUS[:NEW]}"
+  #    count = 1
+  #    undeal_tasks.each do |task|
+  #      if count <= assign_task_num
+  #        current_task = Task.find task.id
+  #        if current_task.status != Task::STATUS[:WAIT_UPLOAD_PPT]
+  #          current_task.update_attributes(:status => Task::STATUS[:WAIT_UPLOAD_PPT], :ppt_doer => user_id, :ppt_start_time => time_now)
+  #        end
+  #        count+=1
+  #      end
+  #    end if(!undeal_tasks.nil? || undeal_tasks.length != 0)
+  #  elsif user_types == User::TYPES[:FLASH]
+  #    #当前持有的任务
+  #    owner_tasks = Task.where("status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and flash_doer = #{user_id}")
+  #    assign_task_num = assign_task_num-owner_tasks.length
+  #    undeal_tasks = Task.where "status=#{Task::STATUS[:WAIT_ASSIGN_FLASH]}"
+  #    count = 1
+  #    undeal_tasks.each do |task|
+  #      if count <= assign_task_num
+  #        current_task = Task.find task.id
+  #        if current_task.status != Task::STATUS[:WAIT_UPLOAD_FLASH]
+  #          task.update_attributes(:status => Task::STATUS[:WAIT_UPLOAD_FLASH], :flash_doer => user_id,:flash_start_time => time_now)
+  #        end
+  #        count+=1
+  #      end
+  #    end if(!undeal_tasks.nil? || undeal_tasks.length != 0)
+  #  else
+  #    undeal_tasks = nil
+  #  end
+  #  undeal_tasks
+  #end
+
+  #领取任务
   def self.get_tasks user_id,user_types
-    time_now = Time.now #任务开始时间
     assign_task_num = 5  #默认分配任务的总数
-    if user_types == User::TYPES[:PPT]
-      #当前持有的任务
-      owner_tasks = Task.where("status=#{Task::STATUS[:WAIT_UPLOAD_PPT]} and ppt_doer = #{user_id}")
-      assign_task_num = assign_task_num-owner_tasks.length
-      undeal_tasks = Task.where "status=#{Task::STATUS[:NEW]}"
+    ppt_doer = nil
+    flash_doer = nil
+    if user_types == User::TYPES[:PPT] || user_types == User::TYPES[:FLASH]
+
+      if user_types == User::TYPES[:PPT] #用户类型为PPT
+          owner_tasks_sql = "status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and ppt_doer = #{user_id}"
+          wait_assign_tasks_sql = "status=#{Task::STATUS[:NEW]}"
+          assigned_task_status = Task::STATUS[:WAIT_UPLOAD_PPT]
+          ppt_doer = user_id
+      else #用户类型为FLASH
+          owner_tasks_sql = "status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and flash_doer = #{user_id}"
+          wait_assign_tasks_sql= "status=#{Task::STATUS[:WAIT_ASSIGN_FLASH]}"
+          assigned_task_status = Task::STATUS[:WAIT_UPLOAD_FLASH]
+          flash_doer = user_id
+      end
+      owner_tasks = Task.where owner_tasks_sql   #当前持有的任务
+      assign_task_num = assign_task_num - owner_tasks.length
+      wait_assign_tasks = Task.where wait_assign_tasks_sql
       count = 1
-      undeal_tasks.each do |task|
+      wait_assign_tasks.each do |task|
         if count <= assign_task_num
-          current_task = Task.find task.id
-          if current_task.status != Task::STATUS[:WAIT_UPLOAD_PPT]
-            current_task.update_attributes(:status => Task::STATUS[:WAIT_UPLOAD_PPT], :ppt_doer => user_id, :ppt_start_time => time_now)
+          current_task = Task.find_by_id task.id
+          if current_task.status != assigned_task_status
+            time_now = Time.now #任务开始时间
+            if !ppt_doer.nil?
+              current_task.update_attributes(:status => assigned_task_status, :ppt_doer => user_id, :ppt_start_time => time_now)
+            elsif !flash_doer.nil?
+              current_task.update_attributes(:status => assigned_task_status, :flash_doer => user_id, :ppt_start_time => time_now)
+            else
+            end
           end
-          count+=1
         end
-      end if(!undeal_tasks.nil? || undeal_tasks.length != 0)
-    elsif user_types == User::TYPES[:FLASH]
-      #当前持有的任务
-      owner_tasks = Task.where("status=#{Task::STATUS[:WAIT_UPLOAD_FLASH]} and flash_doer = #{user_id}")
-      assign_task_num = assign_task_num-owner_tasks.length
-      undeal_tasks = Task.where "status=#{Task::STATUS[:WAIT_ASSIGN_FLASH]}"
-      count = 0
-      undeal_tasks.each do |task|
-        if count <= assign_task_num
-          current_task = Task.find task.id
-          if current_task.status != Task::STATUS[:WAIT_UPLOAD_FLASH]
-            task.update_attributes(:status => Task::STATUS[:WAIT_UPLOAD_FLASH], :flash_doer => user_id,:flash_start_time => time_now)
-          end
-          count+=1
-        end
-      end if(!undeal_tasks.nil? || undeal_tasks.length != 0)
-    else
-      undeal_tasks = nil
+      end
     end
-    undeal_tasks
   end
 end
