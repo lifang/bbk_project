@@ -1,0 +1,41 @@
+<input type="button" value="添加" class="add_user"/>
+<div class="user_list">
+  <table>
+    <tr>
+      <td>用户名</td>
+      <td>角色</td>
+      <td>地址</td>
+      <td>电话</td>
+      <td>操作</td>
+    </tr>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name  %></td>
+        <td><%= User::TYPES_NAME[user.types] %></td>
+        <td><%= user.address  %></td>
+        <td><%= user.phone  %></td>
+        <td>
+          <input type="button" value="编辑" class="edit_user"/>
+          <input type="button" value="禁用" class="disable_user"/>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+
+<div class="add_users">
+  <%= form_for :user, :url => { :action => :login, :controller => :users } do |f| %>
+    <div class="login_item">
+      <%= f.label :用户名： %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="login_item">
+      <%= f.label :密码： %>
+      <%= f.password_field :password %>
+    </div>
+    <div class="login_btn">
+      <%= f.submit "登录" %>
+    </div>
+  <% end %>
+</div>

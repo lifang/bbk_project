@@ -1,5 +1,5 @@
 #encoding: utf-8
 class Calculation < ActiveRecord::Base
-  IS_PAY = {:PAIED => 0,:NO_PAY => 1}
-  IS_PAY_NAME = {0 => '已付款', 1 => "未付款"}
+  IS_PAY = {:PAIED => true,:NO_PAY => false}
+  IS_PAY_NAME = {true => '已付款', false => "未付款"}
 end

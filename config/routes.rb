@@ -8,6 +8,7 @@ BbkProject::Application.routes.draw do
     collection do
       get :assign_tasks, :verify_task
       post :uploadfile
+      get 'tasktag_pptlist'
     end
   end
   resources :task_tags do
@@ -23,7 +24,7 @@ BbkProject::Application.routes.draw do
     end
     collection do
       post 'login','destroy','upload'
-      get 'management','confirm_final','download','ajax_download'
+      get 'management','confirm_final','download','ajax_download',"wage_settlement",'user_management'
     end
   end
 

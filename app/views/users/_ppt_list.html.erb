@@ -1,0 +1,19 @@
+<h2><%= @task_tag.name  %></h2>
+<table>
+  <tr>
+    <td>任务名称</td>
+    <td>PPT制作</td>
+    <td>动画制作</td>
+    <td>质检</td>
+    <td>状态</td>
+  </tr>
+  <% @task_pptlist.each do |ppt| %>
+    <tr>
+      <td><%= ppt.task_name %></td>
+      <td><%= ppt.user_pptname %></td>
+      <td><%= ppt.user_flashname %></td>
+      <td><%= ppt.user_check %></td>
+      <td><%= Task::STATUS_NAME[ppt.status] %></td>
+    </tr>
+  <% end %>
+</table>
