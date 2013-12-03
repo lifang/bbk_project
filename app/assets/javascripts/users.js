@@ -19,7 +19,8 @@ $(function(){
                 alert("终检失败")
             }
         })
-    })
+    });
+    
     $(document).on('click',"input[name='ajax_download']",function(){
         var button = $(this);
         var task_tag_id = $(this).attr("task_tag_id");
@@ -37,6 +38,20 @@ $(function(){
                 alert("下载失败")
             }
         })
+    });
+    $("td.task_batch").click(function(){
+        var task_tag_id = $(this).attr("task_tag_id");
+        $.ajax({
+            async:true,
+            type :'get',
+            url : '/tasks/tasktag_pptlist',
+            data : {
+                task_tag_id : task_tag_id
+            }
+        })
     })
+//    $(document).on('click',"td[class='task_batch']",function(){
+//        alert(1111111111111);
+//    });
 
 })

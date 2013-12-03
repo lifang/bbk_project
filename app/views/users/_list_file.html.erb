@@ -6,9 +6,11 @@
     <td>下载任务</td>
     <td>确认终检</td>
   </tr>
-  <%@task_tags_arr.each do |task_tag| %>
+  <%  @task_tags_arr.each do |task_tag| %>
     <tr>
-      <td><%= task_tag[:name]%></td>
+      <td class="task_batch" task_tag_id="<%= task_tag[:id] %>" >
+        <%= link_to "#{task_tag[:name]}", {:controller => "tasks", :action => "tasktag_pptlist", :task_tag_id => task_tag[:id]}, remote: :true, 'data_type' => "script" %>
+        </td>
       <td><%= task_tag[:created_at]%></td>
       <td><%= task_tag[:complet_count]%>|<%= task_tag[:unfinish_count]%></td>
       <td><input type="button" value="下载任务" name="ajax_download" task_tag_id="<%= task_tag[:id] %>" /></td>

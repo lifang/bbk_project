@@ -136,5 +136,18 @@ class UsersController < ApplicationController
     #      render :json => {:status => 1}
     #    end
   end
-
+  # 工资结算
+  def wage_settlement
+    admin = User.find_by_name("admin")
+    #    p admin.created_at
+    #    p Time.now
+    #    params[:month]
+    @calculation = Calculation.find_by_sql("SELECT users.name,users.types,calculations.time,calculations.is_pay from
+calculations,users WHERE calculations.user_id = users.id and calculations.month = '2013-12'")
+  end
+  #用户管理
+  def user_management
+    @users = User.all
+  end
+  #添加用户
 end

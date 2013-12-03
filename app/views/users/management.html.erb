@@ -1,7 +1,11 @@
 <div class="guanliyuan">
   <div class="tou">任务包</div>
-  <div class="tou">工资结算</div>
-  <div class="tou">用户管理</div>
+  <div class="tou">
+    <%= link_to "工资结算", {:controller => "users", :action => "wage_settlement"}, remote: :true, 'data_type' => "script" %>
+  </div>
+  <div class="tou">
+    <%= link_to "用户管理", {:controller => "users", :action => "user_management"}, remote: :true, 'data_type' => "script" %>
+  </div>
 </div>
 <div class="manager_body" style="text-align: center">
   <div class="upload">
