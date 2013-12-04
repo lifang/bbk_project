@@ -1,0 +1,18 @@
+<div id="month_list">
+  <select name="month" class="settlement_sec" sec_class="month_sec" onchange="settlement_change()">
+    <% @months.each do |month| %>
+      <option value='<%= month.month %>' ><%= month.month  %></option>
+    <% end %>
+  </select>
+
+  <select name="types" class="settlement_sec" sec_class="types_sec" onchange="settlement_change()">
+    <option value="">全部</option>
+    <option value="1">质检员</option>
+    <option value="2">PPT制作</option>
+    <option value="3">动画制作</option>
+  </select>
+</div>
+<div class="salary_list">
+  <%= render :partial => "salary_list" %>
+</div>
+

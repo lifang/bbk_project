@@ -50,8 +50,60 @@ $(function(){
             }
         })
     })
-//    $(document).on('click',"td[class='task_batch']",function(){
-//        alert(1111111111111);
-//    });
-
 })
+
+
+function add_user_unique(){
+    $(".add_users_form").show();
+}
+
+function edit_user_unique(){
+    var id = $(this).attr("user_id");
+    $.ajax({
+        async:true,
+        type :'get',
+        url : '/users/edit',
+        data : {
+            id : id
+        }
+    })
+}
+
+function settlement_change(){
+    var month = $("select[sec_class='month_sec']").val();
+    var types = $("select[sec_class='types_sec']").val();
+    $.ajax({
+        async:true,
+        type : 'get',
+        dataType : 'script',
+        url:"/calculations/settlement_list",
+        data : {
+            month : month,
+            types : types
+        }
+    })
+}
+
+function whether_payment(obj){
+    var calculation_id = $(obj).attr("calculation_id");
+    if (confirm("确认更改？")==true){
+        $.ajax({
+            async:true,
+            type : 'get',
+            dataType : 'json',
+            url:'/calculations/whether_payment',
+            data : {
+                calculation_id : calculation_id
+            },
+            success: function(data){
+                if(data.status==0)
+                    $(obj).val("未付款");
+                else{
+                    $(obj).val("已付款");
+                }
+
+            }
+        })
+    }
+   
+}

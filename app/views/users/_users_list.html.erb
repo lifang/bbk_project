@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>用户名</td>
+    <td>角色</td>
+    <td>地址</td>
+    <td>电话</td>
+    <td>操作</td>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name  %></td>
+      <td><%= User::TYPES_NAME[user.types] %></td>
+      <td><%= user.address  %></td>
+      <td><%= user.phone  %></td>
+      <td>
+        <%= link_to "编辑", {:controller => "users", :action => "edit", :user_id => user.id}, remote: :true, 'data_type' => "script" %>
+        <%= link_to "禁用", {:controller => "users", :action => "disable_user", :user_id => user.id},confirm: '确认禁用?', remote: :true, 'data_type' => "script" %>
+      </td>
+    </tr>
+  <% end %>
+</table>
