@@ -12,28 +12,19 @@ class TasksController < ApplicationController
   end
 
   def show
-    @user = User.find(session[:user_id])
-    @task = Task.find_by_id(params[:id])
-    if !@task.nil? && (@task.ppt_doer == @user.id || @task.checker == @user.id || @task.flash_doer == @user.id)
-      @title = "任务详情-#{@task.name}"
-      @task_tag_id = @task.task_tag.id
-      @ppt_files = @task.accessories.where("types = 'ppt'").order("created_at")
-      @ppt_files.each do |ppt|
-        p ppt
-      end
-      @user = User.find_by_id(session[:user_id])
-      if @user.nil?
-        redirect_to root_url
+    @user = User.find_by_id session[:user_id]
+    @task = Task.find_by_id params[:id]
+    if @user.nil?
+      redirect_to root_url
+    else
+      @task = Task.find_by_id(params[:id])
+      if !@task.nil? && (@task.ppt_doer == @user.id || @task.checker == @user.id || @task.flash_doer == @user.id)
+        @title = "任务详情-#{@task.name}"
+        @task_tag_id = @task.task_tag.id
+        @ppt_files = @task.accessories.where("types = '#{Accessory::TYPES[:PPT]}'").order("created_at")
+        @flash_files = @task.accessories.where("types = '#{Accessory::TYPES[:FLASH]}'").order("created_at")
       else
-        @task = Task.find_by_id(params[:id])
-        if !@task.nil? && (@task.ppt_doer == @user.id || @task.checker == @user.id || @task.flash_doer == @user.id)
-          @title = "任务详情-#{@task.name}"
-          @task_tag_id = @task.task_tag.id
-          @ppt_files = @task.accessories.where("types = '#{Accessory::TYPES[:PPT]}'").order("created_at")
-          @flash_files = @task.accessories.where("types = '#{Accessory::TYPES[:FLASH]}'").order("created_at")
-        else
-          redirect_to :action => :index
-        end
+        redirect_to :action => :index
       end
     end
   end
@@ -48,25 +39,43 @@ class TasksController < ApplicationController
 
   #审核任务
   def verify_task
+    status = -1
     user = User.find_by_id params[:user_id]
     task = Task.find_by_id params[:task_id]
     if !user.nil?
       if user.types == User::TYPES[:CHECKER]
         if task.nil?
           notice = "非法操作:任务不存在"
+          status = -1
         else
-          if task
-
+          if task.checker == user.id
+            if task.status == Task::STATUS[:WAIT_FIRST_CHECK]
+              task.update_attributes(:status => Task::STATUS[:WAIT_PUB_FLASH])
+              status = 0
+            elsif task.status == Task::STATUS[:WAIT_SECOND_CHECK]
+              task.update_attributes(:status => Task::STATUS[:WAIT_FINAL_CHECK])
+              status = 0
+            else
+              status = -1
+            end
+          else
+            notice = "非法操作:该任务不是属于当前用户"
+            status = -1
           end
         end
       else
         notice = "非法操作:用户没有权限"
+        status = -1
       end
     else
       notice = "非法操作:用户不存在"
+      status = -1
     end
+    p task
+    @info = {:notice => notice, :task => task, :user_id => user.id, :status => status}
   end
 
+  #上传文件（PPT 、FLASH、flash源码文件）
   def uploadfile
     uploadfile = params[:file]
     @file_type = params[:file_type]
@@ -103,7 +112,13 @@ class TasksController < ApplicationController
 
   #刷新任务数据
   def reload_tasks
-
+    @user = User.find_by_id session[:user_id]
+    if !@user.nil?
+      @tasks = Task.list @user.id, @user.types
+    else
+      @task = nil
+    end
+    @task
   end
   #private
   #

@@ -124,7 +124,7 @@ class UsersController < ApplicationController
     end
   end
   #确认终检
-  def confirm_final  
+  def confirm_final
     task_tag = TaskTag.find_by_id(params[:task_tag_id])
     TaskTag.transaction do
       @task = Task.where(:task_tag_id => params[:task_tag_id])

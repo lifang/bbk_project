@@ -1,7 +1,7 @@
 #encoding: utf-8
   #创建用户
-  name = ["zhu","zhao","zhang","li"]
-  (0..3).each do |e|
+  name = ["zhu","zhao","zhang","li","wu"]
+  (0..4).each do |e|
     User.create(:name => name[e], :password => "123456", :types => e, :status => 0, :phone=>"123456#{e}",
               :address => "星海街#{e}号10#{e}室")
   end

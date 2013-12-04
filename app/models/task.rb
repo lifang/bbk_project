@@ -14,7 +14,7 @@ class Task < ActiveRecord::Base
   #获取用户相关的任务数据
   def self.list user_id,user_types
     if user_types == User::TYPES[:CHECKER]    #质检用户的任务数据
-      @tasks = Task.where("checker=#{user_id} and status in (#{Task::STATUS[:WAIT_FIRST_CHECK]},#{Task::STATUS[:WAIT_SECOND_CHECK]},#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]})")
+      @tasks = Task.where("checker=#{user_id} and status not in (#{Task::STATUS[:NEW]},#{Task::STATUS[:WAIT_UPLOAD_PPT]})")
     elsif user_types == User::TYPES[:PPT]     #PPT用户的任务数据
       @tasks = Task.where("ppt_doer=#{user_id} and status not in (#{Task::STATUS[:NEW]},#{Task::STATUS[:WAIT_ASSIGN_FLASH]},#{Task::STATUS[:WAIT_UPLOAD_FLASH]})")
     elsif user_types == User::TYPES[:FLASH]   #FLASH用户的任务数据
@@ -96,7 +96,9 @@ class Task < ActiveRecord::Base
             else
             end
           end
+        else
         end
+        count+=1
       end
     end
   end

@@ -1,0 +1,10 @@
+<% if @info[:status] == 0 %>
+alert("审核成功！");
+$("#verify_bar").remove();
+<% @task = @info[:task] %>
+$("#task_details").html('<%= escape_javascript(render :partial => "task_details_list")%>');
+<% elsif @info[:status] == -1 %>
+alert("<%= @info[:notice] %>");
+var input_text = "<input type='button' value='审 核' onclick='verify(this, <%= @info[:user_id] %>,<%= @info[:task].id %>);' style='margin:0 auto'>";
+$("#verify_bar").append(input_text);
+<% end %>

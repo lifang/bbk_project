@@ -6,7 +6,7 @@ BbkProject::Application.routes.draw do
     end
 
     collection do
-      get :assign_tasks
+      get :assign_tasks, :verify_task, :reload_tasks
       post :uploadfile
       get 'tasktag_pptlist'
     end
@@ -37,7 +37,14 @@ BbkProject::Application.routes.draw do
       get "wage_settlement",'settlement_list','whether_payment'
     end
   end
+  resources :messages do
+    member do
+    end
 
+    collection do
+      post :send
+    end
+  end
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
