@@ -188,7 +188,7 @@ label{
 }
 .ppt_list_item{
     margin: 0 5px 5px 5px;
-    width: auto;
+    width: 351px;
     height: 30px;
     border: 1px grey dashed;
     text-align: center;
@@ -199,8 +199,9 @@ label{
 .chat_bar{
     margin: -5px 5px 5px 5px;
     height: 250px;
-    width: auto;
+    width: 351px;
     border: 1px grey solid;
+    float:left;
     /*background-color: royalblue;*/
     overflow-x: hidden;
     overflow-y: hidden;
@@ -221,7 +222,7 @@ label{
 
 .left_chat_form{
     margin: 0 auto;
-    height: 60px;
+    height: 50px;
     width: 100%;
     z-index: 1;
     /*background-color: chartreuse;*/
@@ -231,12 +232,12 @@ label{
     margin: 2px auto;
     height: 98%;
     width: 100%;
-    background-color: #9BD1FA;
+    background-color: cadetblue;
     z-index: 2;
 }
 
 .left_chat_form fieldset form{
-    height: 40px;
+    height: 30px;
     width: 100%;
     z-index: 3;
 }

@@ -1,5 +1,5 @@
 <fieldset>
-  <legend>上传flash</legend>
+  <legend>上传FLASH</legend>
   <%= form_tag({:action => :uploadfile}, :multipart => true ,:remote => true ) do %>
       <div class="form_div">
         <%= file_field_tag 'file', :onchange => "handleUpload(this);file_validate(this);"%>
@@ -7,6 +7,6 @@
       </div>
       <input type="hidden" name="user_id" value="<%= @user.id %>" />
       <input type="hidden" name="task_id" value="<%= @task.id %>" />
-      <input id="file_type" type="hidden" name="file_type" />
+      <input id="file_type" type="input" name="file_type" value="swf" />
   <% end %>
 </fieldset>
