@@ -11,4 +11,12 @@ class MessagesController < ApplicationController
     end
     @messages = @accessory.messages
   end
+
+  #刷新消息
+  def reload_msg
+    user = User.find_by_id params[:user_id]
+    task = Task.find_by_id params[:task_id]
+
+  end
+
 end

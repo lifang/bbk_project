@@ -221,7 +221,7 @@ label{
 
 .left_chat_form{
     margin: 0 auto;
-    height: 50px;
+    height: 60px;
     width: 100%;
     z-index: 1;
     /*background-color: chartreuse;*/
@@ -231,12 +231,12 @@ label{
     margin: 2px auto;
     height: 98%;
     width: 100%;
-    background-color: cadetblue;
+    background-color: #9BD1FA;
     z-index: 2;
 }
 
 .left_chat_form fieldset form{
-    height: 30px;
+    height: 40px;
     width: 100%;
     z-index: 3;
 }
@@ -278,3 +278,12 @@ label{
 .file_uploadfile_panel fieldset #btn_upload{
     float: right;
 }
+
+//圆角矩形
+.RoundedCorner{background: #9BD1FA; height:auto; width:300px;}
+b.rtop, b.rbottom{display:block; background: #FFF}
+b.rtop b, b.rbottom b{display:block;height: 1px;overflow: hidden; background: #9BD1FA}
+b.r1{margin: 0 5px}
+b.r2{margin: 0 3px}
+b.r3{margin: 0 2px}
+b.rtop b.r4, b.rbottom b.r4{margin: 0 1px;height: 2px}
