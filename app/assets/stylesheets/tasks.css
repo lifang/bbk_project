@@ -200,42 +200,45 @@ label{
     margin: -5px 5px 5px 5px;
     height: 250px;
     width: auto;
-    border: 1px grey dashed;
-    background-color: royalblue;
-    display: none;
+    border: 1px grey solid;
+    /*background-color: royalblue;*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /*display: none;*/
+    z-index: 0;
 }
 
 .left_chat_records{
     margin: 0 auto;
     width: 100%;
-    height: 200px;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    display: inline-block;
     /*background-color: black;*/
+    z-index: 1;
 }
 
 .left_chat_form{
     margin: 0 auto;
     height: 50px;
     width: 100%;
-    background-color: chartreuse;
-}
-
-.left_chat_form fieldset form{
-    height: 30px;
-    width: 100%;
-}
-
-.left_chat_form fieldset .form_div{
-    margin: 0 30px;
-    width: auto;
-    height: auto;
+    z-index: 1;
+    /*background-color: chartreuse;*/
 }
 
 .left_chat_form fieldset{
     margin: 2px auto;
     height: 98%;
     width: 100%;
+    background-color: cadetblue;
+    z-index: 2;
+}
+
+.left_chat_form fieldset form{
+    height: 30px;
+    width: 100%;
+    z-index: 3;
 }
 
 .files_list_panel fieldset .list_div div a{

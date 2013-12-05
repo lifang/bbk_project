@@ -32,7 +32,7 @@ BbkProject::Application.routes.draw do
     end
 
     collection do
-      post :send
+      post :send_msg
     end
   end
   # Sample of regular route:

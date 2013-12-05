@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Rails bbk_project: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="032e25c4-30e8-4ac0-8167-2e10ce992bb0">
+  <data-source source="LOCAL" name="Rails bbk_project: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="9567138e-b9a6-4adb-a04f-08fbba7b22e9">
     <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
     <jdbc-url>jdbc:mysql://127.0.0.1/bbk_project_test</jdbc-url>
     <user-name>root</user-name>
@@ -11,18 +11,7 @@
       </library>
     </libraries>
   </data-source>
-  <data-source source="LOCAL" name="Rails bbk_project: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="1cbb57c7-9ebd-4ccb-a1c5-f2b189c22938">
-    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-    <jdbc-url>jdbc:mysql://127.0.0.1/bbk_project</jdbc-url>
-    <user-name>root</user-name>
-    <user-password>dfc9dfc5dfc7dfcedfc5df98df9adf9bdf98</user-password>
-    <libraries>
-      <library>
-        <url>file://</url>
-      </library>
-    </libraries>
-  </data-source>
-  <data-source source="LOCAL" name="Rails bbk_project: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="36306a33-f725-45f0-8108-ba38d8277ebe">
+  <data-source source="LOCAL" name="Rails bbk_project: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="b92629b7-a7b9-4770-8aa7-078ac320ee01">
     <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
     <jdbc-url>jdbc:mysql://127.0.0.1/bbk_project_production</jdbc-url>
     <user-name>root</user-name>
@@ -32,5 +21,114 @@
         <url>file://</url>
       </library>
     </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Rails bbk_project: development" product="MySQL" version="5.5.34-0ubuntu0.13.10.1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="849a8223-893d-4e0c-ab03-8699249b17cf">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <synchronize>true</synchronize>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost:3306/bbk_project</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>dfc9dfc5dfc7dfcedfc5df98df9adf9bdf98</user-password>
+    <schema-pattern>bbk_project.*</schema-pattern>
+    <default-schemas>bbk_project.*</default-schemas>
+    <default-dialect>MySQL</default-dialect>
+    <libraries>
+      <library>
+        <url>file://$APPLICATION_HOME_DIR$/plugins/DatabaseSupport/lib/mysql-connector-java-5.1.22-bin.jar</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="bbk_project"/>
+    <table name="abandon_tasks" schema="" catalog="bbk_project" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="task_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="types" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="index_abandon_tasks_on_task_id" unique="false" columns="task_id"/>
+      <index name="index_abandon_tasks_on_user_id" unique="false" columns="user_id"/>
+    </table>
+    <table name="accessories" schema="" catalog="bbk_project" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="types" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="task_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="status" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="longness" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="accessory_url" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="index_accessories_on_task_id" unique="false" columns="task_id"/>
+    </table>
+    <table name="calculations" schema="" catalog="bbk_project" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="month" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="time" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="is_pay" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7"/>
+      <column name="longness" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="index_calculations_on_user_id" unique="false" columns="user_id"/>
+    </table>
+    <table name="messages" schema="" catalog="bbk_project" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="sender_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="reciver_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="content" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="accessory_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="index_messages_on_accessory_id" unique="false" columns="accessory_id"/>
+    </table>
+    <table name="schema_migrations" schema="" catalog="bbk_project" type="TABLE">
+      <column name="version" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <index name="unique_schema_migrations" unique="true" columns="version"/>
+    </table>
+    <table name="task_tags" schema="" catalog="bbk_project" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="status" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tasks" schema="" catalog="bbk_project" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="types" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="origin_ppt_url" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="origin_flash_url" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ppt_doer" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="flash_doer" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="status" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="checker" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="ppt_start_time" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="flash_start_time" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="is_calculate" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="task_tag_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="index_tasks_on_task_tag_id" unique="false" columns="task_tag_id"/>
+    </table>
+    <table name="users" schema="" catalog="bbk_project" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="types" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="phone" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="address" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="status" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
   </data-source>
 </component>

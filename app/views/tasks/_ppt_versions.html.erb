@@ -10,12 +10,26 @@
 </div>
 <% @messages = ppt.messages %>
 <% @accessory = ppt %>
-<div id="left_chat_panel_<%= ppt.id %>" class="chat_bar">
-  <div id="chat_records_<%= ppt.id %>" class="left_chat_records">
-    <%= render :partial => "left_chat_records"%>
-  </div>
+
+<% if ppt.id == @ppt_files.last.id %>
+<div id="left_chat_panel_<%= ppt.id %>" class="chat_bar" style="border-top: none;">
+<% else %>
+<div id="left_chat_panel_<%= ppt.id %>" class="chat_bar" style="border-top: none; display: none;">
+<% end %>
+  <% if ppt.id == @ppt_files.last.id %>
+    <div id="chat_records_<%= ppt.id %>" class="left_chat_records" style="height: 200px;">
+      <%= render :partial => "left_chat_records"%>
+    </div>
+  <% else %>
+    <div id="chat_records_<%= ppt.id %>" class="left_chat_records">
+      <%= render :partial => "left_chat_records"%>
+    </div>
+  <% end %>
+
+  <% if ppt.id == @ppt_files.last.id %>
   <div id="chat_form_<%= ppt.id %>" class="left_chat_form">
     <%= render :partial => "left_chat_form"%>
   </div>
+  <% end %>
 </div>
 <% end %>

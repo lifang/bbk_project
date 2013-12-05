@@ -33,8 +33,8 @@ class TasksController < ApplicationController
   def assign_tasks
     user = User.find_by_id params[:user_id]
     Task.get_tasks user.id, user.types
-    @tasks = Task.list user.id, user.types
-    @info = {:notice => notice, :tasks => @tasks}
+    tasks = Task.list user.id, user.types
+    @info = {:notice => notice, :tasks => tasks}
   end
 
   #审核任务

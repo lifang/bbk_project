@@ -1,3 +1,7 @@
-<% @messages.each do |msg| %>
-    <div style="width: 100%; height: auto;"><%= msg.content %></div>
+<% if @messages.nil? || @messages.length == 0%>
+    <div style="width: 150px; height: auto; text-align: center; margin: 0 auto;">无聊天记录</div>
+<% else %>
+    <% @messages.each do |msg| %>
+        <div style="width: 100%; height: auto; text-align: left;"><%= msg.content %></div>
+    <% end %>
 <% end %>
