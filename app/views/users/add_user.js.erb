@@ -1,0 +1,9 @@
+<% if @user_exist.blank? %>
+  <% if @user %>
+    alert("用户添加成功");
+    $(".add_users_form").hide();
+  <% end %>
+<% else %>
+  alert("用户已存在")
+<% end %>
+

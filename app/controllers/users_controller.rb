@@ -140,18 +140,40 @@ class UsersController < ApplicationController
     #      render :json => {:status => 1}
     #    end
   end
-  # 工资结算
-  def wage_settlement
-    admin = User.find_by_name("admin")
-    #    p admin.created_at
-    #    p Time.now
-    #    params[:month]
-    @calculation = Calculation.find_by_sql("SELECT users.name,users.types,calculations.time,calculations.is_pay from
-calculations,users WHERE calculations.user_id = users.id and calculations.month = '2013-12'")
-  end
   #用户管理
   def user_management
-    @users = User.all
+    @users = User.where(:status => 0)
   end
   #添加用户
+  def add_user
+    name = params[:user][:name]
+    @user_exist = User.find_by_name(name)
+    password = params[:user][:password]
+    types = params[:types].to_i
+    phone = params[:user][:phone]
+    address = params[:user][:address]
+    if @user_exist.blank?
+      @user = User.create(:name => name,:password => password,:types => types,:phone => phone,:address => address,:status => 0)
+    end
+  end
+  #修改用户
+  def edit
+    @user = User.find(params[:user_id])
+  end
+  #更新用户
+  def modify_user
+    @user_exist =  User.find(params[:user][:id])
+    password = params[:user][:password]
+    types = params[:types].to_i
+    phone = params[:user][:phone]
+    address = params[:user][:address]
+    @user = @user_exist.update_attributes(:password => password,:types => types,:phone => phone,:address => address)
+  end
+  # 禁用用户
+  def disable_user
+    user_id = params[:user_id]
+    user = User.find(user_id)
+    @user = user.update_attributes(:status => User::STATUS[:DISABLED])
+    @users = User.where(:status => 0)
+  end
 end

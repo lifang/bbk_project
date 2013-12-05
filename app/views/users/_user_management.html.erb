@@ -1,31 +1,9 @@
-<input type="button" value="添加" class="add_user"/>
+<input type="button" value="添加" id="add_user_unique" onclick="add_user_unique()"/>
 <div class="user_list">
-  <table>
-    <tr>
-      <td>用户名</td>
-      <td>角色</td>
-      <td>地址</td>
-      <td>电话</td>
-      <td>操作</td>
-    </tr>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name  %></td>
-        <td><%= User::TYPES_NAME[user.types] %></td>
-        <td><%= user.address  %></td>
-        <td><%= user.phone  %></td>
-        <td>
-          <input type="button" value="编辑" class="edit_user"/>
-          <input type="button" value="禁用" class="disable_user"/>
-        </td>
-      </tr>
-    <% end %>
-  </table>
+  <%= render :partial => 'users_list'  %>
 </div>
-
-
-<div class="add_users">
-  <%= form_for :user, :url => { :action => :login, :controller => :users } do |f| %>
+<div class="add_users_form" style="display: none">
+  <%= form_for :user, :url => { :action => :add_user, :controller => :users }, :remote => true, "data-type" => "script" do |f| %>
     <div class="login_item">
       <%= f.label :用户名： %>
       <%= f.text_field :name %>
@@ -34,8 +12,26 @@
       <%= f.label :密码： %>
       <%= f.password_field :password %>
     </div>
+    <select id="is_vip" name="types" class="select_marginRight">
+      <option></option>
+      <option value="0">管理员</option>
+      <option value="1">质检员</option>
+      <option value="2">PPT制作</option>
+      <option value="3">动画制作</option>
+    </select>
+
+    <div class="login_item">
+      <%= f.label :电话号码： %>
+      <%= f.text_field :phone %>
+    </div>
+    <div class="login_item">
+      <%= f.label :地址： %>
+      <%= f.text_field :address %>
+    </div>
     <div class="login_btn">
-      <%= f.submit "登录" %>
+      <%= f.submit "添加" %>
     </div>
   <% end %>
+</div>
+<div class="edit_users_form">
 </div>

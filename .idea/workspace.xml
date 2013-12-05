@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7b857bc-1164-4ffc-86ce-835b7877da04" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/charles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_left_chat_records.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_left_chat_records.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_workspaces.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/messages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/_edit_user.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/calculations/_salary_list.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/_users_list.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/calculations/_wage_settlement.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/add_user.js.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/calculations.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/calculations.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/calculations_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/calculations_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/disable_user.js.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/edit.js.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/modify_user.js.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/calculations/settlement_list.js.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/calculations/wage_settlement.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_nav_menus.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_nav_menus.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_user_management.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_user_management.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/users.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/users.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
     </list>
     <ignored path="bbk_project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -126,13 +137,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_left_chat_records.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_left_chat_records.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_chat_records.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="282" selection-start="511" selection-end="511" vertical-scroll-proportion="0.22580644">
+            <state line="5" column="282" selection-start="511" selection-end="511" vertical-scroll-proportion="-3.2692308">
               <folding>
                 <marker date="1386218385805" expanded="true" signature="253:279" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="357" selection-end="357" vertical-scroll-proportion="0.02866779">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -187,9 +207,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="48" />
-    <option name="y" value="24" />
+    <option name="y" value="-3" />
     <option name="width" value="1319" />
-    <option name="height" value="745" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -651,7 +671,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="24" width="1319" height="745" extended-state="7" />
+    <frame x="48" y="-3" width="1319" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -847,10 +867,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_chat_records.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="282" selection-start="511" selection-end="511" vertical-scroll-proportion="0.22580644">
+        <state line="5" column="282" selection-start="511" selection-end="511" vertical-scroll-proportion="-3.2692308">
           <folding>
             <marker date="1386218385805" expanded="true" signature="253:279" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="357" selection-end="357" vertical-scroll-proportion="0.02866779">
+          <folding />
         </state>
       </provider>
     </entry>
