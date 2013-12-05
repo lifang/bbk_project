@@ -98,3 +98,57 @@ function remove_disable(obj)
 {
     $(obj).removeAttr("disabled");
 }
+
+
+//刷新左边聊天数据
+function reload_left_records()
+{
+    if(document.getElementById("left_reciver_id"))
+    {
+        var user_id = $("#left_user_id").val();
+        var task_id = $("#left_task_id").val();
+        var accessory_id = $("#left_accessory_id").val();
+        var reciver_id = $("#left_reciver_id").val();
+        $.ajax({
+            url : "/messages/reload_msg",
+            type:'get',
+            dataType : 'script',
+            data:{
+                user_id : user_id,
+                task_id : task_id,
+                from : "left",
+                reciver_id : reciver_id,
+                accessory_id : accessory_id,
+            },
+            success:function(){
+            }
+        });
+    } else {}
+
+}
+
+//刷新右边聊天数据
+function reload_right_records()
+{
+    if(document.getElementById("right_reciver_id"))
+    {
+        var user_id = $("#right_user_id").val();
+        var task_id = $("#right_task_id").val();
+        var accessory_id = $("#right_accessory_id").val();
+        var reciver_id = $("#right_reciver_id").val();
+        $.ajax({
+            url : "/messages/reload_msg",
+            type:'get',
+            dataType : 'script',
+            data:{
+                user_id : user_id,
+                task_id : task_id,
+                from : "right",
+                reciver_id : reciver_id,
+                accessory_id : accessory_id,
+            },
+            success:function(){
+            }
+        });
+    }else{}
+}

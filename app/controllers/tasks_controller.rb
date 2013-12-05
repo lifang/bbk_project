@@ -14,7 +14,6 @@ class TasksController < ApplicationController
   def show
     #session[:user_id] = nil
     @user = User.find_by_id session[:user_id]
-    @users = User.where("status!= #{User::STATUS[:NORMAL]}")
     @task = Task.find_by_id params[:id]
     if @user.nil?
       redirect_to root_url
@@ -23,8 +22,20 @@ class TasksController < ApplicationController
       if !@task.nil? && (@task.ppt_doer == @user.id || @task.checker == @user.id || @task.flash_doer == @user.id)
         @title = "任务详情-#{@task.name}"
         @task_tag_id = @task.task_tag.id
-        @ppt_files = @task.accessories.where("types = '#{Accessory::TYPES[:PPT]}'").order("created_at")
-        @flash_files = @task.accessories.where("types = '#{Accessory::TYPES[:FLASH]}'").order("created_at")
+        case @user.types
+          when User::TYPES[:PPT]
+            @ppt_files = @task.accessories.where("types = '#{Accessory::TYPES[:PPT]}'").order("created_at")
+            @flash_files = @task.accessories.where("types = '#{Accessory::TYPES[:FLASH]}'").order("created_at")
+            @left_reciver = User.find_by_id @task.checker
+            @right_reciver = User.find_by_id @task.flash_doer
+          when User::TYPES[:FLASH]
+            @flash_files = @task.accessories.where("types = '#{Accessory::TYPES[:FLASH]}'").order("created_at")
+            @right_reciver = User.find_by_id @task.ppt_doer
+          when User::TYPES[:CHECKER]
+            @ppt_files = @task.accessories.where("types = '#{Accessory::TYPES[:PPT]}'").order("created_at")
+            @left_reciver = User.find_by_id @task.ppt_doer
+        end
+
       else
         redirect_to :action => :index
       end

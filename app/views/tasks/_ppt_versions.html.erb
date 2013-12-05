@@ -27,13 +27,9 @@
       <%= render :partial => "chat_records"%>
     </div>
   <% end %>
-  <% @reciver = nil %>
-  <% @users.each do |user| %>
-    <% if user.id == @user.id{@reciver=user} %> <% end %>
-  <% end %>
   <% if ppt.id == @ppt_files.last.id %>
   <div id="chat_form_<%= ppt.id %>" class="left_chat_form">
-    <%= render :partial => "chat_form"%>
+    <%= render :partial => "left_chat_form"%>
   </div>
   <% end %>
 </div>

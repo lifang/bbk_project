@@ -1,0 +1,14 @@
+<fieldset>
+  <legend>聊天窗口</legend>
+  <%= form_tag({:controller => :messages, :action => :send_msg}, "data-type" => "script",:remote => true, :method => :post ) do %>
+      <div>
+        <label>聊天：</label><input name="content" type="text" size="20">
+        <button id="btn_upload" type="submit" >发 送</button>
+      </div>
+      <input id="left_user_id" type="hidden" name="user_id" value="<%= @user.id %>" />
+      <input id="left_task_id" type="hidden" name="task_id" value="<%= @task.id %>" />
+      <input id="left_accessory_id" type="hidden" name="accessory_id" value="<%= @accessory.id %>" />
+      <input id="left_reciver_id" type="input" name="reciver_id" value="<%= @left_reciver.id %>" />
+      <input id="from" type="input" name="from" value="left" />
+  <% end %>
+</fieldset>

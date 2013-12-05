@@ -43,6 +43,7 @@ BbkProject::Application.routes.draw do
 
     collection do
       post :send_msg
+      get :reload_msg
     end
   end
   # Sample of regular route:
