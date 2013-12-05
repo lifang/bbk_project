@@ -40,12 +40,19 @@ module TasksHelper
     end
   end
 
+  #工作流程中上传文件或更新任务状态
   def update_task_status task_id, task_status
     task = Task.find task_id
-    checker = User.find_by_status_and_types(User::STATUS[:NORMAL], User::TYPES[:CHECKER])
-    case task_status
+    case task.status
       when Task::STATUS[:WAIT_UPLOAD_PPT]
+        checker = User.find_by_status_and_types(User::STATUS[:NORMAL], User::TYPES[:CHECKER])
         task.update_attributes(:status => Task::STATUS[:WAIT_FIRST_CHECK], :checker => checker.id)
+      when Task::STATUS[:WAIT_PUB_FLASH]
+        task.update_attributes(:status => Task::STATUS[:WAIT_ASSIGN_FLASH])
+      when Task::STATUS[:WAIT_UPLOAD_FLASH]
+        task.update_attributes(:status => Task::STATUS[:WAIT_PPT_DEAL])
+      when Task::STATUS[:WAIT_PPT_DEAL]
+        task.update_attributes(:status => Task::STATUS[:WAIT_SECOND_CHECK])
     end
     task
   end

@@ -50,6 +50,28 @@ function reload_tasks()
 }
 
 //显示或隐藏聊天栏
+//function chat(obj)
+//{
+//    $(obj).attr("disabled","true");
+//    var display_val = $(obj).parents().parents().next().css('display');
+//    var div_id = $(obj).parents().parents().next().attr('id');
+//    $(obj).parents().parents().parents().find("[class='chat_bar']").fadeOut(1000);
+//    $(obj).parents().parents().parents().find("[class='chat_bar']").hide();
+//    if(display_val == 'none')
+//    {
+//        $(obj).parents().parents().next().fadeIn(1000);
+//        $(obj).parents().parents().next().show();
+//    }
+//    else
+//    {
+////        $(obj).parents().parents().next().fadeOut(1000);
+//        $(obj).parents().parents().next().find("[id=div_id]").fadeOut(1000);
+//        $(obj).parents().parents().next().find("[id=div_id]").show();
+//    }
+//    $(obj).removeAttr("disabled");
+////    setTimeout(remove_disable(obj),9000);
+//}
+
 function chat(obj)
 {
     $(obj).attr("disabled","true");

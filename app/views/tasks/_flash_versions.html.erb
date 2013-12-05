@@ -1,3 +1,35 @@
 <% @flash_files.each do |flash| %>
-<div><a href="<%= flash.accessory_url %>" target="_blank" title="<%= flash.name%>-点击链接下载"><%= flash.name.size>40?"#{flash.name[0,40]}...":flash.name %></a></div>
+<div class="ppt_list_item">
+  <div class="accessory_name">
+    <a href="<%= flash.accessory_url %>" target="_blank" title="<%= flash.name%>-点击链接下载"><%= flash.name.size>16?"#{flash.name[0,16]}...":flash.name %></a>
+  </div>
+  <div id="button_bar" style="width: 100px; height: auto; float:right; margin:3px auto;">
+    <input id="<%= flash.id %>" type="button" value="聊 天" onclick="chat(this);" style="margin:0 auto">
+  </div>
+</div>
+
+<% @messages = flash.messages %>
+<% @accessory = flash %>
+
+<% if flash.id == @flash_files.last.id %>
+    <div id="right_chat_panel_<%= flash.id %>" class="chat_bar" style="border-top: none;">
+<% else %>
+    <div id="right_chat_panel_<%= flash.id %>" class="chat_bar" style="border-top: none; display: none;">
+<% end %>
+<% if flash.id == @flash_files.last.id %>
+    <div id="chat_records_<%= flash.id %>" class="left_chat_records" style="height: 200px;">
+      <%= render :partial => "chat_records"%>
+    </div>
+<% else %>
+    <div id="chat_records_<%= flash.id %>" class="left_chat_records">
+      <%= render :partial => "chat_records"%>
+    </div>
+<% end %>
+
+<% if flash.id == @flash_files.last.id %>
+    <div id="chat_form_<%= flash.id %>" class="left_chat_form">
+      <%= render :partial => "chat_form"%>
+    </div>
+<% end %>
+</div>
 <% end %>
