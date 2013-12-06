@@ -2,21 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7b857bc-1164-4ffc-86ce-835b7877da04" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/index.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/show.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/tasks.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/tasks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bbk_project.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386271100914" ignored="false" />
+    <file path="/Dummy.txt" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386308236558" ignored="false" />
     <file path="/tasks_controller.rb" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386207310305" ignored="false" />
     <file path="$USER_HOME$/aaa/app/controllers/wwww_controller.rb" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386208222564" ignored="false" />
     <file path="$PROJECT_DIR$/../qxg_manage/app/helpers/question_helper.rb" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386236462097" ignored="false" />
     <file path="$PROJECT_DIR$/../qxg_manage/db/schema.rb" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386236974405" ignored="false" />
     <file path="$PROJECT_DIR$/../qxg_manage/public/qixueguan/Course_1/Chapter_1/Round_3/questions.js" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386235002711" ignored="false" />
-    <file path="$PROJECT_DIR$/../qxg_manage/app/controllers/rounds_controller.rb" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386236092820" ignored="false" />
+    <file path="$PROJECT_DIR$/../qxg_manage/app/controllers/rounds_controller.rb" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386293770807" ignored="false" />
     <file path="$PROJECT_DIR$/../qxg_manage/public/qixueguan/Course_3/Chapter_4/Round_6/questions.js" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386236082775" ignored="false" />
     <file path="$PROJECT_DIR$/../qxg_manage/app/controllers/questions_controller.rb" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386236646394" ignored="false" />
     <file path="$PROJECT_DIR$/../qxg_manage/Gemfile" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386236757116" ignored="false" />
     <file path="$PROJECT_DIR$/../qxg_manage/config/routes.rb" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386236757116" ignored="false" />
+    <file path="$USER_HOME$/lantan_BAM/db/migrate/20130122054759_create_customers.rb" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386298587667" ignored="false" />
+    <file path="$USER_HOME$/lantan_BAM/lib/tasks/salary_list.rake" changelist="d7b857bc-1164-4ffc-86ce-835b7877da04" time="1386298599754" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,33 +47,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_left_chat_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_chat_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="32" selection-start="615" selection-end="630" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_right_chat_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/_right_chat_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="31" selection-start="335" selection-end="353" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/tasks/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="48" selection-start="630" selection-end="630" vertical-scroll-proportion="0.30210015">
-              <folding>
-                <element signature="tag#script#0" expanded="true" />
-                <element signature="e#435#618#0" expanded="true" />
-                <marker date="1386271211794" expanded="true" signature="437:612" placeholder="//..." />
-              </folding>
+            <state line="17" column="7" selection-start="541" selection-end="541" vertical-scroll-proportion="-11.115385">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="35" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,7 +68,16 @@
       <file leaf-file-name="messages_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="4" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.0">
+            <state line="16" column="61" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="29" selection-start="179" selection-end="186" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,17 +86,19 @@
       <file leaf-file-name="tasks.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/tasks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="28" selection-start="3076" selection-end="3084" vertical-scroll-proportion="0.0">
+            <state line="60" column="138" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <file leaf-file-name="20131206025441_modify_types_from_task.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20131206025441_modify_types_from_task.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="21" selection-start="834" selection-end="842" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="11" column="43" selection-start="276" selection-end="276" vertical-scroll-proportion="0.21085271">
+              <folding>
+                <element signature="e#167#271#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,24 +107,6 @@
         <entry file="file://$PROJECT_DIR$/app/views/messages/reload_msg.js.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="6" column="0" selection-start="444" selection-end="553" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_chat_records.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/_chat_records.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="24" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_flash_versions.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/_flash_versions.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="38" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,8 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_flash_versions.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb" />
@@ -166,12 +150,14 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_right_chat_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_left_chat_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/tasks.js" />
         <option value="$PROJECT_DIR$/app/views/tasks/reload_msg.js.erb" />
         <option value="$PROJECT_DIR$/app/views/messages/reload_msg.js.erb" />
         <option value="$PROJECT_DIR$/app/views/messages/send_msg.js.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20131206025441_modify_types_from_task.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/tasks.js" />
       </list>
     </option>
   </component>
@@ -248,12 +234,114 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="bbk_project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bbk_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activerecord (v3.1.2, ruby-1.9.3-p0) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bbk_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activerecord (v3.1.2, ruby-1.9.3-p0) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="active_record" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bbk_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activerecord (v3.1.2, ruby-1.9.3-p0) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="active_record" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="connection_adapters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bbk_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activerecord (v3.1.2, ruby-1.9.3-p0) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="active_record" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="connection_adapters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="abstract" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -356,7 +444,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bbk_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bbk_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,28 +503,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tasks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbk_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="messages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -536,8 +620,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -546,7 +628,7 @@
     <property name="options.lastSelected" value="editor.preferences.tabs" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/lantan_BAM" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../qxg_manage" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
@@ -841,17 +923,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-3" width="1319" height="772" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32919255" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3296617" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21793863" sideWeight="0.6708075" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22501966" sideWeight="0.6708075" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32919255" sideWeight="0.5003934" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4347826" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.43498453" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -924,85 +1006,29 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_flash_versions.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="38" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_flash_list.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="32" selection-start="129" selection-end="129" vertical-scroll-proportion="-2.6153846" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="61" selection-start="764" selection-end="1537" vertical-scroll-proportion="0.5936508" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_right_workspace.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="190" selection-end="190" vertical-scroll-proportion="-3.2692308" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_list.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="34" selection-start="117" selection-end="147" vertical-scroll-proportion="-2.6153846" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_ppt_versions.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="45" selection-start="1543" selection-end="1543" vertical-scroll-proportion="-16.692308" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_right_chat_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="31" selection-start="335" selection-end="353" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="7" column="31" selection-start="335" selection-end="353" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_left_chat_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="615" selection-end="630" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="4" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="32" selection-start="615" selection-end="630" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="21" selection-start="834" selection-end="842" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/tasks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="28" selection-start="3076" selection-end="3084" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="39" column="21" selection-start="834" selection-end="842" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_chat_records.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="24" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_flash_versions.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="38" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="20" column="38" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/messages/reload_msg.js.erb">
@@ -1019,13 +1045,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="35" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="29" selection-start="179" selection-end="186" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="61" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131125063309_remove_taks_tag_id_from_tasks.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="22" selection-start="410" selection-end="410" vertical-scroll-proportion="0.39657855" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131128134804_modify_accessory_url_from_accessory.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="8" selection-start="72" selection-end="72" vertical-scroll-proportion="0.02643857" />
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/ruby/gems/1.9.1/gems/activerecord-3.1.2/lib/active_record/connection_adapters/abstract/schema_statements.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="261" column="57" selection-start="9789" selection-end="9789" vertical-scroll-proportion="0.33281493" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/tasks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="138" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="48" selection-start="630" selection-end="630" vertical-scroll-proportion="0.30210015">
+        <state line="17" column="7" selection-start="541" selection-end="541" vertical-scroll-proportion="-11.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131206025441_modify_types_from_task.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="43" selection-start="276" selection-end="276" vertical-scroll-proportion="0.21085271">
           <folding>
-            <element signature="tag#script#0" expanded="true" />
-            <element signature="e#435#618#0" expanded="true" />
-            <marker date="1386271211794" expanded="true" signature="437:612" placeholder="//..." />
+            <element signature="e#167#271#0" expanded="true" />
           </folding>
         </state>
       </provider>

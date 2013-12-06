@@ -21,6 +21,8 @@ function get_tasks(user_id)
 //审核任务（一检、二检）
 function verify(obj, user_id, task_id)
 {
+  if(confirm("确认审核！")）
+  {
     $(obj).remove();
     $.ajax({
 //        async : true,
@@ -35,6 +37,7 @@ function verify(obj, user_id, task_id)
 //           alert(2);
         }
     });
+  }
 }
 
 //刷新任务数据
