@@ -10,7 +10,7 @@
       <td><%= calculation.name %></td>
       <td><%= User::TYPES_NAME[calculation.types] %></td>
       <td><%= calculation.time %></td>
-      <td><input type="button" value="<%= Calculation::IS_PAY_NAME[calculation.is_pay] %>" calculation_id="<%= calculation.id %>" onclick="whether_payment(this)"/></td>
+      <td><input type="button" class="green_btn" value="<%= Calculation::IS_PAY_NAME[calculation.is_pay] %>" calculation_id="<%= calculation.id %>" onclick="whether_payment(this)"/></td>
     </tr>
   <% end %>
 </table>

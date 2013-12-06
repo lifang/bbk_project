@@ -1,11 +1,14 @@
-<ol class="ol_menus">
-  <li>
-    <div class="tou" style="margin: 0 auto;"><span class="tou_label"><a href="/users/management">任务包</a></span></div>
-  </li>
-  <li>
-    <div class="tou"><span class="tou_label"><%= link_to "工资结算", {:controller => "calculations", :action => "wage_settlement"}, remote: :true, 'data_type' => "script" %></span></div>
-  </li>
-  <li>
-    <div class="tou"><span class="tou_label"><%= link_to "用户管理", {:controller => "users", :action => "user_management"}, remote: :true, 'data_type' => "script" %></span></div>
-  </li>
-</ol>
+
+<nav>
+  <ul class="theTabs">
+    <li class="theTab used">
+      <span><a href="/users/management">任务包</a></span>
+    </li>
+    <li class="theTab">
+      <span><%= link_to "工资结算", {:controller => "calculations", :action => "wage_settlement"}, remote: :true, 'data_type' => "script" %></span>
+    </li>
+    <li class="theTab">
+      <span><%= link_to "用户管理", {:controller => "users", :action => "user_management"}, remote: :true, 'data_type' => "script" %></span>
+    </li>
+  </ul>
+</nav>

@@ -78,6 +78,7 @@ class UsersController < ApplicationController
     end
     @successornot = '上传成功'
     begin
+      #解压
       Archive::Zip.extract("#{zip_url}.zip","#{Rails.root}/public/accessories")
       File.delete "#{zip_url}.zip"
       task_tags = TaskTag.create(:name => filename_body, :status => 0)
@@ -89,8 +90,15 @@ class UsersController < ApplicationController
         if suffix.eql?("ppt")
           file_old_url = zip_url + '/' + file
           origin_ppt_url = "/" + newfilename +"/" + file
-          FileUtils.mv file_old_url,"#{File.expand_path(Rails.root)}/public/accessories/#{newfilename}",:force => true
-          Task.create(:name => ppt_name,:types => 0,:origin_ppt_url => origin_ppt_url,:status => 0,:task_tag_id => task_tags.id)
+          
+          tasks = Task.create(:name => ppt_name,:types => 0,:origin_ppt_url => origin_ppt_url,:status => 0,:task_tag_id => task_tags.id,:is_calculate => 1)
+          tasks_id = tasks.id
+          # 任务包名
+          task_url = "#{File.expand_path(Rails.root)}/public/accessories/#{newfilename}" + "/task_" + tasks_id.to_s + "/origin"
+          FileUtils.mkdir_p "#{File.expand_path(task_url)}" if !(File.exist?("#{File.expand_path(task_url)}"))
+          FileUtils.mv file_old_url,task_url,:force => true
+          ppt_sql_save = "/accessories/#{newfilename}" + "/task_" + tasks_id.to_s + "/origin/" + file
+          tasks.update_attributes(:origin_ppt_url => ppt_sql_save)
         end
       end
       FileUtils.rm_rf "#{zip_url}"
@@ -102,9 +110,12 @@ class UsersController < ApplicationController
   end
   #下载任务
   def download
+    zip_url = "#{Rails.root}/public/accessories/"
+    if   File.exist?("#{zip_url}1234.zip")
+      File.delete "#{zip_url}1234.zip"
+    end
     params[:task_tag_id]
     tasks = Task.find_by_sql("select * from tasks where tasks.`status` in (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and tasks.task_tag_id = #{params[:task_tag_id]}")
-    zip_url = "#{Rails.root}/public/accessories/"
     tasks.each do |task|
       task_id = task.id
       accessory = Accessory.find_by_sql("SELECT  * from accessories where task_id = #{task_id} ORDER BY created_at DESC limit 1")

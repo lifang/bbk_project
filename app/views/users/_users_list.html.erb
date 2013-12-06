@@ -13,8 +13,8 @@
       <td><%= user.address  %></td>
       <td><%= user.phone  %></td>
       <td>
-        <%= link_to "编辑", {:controller => "users", :action => "edit", :user_id => user.id}, remote: :true, 'data_type' => "script" %>
-        <%= link_to "禁用", {:controller => "users", :action => "disable_user", :user_id => user.id},confirm: '确认禁用?', remote: :true, 'data_type' => "script" %>
+        <%= link_to "编辑", {:controller => "users", :action => "edit", :user_id => user.id}, remote: :true, 'data_type' => "script",:class=>"green_btn" %>
+        <%= link_to "禁用", {:controller => "users", :action => "disable_user", :user_id => user.id},confirm: '确认禁用?', remote: :true, 'data_type' => "script" ,:class=>"green_btn"%>
       </td>
     </tr>
   <% end %>

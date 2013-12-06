@@ -11,6 +11,8 @@ class Task < ActiveRecord::Base
   TYPES = {:PPT => 0, :FLASH => 1}
   TYPES_NAME = {0 => "PPT制作", 1 => "动画制作"}
 
+  IS_CALCULATE = {:yse =>0,:no => 1}
+
   #获取用户相关的任务数据
   def self.list user_id,user_types
     if user_types == User::TYPES[:CHECKER]    #质检用户的任务数据

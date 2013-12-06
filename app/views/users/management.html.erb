@@ -1,14 +1,29 @@
-<div id="header" xmlns="http://www.w3.org/1999/html">
-  <%= render :partial => "share/header"%>
-</div>
-<div class="guanliyuan">
-  <%= render :partial => "users/nav_menus" %>
-</div>
-<div class="manager_body" style="text-align: center">
-  <div class="upload">
-    <%= render :partial => 'upload_filetag' %>
+<div class="wrap">
+  <div class="head">
+    <div class="top">
+      <h1>head</h1>
+      <div id="userinfo" xmlns="http://www.w3.org/1999/html">
+        <%= render :partial => "share/header"%>
+      </div>
+    </div>
   </div>
-  <div class="list_file" >
-        <%= render :partial => 'list_file' %>
+  <div class="main">
+    <div class="m_con">
+      
+      <div class="guanliyuan">
+        <%= render :partial => "users/nav_menus" %>
+      </div>
+      <div class="manager_body">
+        <div class="upload">
+          <%= render :partial => 'upload_filetag' %>
+        </div>
+        <div class="list_file " >
+          <%= render :partial => 'list_file' %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<div class="second_bg"></div>
+
+

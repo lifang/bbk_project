@@ -5,5 +5,5 @@ class Accessory < ActiveRecord::Base
   TYPES = {:PPT =>0, :FLASH => 1}
   TYPES_NAME = {0 => "PPT", 1 => "FLASH"}
   STATUS = {:NO=>0,:YES=>1}
-  STATUS_NAME = {0 => '未上传',1 => '已上传'}
+  STATUS_NAME = {0 => '非最终版',1 => '最终版'}
 end

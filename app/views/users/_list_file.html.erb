@@ -1,10 +1,10 @@
 <table style="text-align: center;">
   <tr>
-    <td style="width: 250px;">任务批次</td>
-    <td style="width: 250px;">上传日期</td>
-    <td style="width: 200px;">状态</td>
-    <td style="width: auto;">下载任务</td>
-    <td style="width: auto;">确认终检</td>
+    <td >任务批次</td>
+    <td >上传日期</td>
+    <td >状态</td>
+    <td >下载任务</td>
+    <td >确认终检</td>
   </tr>
   <%  @task_tags_arr.each do |task_tag| %>
     <tr>
@@ -16,15 +16,15 @@
       <td><%= task_tag[:name]%></td>
       <td><%= task_tag[:created_at].to_s[0,19]%></td>
       <td><%= task_tag[:complet_count]%><label style="font: oblique; font: 20px; margin: 0 auto;">|</label><%= task_tag[:unfinish_count]%></td>
-      <td><input type="button" value="下载任务" name="ajax_download" task_tag_id="<%= task_tag[:id] %>" /></td>
+      <td><input type="button" class="green_btn" value="下载任务" name="ajax_download" task_tag_id="<%= task_tag[:id] %>" /></td>
       <td>
         <% if  task_tag[:unfinish_count] >0 %>
-          <input type="button" value="不可终检" name="ajax_final" task_tag_id="<%= task_tag[:id] %>" />
+          <input type="button" class="green_btn" value="不可终检" name="ajax_final" task_tag_id="<%= task_tag[:id] %>" />
         <% else %>
           <% if task_tag[:status].eql?(TaskTag::STATUS[:COMPLETE]) %>
-            <input type="button" value="终检完成" name="ajax_final" task_tag_id="<%= task_tag[:id] %>" />
+            <input type="button" class="green_btn" value="终检完成" name="ajax_final" task_tag_id="<%= task_tag[:id] %>" />
           <% else %>
-            <input type="button" value="确认终检" name="ajax_final" task_tag_id="<%= task_tag[:id] %>" />
+            <input type="button" class="green_btn" value="确认终检" name="ajax_final" task_tag_id="<%= task_tag[:id] %>" />
           <% end %>
         <% end %>
       </td>

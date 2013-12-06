@@ -1,37 +1,43 @@
-<input type="button" value="添加" id="add_user_unique" onclick="add_user_unique()"/>
+<div class="btn_div"><input type="button" value="添加" id="add_user_unique" onclick="add_user_unique()" class="green_btn"/></div>
 <div class="user_list">
   <%= render :partial => 'users_list'  %>
 </div>
-<div class="add_users_form" style="display: none">
-  <%= form_for :user, :url => { :action => :add_user, :controller => :users }, :remote => true, "data-type" => "script" do |f| %>
-    <div class="login_item">
-      <%= f.label :用户名： %>
-      <%= f.text_field :name %>
-    </div>
-    <div class="login_item">
-      <%= f.label :密码： %>
-      <%= f.password_field :password %>
-    </div>
-    <select id="is_vip" name="types" class="select_marginRight">
-      <option></option>
-      <option value="0">管理员</option>
-      <option value="1">质检员</option>
-      <option value="2">PPT制作</option>
-      <option value="3">动画制作</option>
-    </select>
 
-    <div class="login_item">
-      <%= f.label :电话号码： %>
-      <%= f.text_field :phone %>
-    </div>
-    <div class="login_item">
-      <%= f.label :地址： %>
-      <%= f.text_field :address %>
-    </div>
-    <div class="login_btn">
-      <%= f.submit "添加" %>
-    </div>
-  <% end %>
+<div class="add_users_form addUser" style="display: none" id="users_add_ff">
+    <div id="add_user" class="second_content" style="display:none; position: absolute; z-index: 100;">
+    <span class="close" >关闭</span>
+    <h1>添加用户</h1>
+    <%= form_for :user, :url => { :action => :add_user, :controller => :users }, :remote => true, "data-type" => "script" do |f| %>
+      <div class="login_item">
+        <%= f.label :用户名： %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="login_item">
+        <%= f.label :密码： %>
+        <%= f.password_field :password %>
+      </div>
+      <select id="is_vip" name="types" class="select_marginRight">
+        <option></option>
+        <option value="0">管理员</option>
+        <option value="1">质检员</option>
+        <option value="2">PPT制作</option>
+        <option value="3">动画制作</option>
+      </select>
+
+      <div class="login_item">
+        <%= f.label :电话号码： %>
+        <%= f.text_field :phone %>
+      </div>
+      <div class="login_item">
+        <%= f.label :地址： %>
+        <%= f.text_field :address %>
+      </div>
+      <div class="login_btn">
+        <%= f.submit "添加" ,:class=>"green_btn"%>
+      </div>
+    <% end %>
+  </div>
 </div>
 <div class="edit_users_form">
 </div>
+

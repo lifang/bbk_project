@@ -54,7 +54,17 @@ $(function(){
 
 
 function add_user_unique(){
-    $(".add_users_form").show();
+//    alert(1);
+//    var doc_height = $(document).height();
+//    var doc_width = $(document).width();
+//    var u_height = $("#add_user").height();
+//    var u_width = $("#add_user").width();
+//    var top = (doc_height-u_height)/2;
+//    var left = (doc_width-u_width)/2;
+//     $("#add_user").css("margin-top",top);
+//     $("#add_user").css("margin-left",left);
+    $("#users_add_ff").show();
+    $("#add_user").show();
 }
 
 function edit_user_unique(){
@@ -101,7 +111,6 @@ function whether_payment(obj){
                 else{
                     $(obj).val("已付款");
                 }
-
             }
         })
     }
