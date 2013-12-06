@@ -6,8 +6,7 @@ $("#task_details").html('<%= escape_javascript(render :partial => "task_details_
         $("#workspace_left").find("[class='file_uploadfile_panel']").html('<%= escape_javascript(render :partial => "upload_flash_source")%>');
         $("#workspace_left").find("div").find("[id='file_type']").val("ppt");
     <% elsif @file_type == "flash" %>
-        $("#workspace_right").find("[class='file_uploadfile_panel']").html('<%= escape_javascript(render :partial => "upload_flash_source")%>');
-        $("#workspace_right").find("div").find("[id='file_type']").val("flash");
+        $("#flash_list").html('<%= escape_javascript(render :partial => "flash_list")%>');
     <% else %>
     <% end %>
 <% else %>

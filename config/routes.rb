@@ -7,7 +7,7 @@ BbkProject::Application.routes.draw do
 
     collection do
       get :assign_tasks, :verify_task, :reload_tasks
-      post :uploadfile
+      post :uploadfile, :publish_flash_task
       get 'tasktag_pptlist'
     end
   end
@@ -42,7 +42,8 @@ BbkProject::Application.routes.draw do
     end
 
     collection do
-      post :send
+      post :send_msg
+      get :reload_msg
     end
   end
   # Sample of regular route:

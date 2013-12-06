@@ -1,0 +1,9 @@
+<% if @from == "left" %>
+$("#chat_records_<%= @accessory.id %>").html('<%= escape_javascript(render :partial => "tasks/chat_records")%>');
+$("#chat_form_<%= @accessory.id %>").html('<%= escape_javascript(render :partial => "tasks/left_chat_form")%>');
+<% elsif @from == "right" %>
+$("#chat_records_<%= @accessory.id %>").html('<%= escape_javascript(render :partial => "tasks/chat_records")%>');
+$("#chat_form_<%= @accessory.id %>").html('<%= escape_javascript(render :partial => "tasks/right_chat_form")%>');
+<% else %>
+<% end %>
+$("#chat_records_<%= @accessory.id %>").scrollTop($("#chat_records_<%= @accessory.id %>").scrollTop()+10000);

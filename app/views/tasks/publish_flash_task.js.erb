@@ -1,0 +1,7 @@
+alert("<%= @notice %>");
+<%if @status == true  %>
+$("#task_details").html('<%= escape_javascript(render :partial => "task_details_list")%>');
+$("#publish_flash_task").remove();
+<% else %>
+$("#publish_flash_task").html('<%= escape_javascript(render :partial => "pub_flash_task")%>');
+<% end %>

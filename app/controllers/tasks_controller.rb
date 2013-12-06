@@ -2,6 +2,7 @@
 class TasksController < ApplicationController
   layout 'tasks'
   def index
+    # session[:user_id] = nil
     @title = "任务中心"
     @user = User.find_by_id session[:user_id]
     if !@user.nil? && @user.types != User::TYPES[:ADMIN]
@@ -12,6 +13,7 @@ class TasksController < ApplicationController
   end
 
   def show
+    #session[:user_id] = nil
     @user = User.find_by_id session[:user_id]
     @task = Task.find_by_id params[:id]
     if @user.nil?
@@ -21,8 +23,20 @@ class TasksController < ApplicationController
       if !@task.nil? && (@task.ppt_doer == @user.id || @task.checker == @user.id || @task.flash_doer == @user.id)
         @title = "任务详情-#{@task.name}"
         @task_tag_id = @task.task_tag.id
-        @ppt_files = @task.accessories.where("types = '#{Accessory::TYPES[:PPT]}'").order("created_at")
-        @flash_files = @task.accessories.where("types = '#{Accessory::TYPES[:FLASH]}'").order("created_at")
+        case @user.types
+          when User::TYPES[:PPT]
+            @ppt_files = @task.accessories.where("types = '#{Accessory::TYPES[:PPT]}'").order("created_at")
+            @flash_files = @task.accessories.where("types = '#{Accessory::TYPES[:FLASH]}'").order("created_at")
+            @left_reciver = User.find_by_id @task.checker
+            @right_reciver = User.find_by_id @task.flash_doer
+          when User::TYPES[:FLASH]
+            @flash_files = @task.accessories.where("types = '#{Accessory::TYPES[:FLASH]}'").order("created_at")
+            @right_reciver = User.find_by_id @task.ppt_doer
+          when User::TYPES[:CHECKER]
+            @ppt_files = @task.accessories.where("types = '#{Accessory::TYPES[:PPT]}'").order("created_at")
+            @left_reciver = User.find_by_id @task.ppt_doer
+        end
+
       else
         redirect_to :action => :index
       end
@@ -33,8 +47,8 @@ class TasksController < ApplicationController
   def assign_tasks
     user = User.find_by_id params[:user_id]
     Task.get_tasks user.id, user.types
-    @tasks = Task.list user.id, user.types
-    @info = {:notice => notice, :tasks => @tasks}
+    tasks = Task.list user.id, user.types
+    @info = {:notice => notice, :tasks => tasks}
   end
 
   #审核任务
@@ -75,15 +89,15 @@ class TasksController < ApplicationController
     @info = {:notice => notice, :task => task, :user_id => user.id, :status => status}
   end
 
-  #上传文件（PPT 、FLASH、flash源码文件）
+  #上传文件PPT、flash
   def uploadfile
     uploadfile = params[:file]
     @file_type = params[:file_type]
-    @task = Task.find_by_id params[:task_id]
-    @task_tag_id = @task.task_tag.id
+    task = Task.find_by_id params[:task_id]
+    @task_tag_id = task.task_tag.id
     longness = nil
     file_type = nil
-    file_url = "#{Rails.root}/public/accessories/task_tag_#{@task_tag_id}/task_#{@task.id}/#{@file_type}"
+    file_url = "#{Rails.root}/public/accessories/task_tag_#{@task_tag_id}/task_#{task.id}/#{@file_type}"
     @user = User.find_by_id params[:user_id]
     if !uploadfile.nil?
 
@@ -96,16 +110,51 @@ class TasksController < ApplicationController
       else
       end
       upload uploadfile, file_url
-      p @task.id
-      p @task.status
-      @task = update_task_status @task.id, @task.status
+      @task = update_task_status task.id, task.status, @user.types
       Accessory.create(:name => uploadfile.original_filename, :types => file_type,:task_id => @task.id,
         :status => Accessory::STATUS[:NO], :accessory_url => "/accessories/task_tag_#{@task_tag_id}/task_#{@task.id}/#{@file_type}/#{uploadfile.original_filename}", :longness => longness) if !longness.nil? || !file_type.nil?
-      @ppt_files = @task.accessories.where("types = 'ppt'").order("created_at")
+      @ppt_files = @task.accessories.where("types = #{Accessory::TYPES[:PPT]}").order("created_at")
+      @flash_files = @task.accessories.where("types = #{Accessory::TYPES[:FLASH]}").order("created_at")
+      case @user.types
+        when User::TYPES[:PPT]
+          @left_reciver = User.find_by_id @task.checker
+          @right_reciver = User.find_by_id @task.flash_doer
+        when User::TYPES[:FLASH]
+          @right_reciver = User.find_by_id @task.ppt_doer
+      end
       @notice = "上传#{@file_type}成功!"
       @status = true
     else
       @notice = "没有上传文件!"
+      @status = false
+    end
+  end
+
+  
+  def uploadfile_flash_source_file
+    params[]
+  end  
+
+  #发布动画任务
+  def publish_flash_task
+    uploadfile = params[:file]
+    @task = Task.find_by_id params[:task_id]
+    @task_tag_id = @task.task_tag.id
+    file_url = "#{Rails.root}/public/accessories/task_tag_#{@task_tag_id}/task_#{@task.id}/origin"
+    @user = User.find_by_id params[:user_id]
+    if @user.types == User::TYPES[:PPT]
+      if !uploadfile.nil?
+        upload uploadfile, file_url
+        @task = update_task_status @task.id, @task.status
+        @task.update_attributes(:origin_flash_url=>"/accessories/task_tag_#{@task_tag_id}/task_#{@task.id}/origin/#{uploadfile.original_filename}")
+        @notice = "FLASH任务发布成功!"
+        @status = true
+      else
+        @notice = "没有上传文件!"
+        @status = false
+      end
+    else
+      @notice = "该用户没有权限发布任务!"
       @status = false
     end
   end
@@ -120,11 +169,6 @@ class TasksController < ApplicationController
     end
     @task
   end
-  #private
-  #
-  #def get_host_and_port
-  #  @host_and_port = request.host_with_port
-  #end
 
   #任务包ppt列表
   def tasktag_pptlist

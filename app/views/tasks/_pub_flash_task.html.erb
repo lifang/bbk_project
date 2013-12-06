@@ -1,12 +1,14 @@
+<% if @user.types == User::TYPES[:PPT] && @task.status == Task::STATUS[:WAIT_PUB_FLASH] %>
 <fieldset>
-  <legend>发布flash任务</legend>
-  <%= form_tag({:action => :uploadfile}, :multipart => true ,:remote => true ) do %>
+  <legend>发布FLASH任务</legend>
+  <%= form_tag({:action => :publish_flash_task}, :multipart => true ,:remote => true ) do %>
       <div class="form_div">
         <%= file_field_tag 'file', :onchange => "handleUpload(this);file_validate(this);"%>
         <button id="btn_upload" type="submit"  onchange="file_validate(this)" >上 传</button>
       </div>
       <input type="hidden" name="user_id" value="<%= @user.id %>" />
       <input type="hidden" name="task_id" value="<%= @task.id %>" />
-      <input id="file_type" type="hidden" name="file_type" />
+      <input id="file_type" type="input"  value="pub_flash_task"/>
   <% end %>
 </fieldset>
+<% end %>

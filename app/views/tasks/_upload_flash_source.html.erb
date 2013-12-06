@@ -1,5 +1,5 @@
 <fieldset>
-  <legend>文件上传</legend>
+  <legend>FLASH源文件上传</legend>
   <%= form_tag({:action => :uploadfile}, :multipart => true ,:remote => true ) do %>
       <div class="form_div">
         <%= file_field_tag 'file', :onchange => "handleUpload(this);file_validate(this);"%>

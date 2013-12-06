@@ -6,6 +6,9 @@
 a { text-decoration: none;}
 
 *{ padding: 0px; }
+
+body{ background-color:#edf0f1; }
+
 .header{
     width: 100%;
     height: 40px;
@@ -20,7 +23,7 @@ a { text-decoration: none;}
 .summary{
     margin: 0 auto;
     width: 100%;
-    height: 30px;
+    height: 40px;
     /*background-color: beige;*/
     display: inline-block;
 }
@@ -33,13 +36,14 @@ a { text-decoration: none;}
 }
 
 .item{
-    margin: 0 auto 0 4%;
-    width: 28%;
-    height: 30px;
+    margin: 10px auto 10px 4%;
+    width: 300px;
+    height: 20px;
     float: left;
     vertical-align: middle;
     /*background-color: orangered;*/
 }
+
 label{
     font-size: 18px;
 }
@@ -112,18 +116,17 @@ label{
 .task_details_container{
     margin: 0 auto;
     width: 100%;
-    height: 120px;
+    height: 150px;
     display: inline-block;
 }
 
 .task_details_data{
     margin: 0 auto;
     width: 80%;
-    height: 120px;
+    height: 140px;
     border: 1px darkgrey solid;
     background-color: beige;
 }
-
 .task_details_data .item{
     margin: 1% auto auto 12%;
     width: 30%;
@@ -180,36 +183,40 @@ label{
 }
 
 .files_list_panel fieldset .list_div{
-    margin: 5px 10px 5px 10px;
-    width: auto;
+    margin: 5px auto 0 auto;
+    width: 351px;
     height: auto;
-    background-color: white;
+    /*background-color: white;*/
 }
 .ppt_list_item{
-    margin: 0 5px 5px 5px;
-    width: auto;
+    margin: 5px auto 0 auto;
+    width: 351px;
     height: 30px;
     border: 1px grey dashed;
     text-align: center;
-    z-index: 3;
+    display:inline-block;
     /*background-color: cornflowerblue;*/
 }
 
 .chat_bar{
-    margin: -5px 5px 5px 5px;
+    margin: -5px auto 5px auto;
     height: 250px;
-    width: auto;
-    border: 1px grey dashed;
-    background-color: royalblue;
-    display: none;
+    width: 351px;
+    border: 1px grey solid;
+    float:left;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /*display: none;*/
+    z-index: 0;
 }
 
 .left_chat_records{
     margin: 0 auto;
-    width: 100%;
-    height: 200px;
+    width: 351px;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    display: inline-block;
     /*background-color: black;*/
 }
 
@@ -217,25 +224,25 @@ label{
     margin: 0 auto;
     height: 50px;
     width: 100%;
-    background-color: chartreuse;
-}
-
-.left_chat_form fieldset form{
-    height: 30px;
-    width: 100%;
-}
-
-.left_chat_form fieldset .form_div{
-    margin: 0 30px;
-    width: auto;
-    height: auto;
+    z-index: 1;
+    /*background-color: chartreuse;*/
 }
 
 .left_chat_form fieldset{
     margin: 2px auto;
     height: 98%;
     width: 100%;
+    background-color: cadetblue;
+    z-index: 2;
 }
+
+.left_chat_form fieldset form{
+    height: 30px;
+    width: 100%;
+    z-index: 3;
+}
+
+.accessory_name{width:250px; height:20px; margin:6px auto; float:left;}
 
 .files_list_panel fieldset .list_div div a{
     margin: 5px auto auto auto;
@@ -274,3 +281,12 @@ label{
 .file_uploadfile_panel fieldset #btn_upload{
     float: right;
 }
+
+//圆角矩形
+.RoundedCorner{background: #9BD1FA; height:auto; width:300px;}
+b.rtop, b.rbottom{display:block; background: #edf0f1}
+b.rtop b, b.rbottom b{display:block;height: 1px;overflow: hidden; background: #9BD1FA}
+b.r1{margin: 0 5px}
+b.r2{margin: 0 3px}
+b.r3{margin: 0 2px}
+b.rtop b.r4, b.rbottom b.r4{margin: 0 1px;height: 2px}
