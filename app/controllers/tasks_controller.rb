@@ -2,6 +2,7 @@
 class TasksController < ApplicationController
   layout 'tasks'
   def index
+    # session[:user_id] = nil
     @title = "任务中心"
     @user = User.find_by_id session[:user_id]
     if !@user.nil? && @user.types != User::TYPES[:ADMIN]
@@ -109,11 +110,18 @@ class TasksController < ApplicationController
       else
       end
       upload uploadfile, file_url
-      @task = update_task_status task.id, task.status
+      @task = update_task_status task.id, task.status, @user.types
       Accessory.create(:name => uploadfile.original_filename, :types => file_type,:task_id => @task.id,
         :status => Accessory::STATUS[:NO], :accessory_url => "/accessories/task_tag_#{@task_tag_id}/task_#{@task.id}/#{@file_type}/#{uploadfile.original_filename}", :longness => longness) if !longness.nil? || !file_type.nil?
       @ppt_files = @task.accessories.where("types = #{Accessory::TYPES[:PPT]}").order("created_at")
       @flash_files = @task.accessories.where("types = #{Accessory::TYPES[:FLASH]}").order("created_at")
+      case @user.types
+        when User::TYPES[:PPT]
+          @left_reciver = User.find_by_id @task.checker
+          @right_reciver = User.find_by_id @task.flash_doer
+        when User::TYPES[:FLASH]
+          @right_reciver = User.find_by_id @task.ppt_doer
+      end
       @notice = "上传#{@file_type}成功!"
       @status = true
     else
@@ -121,6 +129,11 @@ class TasksController < ApplicationController
       @status = false
     end
   end
+
+  
+  def uploadfile_flash_source_file
+    params[]
+  end  
 
   #发布动画任务
   def publish_flash_task
@@ -156,11 +169,6 @@ class TasksController < ApplicationController
     end
     @task
   end
-  #private
-  #
-  #def get_host_and_port
-  #  @host_and_port = request.host_with_port
-  #end
 
   #任务包ppt列表
   def tasktag_pptlist

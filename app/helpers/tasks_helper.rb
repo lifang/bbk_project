@@ -41,18 +41,26 @@ module TasksHelper
   end
 
   #工作流程中上传文件或更新任务状态
-  def update_task_status task_id, task_status
-    task = Task.find task_id
+  def update_task_status task_id, task_status, user_types
+    task = Task.find_by_id task_id
     case task.status
       when Task::STATUS[:WAIT_UPLOAD_PPT]
-        checker = User.find_by_status_and_types(User::STATUS[:NORMAL], User::TYPES[:CHECKER])
-        task.update_attributes(:status => Task::STATUS[:WAIT_FIRST_CHECK], :checker => checker.id)
+        if user_types == User::TYPES[:PPT]
+          checker = User.find_by_status_and_types(User::STATUS[:NORMAL], User::TYPES[:CHECKER])
+          task.update_attributes(:status => Task::STATUS[:WAIT_FIRST_CHECK], :checker => checker.id)
+        end  
       when Task::STATUS[:WAIT_PUB_FLASH]
-        task.update_attributes(:status => Task::STATUS[:WAIT_ASSIGN_FLASH])
+        if user_types == User::TYPES[:PPT]
+          task.update_attributes(:status => Task::STATUS[:WAIT_ASSIGN_FLASH])
+        end  
       when Task::STATUS[:WAIT_UPLOAD_FLASH]
-        task.update_attributes(:status => Task::STATUS[:WAIT_PPT_DEAL])
+        if user_types == User::TYPES[:FLASH]
+          task.update_attributes(:status => Task::STATUS[:WAIT_PPT_DEAL])
+        end  
       when Task::STATUS[:WAIT_PPT_DEAL]
-        task.update_attributes(:status => Task::STATUS[:WAIT_SECOND_CHECK])
+        if user_types == User::TYPES[:PPT]
+          task.update_attributes(:status => Task::STATUS[:WAIT_SECOND_CHECK])
+        end  
     end
     task
   end
