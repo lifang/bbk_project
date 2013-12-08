@@ -6,10 +6,10 @@
         <label>任务批次:</label><%= @task.task_tag.name %>
     </div>
     <div class="item">
-        <label>PPT任务资料:</label><%= @task.origin_ppt_url %>
+        <label>PPT任务资料:</label><a href="<%= @task.origin_ppt_url %>"><%= @task.origin_ppt_url %></a>
     </div>
     <div class="item">
-        <label>FLASH任务资料:</label><%= @task.origin_flash_url %>
+        <label>FLASH任务资料:</label><a href="<%= @task.origin_flash_url %>"><%= @task.origin_flash_url %></a>
     </div>
     <div class="item">
         <label>任务状态:</label><%= Task::STATUS_NAME[@task.status] %>

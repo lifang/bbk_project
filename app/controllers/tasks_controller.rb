@@ -68,6 +68,8 @@ class TasksController < ApplicationController
               status = 0
             elsif task.status == Task::STATUS[:WAIT_SECOND_CHECK]
               task.update_attributes(:status => Task::STATUS[:WAIT_FINAL_CHECK])
+              ppt_files = task.accessories.where("types=#{Accessory::TYPES[:PPT]}").order("created_at")
+              ppt_files.last.update_attributes(:status => "#{Accessory::STATUS[:YES]}")
               status = 0
             else
               status = -1
@@ -85,7 +87,6 @@ class TasksController < ApplicationController
       notice = "非法操作:用户不存在"
       status = -1
     end
-    p task
     @info = {:notice => notice, :task => task, :user_id => user.id, :status => status}
   end
 
@@ -100,7 +101,6 @@ class TasksController < ApplicationController
     file_url = "#{Rails.root}/public/accessories/task_tag_#{@task_tag_id}/task_#{task.id}/#{@file_type}"
     @user = User.find_by_id params[:user_id]
     if !uploadfile.nil?
-
       if @file_type == "ppt"
         longness = 1
         file_type = Accessory::TYPES[:PPT]
@@ -130,9 +130,23 @@ class TasksController < ApplicationController
     end
   end
 
-  
+  #上传flash源码
   def uploadfile_flash_source_file
-    params[]
+    uploadfile = params[:file]
+    task = Task.find_by_id params[:task_id]
+    task_tag_id = taks.task_tag.id
+    user = User.find_by_id params[:user_id]
+    file_url = "#{Rails.root}/public/accessories/task_tag_#{task_tag_id}/task_#{task.id}/fla"
+    if !uploadfile.nil?
+      upload uploadfile, file_url
+      task.update_attributes(:source_url => "/accessories/task_tag_#{task_tag_id}/task_#{task.id}
+        /fla/#{uploadfile.original_filename}", :status => Task::IS_UPLOAD_SOURCE[:YES] )
+      @notice = "上传完成!"
+      @status = false
+    else
+      @notice = "没有上传文件!"
+      @status = false 
+    end  
   end  
 
   #发布动画任务
@@ -145,7 +159,7 @@ class TasksController < ApplicationController
     if @user.types == User::TYPES[:PPT]
       if !uploadfile.nil?
         upload uploadfile, file_url
-        @task = update_task_status @task.id, @task.status
+        @task = update_task_status @task.id, @task.status, @user.types
         @task.update_attributes(:origin_flash_url=>"/accessories/task_tag_#{@task_tag_id}/task_#{@task.id}/origin/#{uploadfile.original_filename}")
         @notice = "FLASH任务发布成功!"
         @status = true

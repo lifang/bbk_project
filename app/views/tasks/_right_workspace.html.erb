@@ -12,7 +12,7 @@
 <% end %>
 </div>
 <div id="upload_flash_source" class="file_uploadfile_panel">
-<% if @user.types == User::TYPES[:FLASH] && @user.id == @task.flash_doer %>
+<% if @user.types == User::TYPES[:FLASH] && @user.id == @task.flash_doer &&  %>
   <%= render :partial => "upload_flash_source"%>
 <% end %>
 </div>
