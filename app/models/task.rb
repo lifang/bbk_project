@@ -26,48 +26,8 @@ class Task < ActiveRecord::Base
   end
 
   #领取任务
-  #def self.get_tasks user_id,user_types
-  #  time_now = Time.now #任务开始时间
-  #  assign_task_num = 5  #默认分配任务的总数
-  #  if user_types == User::TYPES[:PPT]
-  #    #当前持有的任务
-  #    owner_tasks = Task.where("status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and ppt_doer = #{user_id}")
-  #    assign_task_num = assign_task_num-owner_tasks.length
-  #    undeal_tasks = Task.where "status=#{Task::STATUS[:NEW]}"
-  #    count = 1
-  #    undeal_tasks.each do |task|
-  #      if count <= assign_task_num
-  #        current_task = Task.find task.id
-  #        if current_task.status != Task::STATUS[:WAIT_UPLOAD_PPT]
-  #          current_task.update_attributes(:status => Task::STATUS[:WAIT_UPLOAD_PPT], :ppt_doer => user_id, :ppt_start_time => time_now)
-  #        end
-  #        count+=1
-  #      end
-  #    end if(!undeal_tasks.nil? || undeal_tasks.length != 0)
-  #  elsif user_types == User::TYPES[:FLASH]
-  #    #当前持有的任务
-  #    owner_tasks = Task.where("status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and flash_doer = #{user_id}")
-  #    assign_task_num = assign_task_num-owner_tasks.length
-  #    undeal_tasks = Task.where "status=#{Task::STATUS[:WAIT_ASSIGN_FLASH]}"
-  #    count = 1
-  #    undeal_tasks.each do |task|
-  #      if count <= assign_task_num
-  #        current_task = Task.find task.id
-  #        if current_task.status != Task::STATUS[:WAIT_UPLOAD_FLASH]
-  #          task.update_attributes(:status => Task::STATUS[:WAIT_UPLOAD_FLASH], :flash_doer => user_id,:flash_start_time => time_now)
-  #        end
-  #        count+=1
-  #      end
-  #    end if(!undeal_tasks.nil? || undeal_tasks.length != 0)
-  #  else
-  #    undeal_tasks = nil
-  #  end
-  #  undeal_tasks
-  #end
-
-  #领取任务
   def self.get_tasks user_id,user_types
-    assign_task_num = 5  #默认分配任务的总数
+    assign_task_num = 6  #默认分配任务的总数
     ppt_doer = nil
     flash_doer = nil
     if user_types == User::TYPES[:PPT] || user_types == User::TYPES[:FLASH]
@@ -105,4 +65,9 @@ class Task < ActiveRecord::Base
       end
     end
   end
+
+  #统计PPT和FLASH领取，在领取后二十四内小时未提交的任务
+  def count_abandon_tasks
+    # Task.
+  end  
 end
