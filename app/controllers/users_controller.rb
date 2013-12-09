@@ -38,9 +38,9 @@ class UsersController < ApplicationController
     end
   end
   #注销登录
-  def destroy
+  def logout
     session[:user_id] = nil
-    redirect_to "/"
+    render :index
   end
   #管理员页面
   def management
