@@ -3,15 +3,16 @@ class Task < ActiveRecord::Base
   belongs_to :task_tag
   has_many :accessories
   STATUS = {:NEW => 0, :WAIT_UPLOAD_PPT => 1, :WAIT_FIRST_CHECK => 2, :WAIT_PUB_FLASH => 3,
-            :WAIT_ASSIGN_FLASH => 4, :WAIT_UPLOAD_FLASH => 5, :WAIT_PPT_DEAL => 6,
-            :WAIT_SECOND_CHECK => 7, :WAIT_FINAL_CHECK => 8, :FINAL_CHECK_COMPLETE => 9}
+    :WAIT_ASSIGN_FLASH => 4, :WAIT_UPLOAD_FLASH => 5, :WAIT_PPT_DEAL => 6,
+    :WAIT_SECOND_CHECK => 7, :WAIT_FINAL_CHECK => 8, :FINAL_CHECK_COMPLETE => 9}
   STATUS_NAME = {0 => "未领取", 1 => "待一次上传", 2 => "待一次质检", 3 => "待发布动画",
-                 4 => "待领取动画任务", 5 => "待上传动画", 6 => "待二次上传", 7 => "待二次质检",
-                 8 =>"待终检", 9 =>"终检完成"}
+    4 => "待领取动画任务", 5 => "待上传动画", 6 => "待二次上传", 7 => "待二次质检",
+    8 =>"待终检", 9 =>"终检完成"}
   TYPES = {:PPT => 0, :FLASH => 1}
   TYPES_NAME = {0 => "PPT制作", 1 => "动画制作"}
 
-  IS_CALCULATE = {:yse =>0,:no => 1}
+  IS_CALCULATE = {:YSE =>1,:NO => 0 }
+  IS_UPLOAD_SOURCE = {:YES =>1,:NO => 0 }
 
   #获取用户相关的任务数据
   def self.list user_id,user_types
@@ -72,15 +73,15 @@ class Task < ActiveRecord::Base
     if user_types == User::TYPES[:PPT] || user_types == User::TYPES[:FLASH]
 
       if user_types == User::TYPES[:PPT] #用户类型为PPT
-          owner_tasks_sql = "status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and ppt_doer = #{user_id}"
-          wait_assign_tasks_sql = "status=#{Task::STATUS[:NEW]}"
-          assigned_task_status = Task::STATUS[:WAIT_UPLOAD_PPT]
-          ppt_doer = user_id
+        owner_tasks_sql = "status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and ppt_doer = #{user_id}"
+        wait_assign_tasks_sql = "status=#{Task::STATUS[:NEW]}"
+        assigned_task_status = Task::STATUS[:WAIT_UPLOAD_PPT]
+        ppt_doer = user_id
       else #用户类型为FLASH
-          owner_tasks_sql = "status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and flash_doer = #{user_id}"
-          wait_assign_tasks_sql= "status=#{Task::STATUS[:WAIT_ASSIGN_FLASH]}"
-          assigned_task_status = Task::STATUS[:WAIT_UPLOAD_FLASH]
-          flash_doer = user_id
+        owner_tasks_sql = "status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and flash_doer = #{user_id}"
+        wait_assign_tasks_sql= "status=#{Task::STATUS[:WAIT_ASSIGN_FLASH]}"
+        assigned_task_status = Task::STATUS[:WAIT_UPLOAD_FLASH]
+        flash_doer = user_id
       end
       owner_tasks = Task.where owner_tasks_sql   #当前持有的任务
       assign_task_num = assign_task_num - owner_tasks.length
