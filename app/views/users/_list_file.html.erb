@@ -4,6 +4,7 @@
     <td >上传日期</td>
     <td >状态</td>
     <td >下载任务</td>
+    <td>下载flash源码</td>
     <td >确认终检</td>
   </tr>
   <%  @task_tags_arr.each do |task_tag| %>
@@ -12,17 +13,17 @@
         <%= link_to "#{task_tag[:name]}", {:controller => "tasks", :action => "tasktag_pptlist", :task_tag_id => task_tag[:id]}, remote: :true, 'data_type' => "script" %>
         </td>
       <td><%= task_tag[:created_at]%></td>
-      <td><%= task_tag[:complet_count]%>|<%= task_tag[:unfinish_count]%></td>
-      <td><%= task_tag[:name]%></td>
-      <td><%= task_tag[:created_at].to_s[0,19]%></td>
       <td><%= task_tag[:complet_count]%><label style="font: oblique; font: 20px; margin: 0 auto;">|</label><%= task_tag[:unfinish_count]%></td>
       <td><input type="button" class="green_btn" value="下载任务" name="ajax_download" task_tag_id="<%= task_tag[:id] %>" /></td>
       <td>
+      <%= link_to "下载flash",{:controller=> "users",:action=>'flash_download',:task_tag_id => task_tag[:id]},confirm: '确认禁用?',:class=>"green_btn" %>
+      </td>
+      <td>
         <% if  task_tag[:unfinish_count] >0 %>
-          <input type="button" class="green_btn" value="不可终检" name="ajax_final" task_tag_id="<%= task_tag[:id] %>" />
+          <input type="button" class="gray_btn" value="不可终检" name="ajax_final" task_tag_id="<%= task_tag[:id] %>"disabled="disabled" />
         <% else %>
           <% if task_tag[:status].eql?(TaskTag::STATUS[:COMPLETE]) %>
-            <input type="button" class="green_btn" value="终检完成" name="ajax_final" task_tag_id="<%= task_tag[:id] %>" />
+            <input type="button" class="gray_btn" value="终检完成" name="ajax_final" task_tag_id="<%= task_tag[:id] %>" disabled="disabled"/>
           <% else %>
             <input type="button" class="green_btn" value="确认终检" name="ajax_final" task_tag_id="<%= task_tag[:id] %>" />
           <% end %>

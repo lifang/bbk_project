@@ -2,15 +2,15 @@
 body { font-family: "微软雅黑", "宋体", Arial; font-size: 12px; background:#edf0f1;}
 
 ul{
-	font-size:0;
-	letter-spacing: -8px;/*根据不同字体字号或许需要做一定的调整*/
-	word-spacing: -8px;
+    font-size:0;
+    letter-spacing: -8px;/*根据不同字体字号或许需要做一定的调整*/
+    word-spacing: -8px;
 }
 li{
-	display:inline-block;
-	letter-spacing:normal;
-	word-spacing:normal;
-	list-style: none;
+    display:inline-block;
+    letter-spacing:normal;
+    word-spacing:normal;
+    list-style: none;
 }
 a { text-decoration: none; cursor: pointer;}
 button { border: none; cursor: pointer;}
@@ -18,9 +18,16 @@ button:hover { box-shadow:0px 0px 2px rgba(0,0,0,0.3);}
 h1 { font-size: 18px; line-height:36px; }
 
 .green_btn { 
-	background: #4dc078; 
-	padding: 5px 10px; 
-	color: #FFFFFF;
+    background: #4dc078;
+    padding: 5px 10px;
+    color: #FFFFFF;
+    border: 0 none;
+    border-radius: 5px;
+}
+.gray_btn {
+    background: #c2c2c2;
+    padding: 5px 10px; 
+    color: #FFFFFF;
     border: 0 none;
     border-radius: 5px;
 }
@@ -28,14 +35,14 @@ h1 { font-size: 18px; line-height:36px; }
 .cf:after { clear: both; content:"."; display: block; height: 0; overflow: hidden; visibility:hidden;}
 .close { 
     width: 17px; 
-	height: 17px; 
-	display: block; 
-	text-indent: -999px;
-	background: url(../images/close.png) no-repeat;
-	cursor: pointer;
-	position: absolute;
-	top: 5px;
-	right: 5px;
+    height: 17px;
+    display: block;
+    text-indent: -999px;
+    background: url(../assets/close.png) no-repeat;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
 
 
@@ -50,30 +57,30 @@ h1 { font-size: 18px; line-height:36px; }
 .theTabs { border-bottom: 2px solid #4DC078; margin: 10px 0;}
 
 .theTabs li {
-	width:120px;
-	height:35px;
-	line-height:35px;
-	font-size:18px;
-	background-color:#dcdfe0;
-	color:#2c2c2c;
-	cursor: pointer;
-	text-align: center;
+    width:112px;
+    height:35px;
+    line-height:35px;
+    font-size:21px;
+    background-color:#dcdfe0;
+    color:#2c2c2c;
+    cursor: pointer;
+    text-align: center;
 }
 
 .theTabs li:hover {	background-color:#4DC078;}
 
 .theTabs li.used {
-	background-color: #4DC078;
+    background-color: #4DC078;
 }
 
 .tabDiv {
-	display: none;
-	margin-top: 20px;
-	padding: 10px;
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 .tabDiv.used {
-	display: block;
+    display: block;
 }
 
 .tabDiv fieldset { border: 5px solid #FFFFFF; padding: 5px;}
@@ -85,9 +92,9 @@ h1 { font-size: 18px; line-height:36px; }
 .main table {
     border-collapse: collapse;
     width: 100%;
-	table-layout: fixed;
-	background: #FFFFFF;
-	border: 5px solid #FFFFFF;
+    table-layout: fixed;
+    background: #FFFFFF;
+    border: 5px solid #FFFFFF;
 }
 
 .main tr {
@@ -95,10 +102,10 @@ h1 { font-size: 18px; line-height:36px; }
 }
 
 .main th,.main td {
-	padding: 7px 20px;
-	word-wrap:break-word;
-	vertical-align: top;
-	line-height: 24px;
+    padding: 7px 20px;
+    word-wrap:break-word;
+    vertical-align: top;
+    line-height: 24px;
 }
 .main td h2 { font-size: 14px;}
 .main th{ background:#d8dde0;}
@@ -115,8 +122,8 @@ h1 { font-size: 18px; line-height:36px; }
     cursor: pointer;
     margin: 0 2px;
     padding: 3px 10px;
-	background: #ffffff;
-	border: 1px solid #ffffff;
+    background: #ffffff;
+    border: 1px solid #ffffff;
 }
 .pager span:hover,.pager span.hover { background: #A8B5C4; color: #ffffff;}
 
@@ -139,20 +146,20 @@ h1 { font-size: 18px; line-height:36px; }
 .second_content table {
     border-collapse: collapse;
     width: 100%;
-	table-layout: fixed;
-	background: #FFFFFF;
-	border: 5px solid #FFFFFF;
+    table-layout: fixed;
+    background: #FFFFFF;
+    border: 5px solid #FFFFFF;
 }
 .second_content tr {
     height: 40px;
 }
 
 .second_content th,.second_content td {
-	padding: 7px 20px;
-	word-wrap:break-word;
-	vertical-align: top;
-	line-height: 24px;
-	text-align: center;
+    padding: 7px 20px;
+    word-wrap:break-word;
+    vertical-align: top;
+    line-height: 24px;
+    text-align: center;
 }
 .second_content td h2 { font-size: 14px;}
 .second_content th{ background:#d8dde0;}
@@ -167,11 +174,11 @@ h1 { font-size: 18px; line-height:36px; }
 #month_list { padding: 3px;}
 #month_list select { margin-right: 20px; padding: 2px;}
 #userinfo {
-position: absolute;
-top: 0;
-right: 0;
-width: 150px;
-font-size: 16px;
-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    font-size: 16px;
+    color: #fff;
 }
 #userinfo a {color: #fff;}

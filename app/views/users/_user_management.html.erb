@@ -4,7 +4,7 @@
 </div>
 
 <div class="add_users_form addUser" style="display: none" id="users_add_ff">
-    <div id="add_user" class="second_content" style="display:none; position: absolute; z-index: 100;">
+  <div id="add_user" class="second_content" style="display:none;">
     <span class="close" >关闭</span>
     <h1>添加用户</h1>
     <%= form_for :user, :url => { :action => :add_user, :controller => :users }, :remote => true, "data-type" => "script" do |f| %>
@@ -16,14 +16,16 @@
         <%= f.label :密码： %>
         <%= f.password_field :password %>
       </div>
-      <select id="is_vip" name="types" class="select_marginRight">
-        <option></option>
-        <option value="0">管理员</option>
-        <option value="1">质检员</option>
-        <option value="2">PPT制作</option>
-        <option value="3">动画制作</option>
-      </select>
-
+      <div class="login_item">
+        <label>身份：</label>
+        <select id="is_vip" name="types" class="select_marginRight">
+          <option></option>
+          <option value="0">管理员</option>
+          <option value="1">质检员</option>
+          <option value="2">PPT制作</option>
+          <option value="3">动画制作</option>
+        </select>
+      </div>
       <div class="login_item">
         <%= f.label :电话号码： %>
         <%= f.text_field :phone %>
@@ -40,4 +42,8 @@
 </div>
 <div class="edit_users_form">
 </div>
-
+<script>
+  $("#add_user").on("click",".close",function(){
+    $("#users_add_ff").hide();
+  });
+</script>
