@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131206025441) do
+ActiveRecord::Schema.define(:version => 20131209073823) do
 
   create_table "abandon_tasks", :force => true do |t|
     t.integer  "task_id"
@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(:version => 20131206025441) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "task_tag_id"
-    t.integer  "source_url"
+    t.string   "source_url"
   end
 
   add_index "tasks", ["task_tag_id"], :name => "index_tasks_on_task_tag_id"
