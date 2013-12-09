@@ -7,7 +7,7 @@ BbkProject::Application.routes.draw do
 
     collection do
       get :assign_tasks, :verify_task, :reload_tasks
-      post :uploadfile, :publish_flash_task
+      post :uploadfile, :publish_flash_task, :uploadfile_flash_source_file
       get 'tasktag_pptlist'
     end
   end
