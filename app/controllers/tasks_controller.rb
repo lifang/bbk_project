@@ -187,7 +187,6 @@ class TasksController < ApplicationController
   #任务包ppt列表
   def tasktag_pptlist
     @task_tag = TaskTag.find_by_id( params[:task_tag_id])
-    #    @task_pptlist = Task.where(:task_tag_id => params[:task_tag_id])
     @task_pptlist = Task.find_by_sql("SELECT tasks.id,tasks.name task_name,usersx.user_pptname,usersx.user_flashname,usersx.user_check,  tasks.status  from tasks left JOIN
 (SELECT user1.id,user1.user_name user_pptname,user2.user_name user_flashname,user3.user_name user_check FROM
 (SELECT t1.id id, t1.name task_name, u1.name user_name from tasks t1,users u1 where t1.ppt_doer = u1.id ) user1,

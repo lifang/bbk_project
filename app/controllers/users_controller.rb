@@ -3,7 +3,6 @@ require 'fileutils'
 require 'archive/zip'
 class UsersController < ApplicationController
   before_filter :correct_users, :only =>[:management]
- 
   #登录页面
   def index
     user = User.find_by_id(session[:user_id].to_i)
@@ -94,8 +93,7 @@ class UsersController < ApplicationController
         if suffix.eql?("ppt")
           file_old_url = zip_url + '/' + file
           origin_ppt_url = "/" + newfilename +"/" + file
-          
-          tasks = Task.create(:name => ppt_name,:types => 0,:origin_ppt_url => origin_ppt_url,:status => 0,:task_tag_id => task_tags.id,:is_calculate => 1)
+          tasks = Task.create(:name => ppt_name,:is_upload_source => 0,:origin_ppt_url => origin_ppt_url,:status => 0,:task_tag_id => task_tags.id,:is_calculate => 1)
           tasks_id = tasks.id
           # 任务包名
           task_url = "#{File.expand_path(Rails.root)}/public/accessories/#{newfilename}" + "/task_" + tasks_id.to_s + "/origin"
@@ -123,7 +121,6 @@ class UsersController < ApplicationController
     tasks.each do |task|
       task_id = task.id
       accessory = Accessory.find_by_sql("SELECT  * from accessories where task_id = #{task_id} ORDER BY created_at DESC limit 1")
-      p accessory
       if !accessory.blank?
         accessory_url = accessory[0].accessory_url
         file_url = "#{Rails.root}/public" + accessory_url
