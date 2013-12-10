@@ -3,7 +3,11 @@ class CalculationsController < ApplicationController
   # 工资结算
   def wage_settlement
     @months = Calculation.find_by_sql("SELECT `month` from calculations GROUP BY `month` DESC")
-    month = @months[0].month
+    if @months.length != 0
+      month = @months[0].month
+    end#    p admin.created_at
+    #    p Time.now
+    #    params[:month
     @calculation = Calculation.find_by_sql("SELECT calculations.id, users.name,users.types,calculations.time,calculations.is_pay from
 calculations,users WHERE calculations.user_id = users.id and calculations.month = '#{month}'")
   end
