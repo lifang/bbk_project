@@ -1,8 +1,17 @@
 <% if @user.types == User::TYPES[:CHECKER]%>
 <div class="container">
-    <div class="item"><label>待一检任务：</label></div>
-    <div class="item"><label>待二检任务：</label></div>
-    <div class="item"><label>待终检任务：</label></div>
+    <div class="item">
+        <label>待一检任务：</label>
+        <% if !@wait_first_check_tasks.nil? %><%= (@wait_first_check_tasks.length != 0) ? @wait_first_check_tasks.length : 0 %><% end %>
+    </div>
+    <div class="item">
+        <label>待二检任务：</label>
+        <% if !@wait_second_check_tasks.nil? %><%= (@wait_second_check_tasks.length != 0) ? @wait_second_check_tasks.length : 0 %><% end %>
+    </div>
+    <div class="item">
+        <label>待终检任务：</label>
+        <% if !@wait_final_check_tasks.nil? %><%= (@wait_final_check_tasks.length != 0) ? @wait_final_check_tasks.length : 0 %><% end %>
+    </div>
 </div>
 <% elsif @user.types == User::TYPES[:PPT] || @user.types == User::TYPES[:FLASH] %>
 <div class="container">

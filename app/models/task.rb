@@ -14,14 +14,15 @@ class Task < ActiveRecord::Base
   IS_CALCULATE = {:YSE =>1,:NO => 0 }
   IS_UPLOAD_SOURCE = {:YES =>1,:NO => 0 }
 
-  CONFIG = {:TASK_LIMIT => 5, :RELEASE_HOURS => 24}  
+  CONFIG = {:TASK_LIMIT => 5, :RELEASE_HOURS => 24, :OVER_TIME_HOURS => 48}  
 
   #获取用户相关的任务数据
   def self.list user_id,user_types
     if user_types == User::TYPES[:CHECKER]    #质检用户的任务数据
       @tasks = Task.where("checker=#{user_id} and status not in (#{Task::STATUS[:NEW]},#{Task::STATUS[:WAIT_UPLOAD_PPT]})")
     elsif user_types == User::TYPES[:PPT]     #PPT用户的任务数据
-      @tasks = Task.where("ppt_doer=#{user_id} and status not in (#{Task::STATUS[:NEW]},#{Task::STATUS[:WAIT_ASSIGN_FLASH]},#{Task::STATUS[:WAIT_UPLOAD_FLASH]})")
+      # @tasks = Task.where("ppt_doer=#{user_id} and status not in (#{Task::STATUS[:NEW]},#{Task::STATUS[:WAIT_ASSIGN_FLASH]},#{Task::STATUS[:WAIT_UPLOAD_FLASH]})")
+      @tasks = Task.where("ppt_doer=#{user_id} and status not in (#{Task::STATUS[:NEW]})")
     elsif user_types == User::TYPES[:FLASH]   #FLASH用户的任务数据
       @tasks = Task.where("flash_doer=#{user_id} and status in (#{Task::STATUS[:WAIT_UPLOAD_FLASH]},#{Task::STATUS[:WAIT_PPT_DEAL]},#{Task::STATUS[:WAIT_SECOND_CHECK]},#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]})")
     end
@@ -53,11 +54,11 @@ class Task < ActiveRecord::Base
         if count <= assign_task_num
           current_task = Task.find_by_id task.id
           if current_task.status != assigned_task_status
-            time_now = Time.now #任务开始时间
+            time_now = Time.now() #任务开始时间
             if !ppt_doer.nil?
               current_task.update_attributes(:status => assigned_task_status, :ppt_doer => user_id, :ppt_start_time => time_now)
             elsif !flash_doer.nil?
-              current_task.update_attributes(:status => assigned_task_status, :flash_doer => user_id, :ppt_start_time => time_now)
+              current_task.update_attributes(:status => assigned_task_status, :flash_doer => user_id, :flash_start_time => time_now)
             else
             end
           end
@@ -87,31 +88,40 @@ class Task < ActiveRecord::Base
         current_task.update_attributes(:status => Task::STATUS[:WAIT_ASSIGN_FLASH], :flash_doer => nil)
       else
         user = nil
-      end 
-      # p "abandon_task_types:#{abandon_task_types}"
+      end
       AbandonTask.create(:task_id => task.id, :types => abandon_task_types, :user_id => user.id)    
     end      
   end 
   
-  #
-  def self.going_and_Over_time_task user_id, user_types
-    time_limit = Task::CONFIG[:RELEASE_HOURS] * 60
-    if user_types == User::TYPES[:PPT]
+  #获取PPT和FLASH的统计信息
+  def self.going_and_over_time_task user_id, user_types
+    time_limit = Task::CONFIG[:OVER_TIME_HOURS] * 60
+    if user_types == User::TYPES[:PPT] || user_types == User::TYPES[:FLASH]
         if user_types == User::TYPES[:PPT]
           going_tasks_sql = "status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},
-            #{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and ppt_doer = #{user_types}"
+            #{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and ppt_doer = #{user_id}"
           over_time_tasks_sql = "ppt_doer = #{user_id} and status not in 
-            (#{Task::STATUS[:WAIT_UPLOAD_PPT]},#{Task::STATUS[:WAIT_UPLOAD_FLASH]}) 
-            and (TIMESTAMPDIFF(minute, updated_at, now())-480) >=#{time_limit}"
+            (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) 
+            and (TIMESTAMPDIFF(minute, created_at, now())-480) >= #{time_limit}"
         elsif user_types == User::TYPES[:FLASH]
           going_tasks_sql = "status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},
-            #{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and flash_doer = #{@user.id}"
-          over_time_tasks_sql = "flash_doer = #{user_id} and status not in (#{Task::STATUS[:WAIT_UPLOAD_PPT]},#{Task::STATUS[:WAIT_UPLOAD_FLASH]}) 
-            and (TIMESTAMPDIFF(minute, updated_at, now())-480) >=#{time_limit}"
+            #{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and flash_doer = #{user_id}"
+          over_time_tasks_sql = "flash_doer = #{user_id} and status not in 
+            (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) 
+            and (TIMESTAMPDIFF(minute, created_at, now())-480) >=#{time_limit}"
         end  
         goning_tasks = Task.where going_tasks_sql
         over_time_tasks = Task.where over_time_tasks_sql
-        @return = {:goning_tasks => goning_tasks, :over_time_tasks => over_time_tasks}
-    end    
-  end 
+    end 
+    @return = {:goning_tasks => goning_tasks, :over_time_tasks => over_time_tasks}   
+  end
+
+  #显示质检的统计信息
+  def self.checker_wait_task user_id
+    wait_first_check_tasks = Task.where("status = #{Task::STATUS[:WAIT_FIRST_CHECK]} and checker = #{user_id}")
+    wait_second_check_tasks = Task.where("status = #{Task::STATUS[:WAIT_SECOND_CHECK]} and checker = #{user_id}")
+    wait_final_check_tasks = Task.where("status = #{Task::STATUS[:WAIT_FINAL_CHECK]} and checker = #{user_id}")
+    @return = {:wait_first_check_tasks => wait_first_check_tasks, :wait_second_check_tasks => wait_second_check_tasks,
+      :wait_final_check_tasks => wait_final_check_tasks}
+  end
 end
