@@ -5,8 +5,9 @@ class CalculationsController < ApplicationController
     admin = User.find_by_name("admin")
     #    manth = admin.created_at.strftime("%Y-%m")
     @months = Calculation.find_by_sql("SELECT `month` from calculations GROUP BY `month` DESC")
-    month = @months[0].month
-    #    p admin.created_at
+    if @months.length != 0
+      month = @months[0].month
+    end#    p admin.created_at
     #    p Time.now
     #    params[:month]
     @calculation = Calculation.find_by_sql("SELECT calculations.id, users.name,users.types,calculations.time,calculations.is_pay from
