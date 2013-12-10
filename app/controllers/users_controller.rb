@@ -2,6 +2,8 @@
 require 'fileutils'
 require 'archive/zip'
 class UsersController < ApplicationController
+  before_filter :correct_users, :only =>[:management]
+ 
   #登录页面
   def index
     user = User.find_by_id(session[:user_id].to_i)
@@ -196,7 +198,7 @@ class UsersController < ApplicationController
   end
   #更新用户
   def modify_user
-    @user_exist =  User.find(params[:user][:id])
+    @user_exist_id =  User.find(params[:user][:id])
     password = params[:user][:password]
     types = params[:types].to_i
     phone = params[:user][:phone]

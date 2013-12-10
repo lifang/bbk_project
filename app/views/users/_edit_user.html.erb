@@ -8,6 +8,11 @@
         <%= f.text_field :id %>
       </div>
       <div class="login_item">
+        <%= f.label :用户名： %>
+        <label><%= @user.name  %></label>
+       
+      </div>
+      <div class="login_item">
         <%= f.label :密码： %>
         <%= f.text_field :password %>
       </div>
