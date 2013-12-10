@@ -1,6 +1,7 @@
 #encoding: utf-8
 require 'fileutils'
 require 'archive/zip'
+require 'iconv'
 class UsersController < ApplicationController
   before_filter :correct_users, :only =>[:management]
   #登录页面
@@ -67,6 +68,7 @@ class UsersController < ApplicationController
     begin
       #解压
       Archive::Zip.extract("#{zip_url}.zip","#{Rails.root}/public/accessories")
+      `convmv -f gbk -t utf-8 -r --notest  #{Rails.root}/public/accessories`
       File.delete "#{zip_url}.zip"
       task_tags = TaskTag.create(:name => filename_body, :status => 0)
       newfilename = "task_tag_" << task_tags.id.to_s
