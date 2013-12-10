@@ -1,10 +1,12 @@
 <div id="month_list">
+  <label>月份</label>
   <select name="month" class="settlement_sec" sec_class="month_sec" onchange="settlement_change()">
     <% @months.each do |month| %>
       <option value='<%= month.month %>' ><%= month.month  %></option>
     <% end %>
   </select>
 
+  <label>身份</label>
   <select name="types" class="settlement_sec" sec_class="types_sec" onchange="settlement_change()">
     <option value="">全部</option>
     <option value="1">质检员</option>
