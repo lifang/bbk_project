@@ -4,7 +4,7 @@
   <%= form_tag({:action => :uploadfile_flash_source_file}, :multipart => true ,:remote => true ) do %>
       <div class="form_div">
         <%= file_field_tag 'file', :onchange => "file_validate(this);"%>
-        <button id="btn_upload" type="submit"  onchange="file_validate(this)" >上 传</button>
+        <button id="btn_upload" type="submit" class="green_btn" onchange="file_validate(this)" >上 传</button>
       </div>
       <input type="hidden" name="user_id" value="<%= @user.id %>" />
       <input type="hidden" name="task_id" value="<%= @task.id %>" />
