@@ -91,5 +91,27 @@ class Task < ActiveRecord::Base
       # p "abandon_task_types:#{abandon_task_types}"
       AbandonTask.create(:task_id => task.id, :types => abandon_task_types, :user_id => user.id)    
     end      
-  end  
+  end 
+  
+  #
+  def self.going_and_Over_time_task user_id, user_types
+    time_limit = Task::CONFIG[:RELEASE_HOURS] * 60
+    if user_types == User::TYPES[:PPT]
+        if user_types == User::TYPES[:PPT]
+          going_tasks_sql = "status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},
+            #{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and ppt_doer = #{user_types}"
+          over_time_tasks_sql = "ppt_doer = #{user_id} and status not in 
+            (#{Task::STATUS[:WAIT_UPLOAD_PPT]},#{Task::STATUS[:WAIT_UPLOAD_FLASH]}) 
+            and (TIMESTAMPDIFF(minute, updated_at, now())-480) >=#{time_limit}"
+        elsif user_types == User::TYPES[:FLASH]
+          going_tasks_sql = "status not in(#{Task::STATUS[:WAIT_FINAL_CHECK]},
+            #{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and flash_doer = #{@user.id}"
+          over_time_tasks_sql = "flash_doer = #{user_id} and status not in (#{Task::STATUS[:WAIT_UPLOAD_PPT]},#{Task::STATUS[:WAIT_UPLOAD_FLASH]}) 
+            and (TIMESTAMPDIFF(minute, updated_at, now())-480) >=#{time_limit}"
+        end  
+        goning_tasks = Task.where going_tasks_sql
+        over_time_tasks = Task.where over_time_tasks_sql
+        @return = {:goning_tasks => goning_tasks, :over_time_tasks => over_time_tasks}
+    end    
+  end 
 end

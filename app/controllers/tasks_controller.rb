@@ -4,8 +4,18 @@ class TasksController < ApplicationController
   def index
     @title = "任务中心"
     @user = User.find_by_id session[:user_id]
+    p @user
+    time_limit = Task::CONFIG[:RELEASE_HOURS] * 60
     if !@user.nil? && @user.types != User::TYPES[:ADMIN]
       @tasks = Task.list @user.id, @user.types
+      if @user.types == User::TYPES[:PPT] || @user.types == User::TYPES[:FLASH]
+        result = Task.going_and_Over_time_task @user.id, @user.types
+        @goning_tasks = result[:goning_tasks]
+        @over_time_tasks = result[:over_time_tasks]
+      elsif @user.types == User::TYPES[:CHECKER]
+        
+      else
+      end      
     else
       redirect_to root_url
     end
