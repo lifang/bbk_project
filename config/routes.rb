@@ -25,7 +25,7 @@ BbkProject::Application.routes.draw do
     collection do
       post 'login','upload','add_user','modify_user'
       get 'management','confirm_final','download','ajax_download',
-        'user_management','edit','disable_user','logout'
+        'user_management','edit','disable_user','logout','flash_download'
     end
   end
 

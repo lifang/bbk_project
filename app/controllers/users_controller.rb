@@ -2,6 +2,8 @@
 require 'fileutils'
 require 'archive/zip'
 class UsersController < ApplicationController
+  before_filter :correct_users, :only =>[:management]
+ 
   #登录页面
   def index
     user = User.find_by_id(session[:user_id].to_i)
@@ -54,12 +56,14 @@ class UsersController < ApplicationController
         complet_count = Task.find_by_sql("select count(*) count from tasks where tasks.`status` in (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and tasks.task_tag_id=#{task_tag_id}")
         unfinish_count = Task.find_by_sql("select count(*) count from tasks where tasks.`status` not in (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and tasks.task_tag_id=#{task_tag_id}")
         task_tags_list = task_tag.attributes
+        flash_count = Task.find_by_sql("select count(*) count from tasks where task_tag_id = #{task_tag.id} and is_upload_source = 1")
         task_tags_list[:id] = task_tag.id
         task_tags_list[:name] = task_tag.name
-        task_tags_list[:created_at] = task_tag.created_at
+        task_tags_list[:created_at] = task_tag.created_at.strftime("%F-%H")
         task_tags_list[:complet_count] = complet_count[0].count
         task_tags_list[:unfinish_count] = unfinish_count[0].count
         task_tags_list[:status] = task_tag.status
+        task_tags_list[:flash_count] = flash_count[0].count
         @task_tags_arr << task_tags_list
       end
     else
@@ -119,6 +123,7 @@ class UsersController < ApplicationController
     tasks.each do |task|
       task_id = task.id
       accessory = Accessory.find_by_sql("SELECT  * from accessories where task_id = #{task_id} ORDER BY created_at DESC limit 1")
+      p accessory
       if !accessory.blank?
         accessory_url = accessory[0].accessory_url
         file_url = "#{Rails.root}/public" + accessory_url
@@ -132,6 +137,26 @@ class UsersController < ApplicationController
     file_path = "#{Rails.root}/public/accessories/1234.zip"
     if file_path
       send_file file_path, :filename => '12345.zip'
+    end
+  end
+  #下载flash元件
+  def flash_download
+    zip_url = "#{Rails.root}/public/accessories/"
+    if   File.exist?("#{zip_url}flash.zip")
+      File.delete "#{zip_url}flash.zip"
+    end
+    tasks = Task.find_by_sql("SELECT * from tasks where is_upload_source = #{Task::IS_UPLOAD_SOURCE[:YES]} and task_tag_id = #{params[:task_tag_id]}")
+    tasks.each do |task|
+      source_url = task.source_url
+      if !source_url.blank?
+        file_url = "#{Rails.root}/public" + source_url
+        Archive::Zip.archive("#{zip_url}flash.zip","#{file_url}")
+      end
+    end
+    if File.exist?("#{zip_url}flash.zip")
+      send_file "#{zip_url}flash.zip", :filename => 'flash.zip'
+    else
+      render "/users/index"
     end
   end
   #确认终检
@@ -173,7 +198,7 @@ class UsersController < ApplicationController
   end
   #更新用户
   def modify_user
-    @user_exist =  User.find(params[:user][:id])
+    @user_exist_id =  User.find(params[:user][:id])
     password = params[:user][:password]
     types = params[:types].to_i
     phone = params[:user][:phone]
