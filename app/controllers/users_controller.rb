@@ -46,25 +46,9 @@ class UsersController < ApplicationController
   #管理员页面
   def management
     @user = User.find_by_id session[:user_id]
+    status = params[:status].nil? || params[:status].strip.blank? ? "1=1" : ["url = ?", params[:status].strip]
     if !@user.nil? && @user.types == User::TYPES[:ADMIN]
-      status = params[:status].nil? || params[:status].strip.blank? ? "1=1" : ["url = ?", params[:status].strip]
-      task_tags = TaskTag.task_tag_stats(status)
-      @task_tags_arr = []
-      task_tags.each do |task_tag|
-        task_tag_id = task_tag.id
-        complet_count = Task.find_by_sql("select count(*) count from tasks where tasks.`status` in (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and tasks.task_tag_id=#{task_tag_id}")
-        unfinish_count = Task.find_by_sql("select count(*) count from tasks where tasks.`status` not in (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and tasks.task_tag_id=#{task_tag_id}")
-        task_tags_list = task_tag.attributes
-        flash_count = Task.find_by_sql("select count(*) count from tasks where task_tag_id = #{task_tag.id} and is_upload_source = 1")
-        task_tags_list[:id] = task_tag.id
-        task_tags_list[:name] = task_tag.name
-        task_tags_list[:created_at] = task_tag.created_at.strftime("%F-%H")
-        task_tags_list[:complet_count] = complet_count[0].count
-        task_tags_list[:unfinish_count] = unfinish_count[0].count
-        task_tags_list[:status] = task_tag.status
-        task_tags_list[:flash_count] = flash_count[0].count
-        @task_tags_arr << task_tags_list
-      end
+      @task_tags_arr = User.list_user status
     else
       redirect_to "/"
     end
@@ -109,6 +93,8 @@ class UsersController < ApplicationController
       File.delete "#{zip_url}.zip"
       FileUtils.rm_rf "#{zip_url}"
     end
+    status = params[:status].nil? || params[:status].strip.blank? ? "1=1" : ["url = ?", params[:status].strip]
+    @task_tags_arr = User.list_user status
   end
   #下载任务
   def download
