@@ -2,7 +2,7 @@
   <%= render :partial => "ppt_list"%>
 </div>
 <% if @user.types == User::TYPES[:PPT] && (@task.status == Task::STATUS[:WAIT_UPLOAD_PPT] ||
-        @task.status == Task::STATUS[:WAIT_FIRST_CHECK] ||
+        @task.status == Task::STATUS[:WAIT_FIRST_CHECK] || 
         @task.status == Task::STATUS[:WAIT_PPT_DEAL] ||
         @task.status == Task::STATUS[:WAIT_SECOND_CHECK]) %>
 <div class="file_uploadfile_panel">

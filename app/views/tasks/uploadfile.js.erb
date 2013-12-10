@@ -3,7 +3,7 @@ $("#task_details").html('<%= escape_javascript(render :partial => "task_details_
 <% if @status == true %>
     <% if @file_type == "ppt" %>
         $("#workspace_left").find("[class='files_list_panel']").html('<%= escape_javascript(render :partial => "ppt_list")%>');
-        $("#workspace_left").find("[class='file_uploadfile_panel']").html('<%= escape_javascript(render :partial => "upload_flash_source")%>');
+        $("#workspace_left").find("[class='file_uploadfile_panel']").html('<%= escape_javascript(render :partial => "upload_ppt")%>');
         $("#workspace_left").find("div").find("[id='file_type']").val("ppt");
     <% elsif @file_type == "flash" %>
         $("#flash_list").html('<%= escape_javascript(render :partial => "flash_list")%>');

@@ -14,6 +14,8 @@ class Task < ActiveRecord::Base
   IS_CALCULATE = {:YSE =>1,:NO => 0 }
   IS_UPLOAD_SOURCE = {:YES =>1,:NO => 0 }
 
+  CONFIG = {:TASK_LIMIT => 5, :RELEASE_HOURS => 24}  
+
   #获取用户相关的任务数据
   def self.list user_id,user_types
     if user_types == User::TYPES[:CHECKER]    #质检用户的任务数据
@@ -27,7 +29,7 @@ class Task < ActiveRecord::Base
 
   #领取任务
   def self.get_tasks user_id,user_types
-    assign_task_num = 6  #默认分配任务的总数
+    assign_task_num = Task::CONFIG[:TASK_LIMIT]  #默认分配任务的总数
     ppt_doer = nil
     flash_doer = nil
     if user_types == User::TYPES[:PPT] || user_types == User::TYPES[:FLASH]
@@ -67,7 +69,27 @@ class Task < ActiveRecord::Base
   end
 
   #统计PPT和FLASH领取，在领取后二十四内小时未提交的任务
-  def count_abandon_tasks
-    # Task.
+  def self.count_abandon_tasks
+    time_now = Time.now()
+    time_limit = Task::CONFIG[:RELEASE_HOURS] * 60
+    abandon_tasks = Task.find_by_sql("select id, name, status, ppt_doer, flash_doer, checker, updated_at, 
+      (TIMESTAMPDIFF(minute, updated_at, now())-480) as plus from tasks t where status in (#{Task::STATUS[:WAIT_UPLOAD_PPT]},#{Task::STATUS[:WAIT_UPLOAD_FLASH]}) 
+       and (TIMESTAMPDIFF(minute, updated_at, now())-480) >=#{time_limit}")
+    abandon_tasks.each do |task|
+      current_task = Task.find_by_id task.id
+      if task.status == Task::STATUS[:WAIT_UPLOAD_PPT]
+        user = User.find_by_id task.ppt_doer
+        abandon_task_types = AbandonTask::TYPES[:PPT]
+        current_task.update_attributes(:status => Task::STATUS[:NEW], :ppt_doer => nil)
+      elsif task.status == Task::STATUS[:WAIT_UPLOAD_FLASH]
+        user = User.find_by_id task.flash_doer
+        abandon_task_types = AbandonTask::TYPES[:FLASH]
+        current_task.update_attributes(:status => Task::STATUS[:WAIT_ASSIGN_FLASH], :flash_doer => nil)
+      else
+        user = nil
+      end 
+      # p "abandon_task_types:#{abandon_task_types}"
+      AbandonTask.create(:task_id => task.id, :types => abandon_task_types, :user_id => user.id)    
+    end      
   end  
 end

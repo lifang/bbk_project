@@ -1,0 +1,5 @@
+alert("<%= @notice %>");
+<% if @status == true %>
+$("#upload_flash_source").html('<%= escape_javascript(render :partial => "upload_flash_source")%>');
+<% else %>
+<% end %>

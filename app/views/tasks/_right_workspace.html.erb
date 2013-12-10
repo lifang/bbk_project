@@ -7,12 +7,12 @@
 </div>
 
 <div id="upload_flash" class="file_uploadfile_panel">
-<% if @user.types == User::TYPES[:FLASH] && @user.id == @task.flash_doer %>
+<% if(@user.types == User::TYPES[:FLASH] && @user.id == @task.flash_doer) && @task.status != Task::STATUS[:WAIT_FINAL_CHECK] && @task.status != Task::STATUS[:FINAL_CHECK_COMPLETE]  %>
   <%= render :partial => "upload_flash"%>
 <% end %>
 </div>
 <div id="upload_flash_source" class="file_uploadfile_panel">
-<% if @user.types == User::TYPES[:FLASH] && @user.id == @task.flash_doer &&  %>
+<% if @user.types == User::TYPES[:FLASH] && @user.id == @task.flash_doer && @task.status == Task::STATUS[:WAIT_FINAL_CHECK] %>
   <%= render :partial => "upload_flash_source"%>
 <% end %>
 </div>
