@@ -60,7 +60,7 @@ module TasksHelper
       when Task::STATUS[:WAIT_PPT_DEAL]
         if user_types == User::TYPES[:PPT]
           task.update_attributes(:status => Task::STATUS[:WAIT_SECOND_CHECK])
-        end  
+        end              
     end
     task
   end

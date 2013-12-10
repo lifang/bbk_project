@@ -1,3 +1,4 @@
+<% if @task.is_upload_source == Task::IS_UPLOAD_SOURCE[:NO] %>
 <fieldset>
   <legend>FLASH源文件上传</legend>
   <%= form_tag({:action => :uploadfile_flash_source_file}, :multipart => true ,:remote => true ) do %>
@@ -9,3 +10,4 @@
       <input type="hidden" name="task_id" value="<%= @task.id %>" />
   <% end %>
 </fieldset>
+<% end %>

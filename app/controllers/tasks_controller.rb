@@ -2,7 +2,6 @@
 class TasksController < ApplicationController
   layout 'tasks'
   def index
-    # session[:user_id] = nil
     @title = "任务中心"
     @user = User.find_by_id session[:user_id]
     if !@user.nil? && @user.types != User::TYPES[:ADMIN]
@@ -13,7 +12,6 @@ class TasksController < ApplicationController
   end
 
   def show
-    #session[:user_id] = nil
     @user = User.find_by_id session[:user_id]
     @task = Task.find_by_id params[:id]
     if @user.nil?
@@ -134,15 +132,16 @@ class TasksController < ApplicationController
   def uploadfile_flash_source_file
     uploadfile = params[:file]
     task = Task.find_by_id params[:task_id]
-    task_tag_id = taks.task_tag.id
+    task_tag_id = task.task_tag.id
     user = User.find_by_id params[:user_id]
     file_url = "#{Rails.root}/public/accessories/task_tag_#{task_tag_id}/task_#{task.id}/fla"
     if !uploadfile.nil?
       upload uploadfile, file_url
       task.update_attributes(:source_url => "/accessories/task_tag_#{task_tag_id}/task_#{task.id}
-        /fla/#{uploadfile.original_filename}", :status => Task::IS_UPLOAD_SOURCE[:YES] )
+        /fla/#{uploadfile.original_filename}", :is_upload_source => Task::IS_UPLOAD_SOURCE[:YES] )
       @notice = "上传完成!"
-      @status = false
+      @status = true
+      @task = task
     else
       @notice = "没有上传文件!"
       @status = false 
