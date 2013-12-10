@@ -4,7 +4,7 @@
   <a href="<%= ppt.accessory_url %>" target="_blank" title="<%= ppt.name%>-点击链接下载"><%= ppt.name.size>16?"#{ppt.name[0,16]}...":ppt.name %></a>
   </div>
   <div id="button_bar" style="width: 100px; height: auto; float:right; margin:3px auto;">
-    <input id="<%= ppt.id %>" type="button" value="聊 天" onclick="chat(this);" style="margin:0 auto">
+    <input id="<%= ppt.id %>" type="button" class="green_btn" value="聊 天" onclick="chat(this);" style="margin:0 auto">
   <% if ppt.id == @ppt_files.last.id && @user.types == User::TYPES[:CHECKER] && (@task.status == Task::STATUS[:WAIT_FIRST_CHECK] || @task.status == Task::STATUS[:WAIT_SECOND_CHECK]) %>
     <input type="button" value="审 核" onclick="verify(this, <%= @user.id %>,<%= @task.id %>);" style="margin:0 auto">
   <% end %>

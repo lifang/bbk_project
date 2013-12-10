@@ -6,9 +6,16 @@
 </div>
 <% elsif @user.types == User::TYPES[:PPT] || @user.types == User::TYPES[:FLASH] %>
 <div class="container">
-    <div class="item"><label>进行中任务：</label></div>
-    <div class="item"><label>超时任务：</label></div>
-    <div class="item"><label>任务领取：</label><button id="gettask" onclick="get_tasks(<%= @user.id%>);">领取任务</button></div>
+    <div class="item">
+    	<label>进行中任务：</label>
+    </div>
+    <div class="item">
+    	<label>超时任务：</label>
+    </div>
+    <div class="item">
+    	<label>任务领取：</label>
+    	<button id="gettask" class="green_btn" onclick="get_tasks(<%= @user.id%>);">领取任务</button>
+    </div>
 </div>
 <% else %>
 <% end %>
