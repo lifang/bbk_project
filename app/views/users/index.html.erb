@@ -1,11 +1,11 @@
 <div class="login">
   <div class="login_box">
     <%= form_for :user, :url => { :action => :login, :controller => :users } do |f| %>
-      <div class="login_item">
+      <div class="login_items">
         <%= f.label:"用户名" %>
         <%= f.text_field :name,class: "text" %>
       </div>
-      <div class="login_item">
+      <div class="login_items">
         <%= f.label:"密  码" %>
         <%= f.password_field :password,class: "text"%>
       </div>
