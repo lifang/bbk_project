@@ -1,18 +1,28 @@
-<div class = "tishi"><p id="notice"><%= notice %></p></div>
 <div class="login">
   <div class="login_box">
     <%= form_for :user, :url => { :action => :login, :controller => :users } do |f| %>
       <div class="login_item">
-        <%= f.label :用户名： %>
-        <%= f.text_field :name %>
+        <%= f.label:"用户名" %>
+        <%= f.text_field :name,class: "text" %>
       </div>
       <div class="login_item">
-        <%= f.label :密码： %>
-        <%= f.password_field :password %>
+        <%= f.label:"密  码" %>
+        <%= f.password_field :password,class: "text"%>
       </div>
       <div class="login_btn">
         <%= f.submit "登录" %>
       </div>
     <% end %>
   </div>
+  <div class = "tishi"><p id="notice"><%= notice %></p></div>
 </div>
+
+<script type="text/javascript">
+var window_height = $(window).height();
+//alert(window_height);
+var login_height = $(".login").height();
+//alert(login_height);
+var margin_top = (window_height - login_height)/2-20;
+//alert(margin_top);
+$(".login").css("margin-top",margin_top);
+</script>

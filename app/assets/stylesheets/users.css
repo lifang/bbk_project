@@ -5,14 +5,41 @@
 a { text-decoration: none;}
 
 .login {
-    width: 504px;
-    height: 370px;
+    width: 300px;
+    height: 200px;
     margin: 80px auto 0 auto;
+
+    background-color: #202e3c;
+}
+.login_box{
+    width: 220px;
+    height:150px;
+    margin: 20px 40px 0 40px;
+    display: inline-block;
 }
 
+.login_item{
+    width: 220px;
+    margin: 10px auto;
+}
+
+.login_btn{
+    width: 220px;
+    margin: 5px auto 0 auto;
+}
+.tishi{
+    width: 220px;
+    height: 20px;
+    margin: 10px 40px;
+}
 .guanliyuan{
     width: 100%;
     height: 40px;
+}
+
+.text{
+    width: 200px;
+    height: 20px;
 }
 
 .tou{
