@@ -74,7 +74,7 @@ class UsersController < ApplicationController
       File.delete "#{zip_url}.zip" if File.exist?("#{zip_url}.zip")
       file_path = ""
       Dir.foreach(zip_url) do |file|
-        if file != "." && file != ".."
+        if file != "." && file != ".." && file.split(".").length < 2
           file_path = zip_url + "/" + file
         end
       end
@@ -114,6 +114,7 @@ class UsersController < ApplicationController
     if   File.exist?("#{zip_url}1234.zip")
       File.delete "#{zip_url}1234.zip"
     end
+    status=0
     params[:task_tag_id]
     tasks = Task.find_by_sql("select * from tasks where tasks.`status` in (#{Task::STATUS[:WAIT_FINAL_CHECK]},#{Task::STATUS[:FINAL_CHECK_COMPLETE]}) and tasks.task_tag_id = #{params[:task_tag_id]}")
     tasks.each do |task|
@@ -121,18 +122,22 @@ class UsersController < ApplicationController
       accessory = Accessory.find_by_sql("SELECT  * from accessories where task_id = #{task_id} ORDER BY created_at DESC limit 1")
       if !accessory.blank?
         accessory_url = accessory[0].accessory_url
-        file_url = "#{Rails.root}/public" + accessory_url.to_s
-
-        Archive::Zip.archive("#{zip_url}1234.zip","#{file_url}")
+        if accessory_url.present?
+          file_url = "#{Rails.root}/public" + accessory_url.to_s
+          Archive::Zip.archive("#{zip_url}1234.zip","#{file_url}")
+        end
       end
     end
-    render :json => {:status => 1}
+    if File.exist?("#{zip_url}1234.zip")
+      status = 1
+    end
+    render :json => {:status => status}
   end
   #下载
   def ajax_download
     file_path = "#{Rails.root}/public/accessories/1234.zip"
     if file_path
-      send_file file_path, :filename => '12345.zip'
+      send_file file_path, :filename => '12345.zip' if File.exist?(file_path)
     end
   end
   #下载flash元件

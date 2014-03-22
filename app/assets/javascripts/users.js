@@ -32,7 +32,13 @@ $(function(){
                 task_tag_id : task_tag_id
             },
             success: function(data){
-                window.location.href = "/users/ajax_download"
+                if(data.status==1){
+                    window.location.href = "/users/ajax_download"
+                }
+                else{
+                    alert("文件为空")
+                }
+                
             },
             error : function(data){
                 alert("下载失败")
@@ -54,15 +60,15 @@ $(function(){
 
 
 function add_user_unique(){
-//    alert(1);
-//    var doc_height = $(document).height();
-//    var doc_width = $(document).width();
-//    var u_height = $("#add_user").height();
-//    var u_width = $("#add_user").width();
-//    var top = (doc_height-u_height)/2;
-//    var left = (doc_width-u_width)/2;
-//     $("#add_user").css("margin-top",top);
-//     $("#add_user").css("margin-left",left);
+    //    alert(1);
+    //    var doc_height = $(document).height();
+    //    var doc_width = $(document).width();
+    //    var u_height = $("#add_user").height();
+    //    var u_width = $("#add_user").width();
+    //    var top = (doc_height-u_height)/2;
+    //    var left = (doc_width-u_width)/2;
+    //     $("#add_user").css("margin-top",top);
+    //     $("#add_user").css("margin-left",left);
     $("#users_add_ff").show();
     $("#add_user").show();
 }
