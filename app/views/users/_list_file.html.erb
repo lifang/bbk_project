@@ -14,7 +14,13 @@
       </td>
       <td><%= task_tag[:created_at]%></td>
       <td><%= task_tag[:complet_count]%><label style="font: oblique; font: 20px; margin: 0 auto;">|</label><%= task_tag[:unfinish_count]%></td>
-      <td><input type="button" class="green_btn" value="下载任务" name="ajax_download" task_tag_id="<%= task_tag[:id] %>" /></td>
+      <td>
+        <%  if task_tag[:complet_count] > 0 %>
+        <input type="button" class="green_btn" value="下载任务" name="ajax_download" task_tag_id="<%= task_tag[:id] %>" />
+        <% else %>
+        <input type="button" class="gray_btn" value="下载任务" name="ajax_download" task_tag_id="<%= task_tag[:id] %>" disabled="disabled" />
+        <% end %>
+      </td>
       <td>
         <% if task_tag[:flash_count] > 0 %>
           <%= link_to "下载flash",{:controller=> "users",:action=>'flash_download',:task_tag_id => task_tag[:id]},confirm: '确认下载',:class=>"green_btn" %>
