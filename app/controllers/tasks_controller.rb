@@ -5,7 +5,6 @@ class TasksController < ApplicationController
     @title = "任务中心"
     @user = User.find_by_id session[:user_id]
     p @user
-    time_limit = Task::CONFIG[:RELEASE_HOURS] * 60
     if !@user.nil? && @user.types != User::TYPES[:ADMIN]
       @tasks = Task.list @user.id, @user.types
       if @user.types == User::TYPES[:PPT] || @user.types == User::TYPES[:FLASH]
@@ -58,9 +57,17 @@ class TasksController < ApplicationController
   #领取任务
   def assign_tasks
     @user = User.find_by_id params[:user_id]
-    Task.get_tasks @user.id, @user.types
-    tasks = Task.list @user.id, @user.types
-    @info = {:notice => notice, :tasks => tasks}
+    @status = Task.get_tasks @user.id, @user.types
+    @tasks = []
+    @notice =
+    if @status == "true"
+      @tasks = Task.list @user.id, @user.types
+      @notice = "领取成功！"
+    elsif @status == "false"
+      @notice = "领取失败！"
+    elsif @status == "limit"
+      @notice = "已达任务领取上线：#{Task::CONFIG[:TASK_LIMIT]}个！"
+    end
   end
 
   #审核任务

@@ -14,7 +14,7 @@ class Task < ActiveRecord::Base
   IS_CALCULATE = {:YSE =>1,:NO => 0 }
   IS_UPLOAD_SOURCE = {:YES =>1,:NO => 0 }
 
-  CONFIG = {:TASK_LIMIT => 5, :RELEASE_HOURS => 24, :OVER_TIME_HOURS => 48}  
+  CONFIG = {:TASK_LIMIT => 3, :RELEASE_HOURS => 24, :OVER_TIME_HOURS => 48}
 
   #获取用户相关的任务数据
   def self.list user_id,user_types
@@ -30,7 +30,7 @@ class Task < ActiveRecord::Base
 
   #领取任务
   def self.get_tasks user_id,user_types
-    assign_task_num = Task::CONFIG[:TASK_LIMIT]  #默认分配任务的总数
+    assign_task_num = Task::CONFIG[:TASK_LIMIT]  #最大可获取任务数
     ppt_doer = nil
     flash_doer = nil
     if user_types == User::TYPES[:PPT] || user_types == User::TYPES[:FLASH]
@@ -49,24 +49,35 @@ class Task < ActiveRecord::Base
       owner_tasks = Task.where owner_tasks_sql   #当前持有的任务
       assign_task_num = assign_task_num - owner_tasks.length
       wait_assign_tasks = Task.where wait_assign_tasks_sql
-      count = 1
-      wait_assign_tasks.each do |task|
-        if count <= assign_task_num
-          current_task = Task.find_by_id task.id
-          if current_task.status != assigned_task_status
-            time_now = Time.now() #任务开始时间
-            if !ppt_doer.nil?
-              current_task.update_attributes(:status => assigned_task_status, :ppt_doer => user_id, :ppt_start_time => time_now)
-            elsif !flash_doer.nil?
-              current_task.update_attributes(:status => assigned_task_status, :flash_doer => user_id, :flash_start_time => time_now)
-            else
+      count = 0
+      if assign_task_num > 0
+        wait_assign_tasks.each do |task|
+          if count < 1
+            current_task = Task.find_by_id task.id
+            if current_task.status != assigned_task_status
+              time_now = Time.now() #任务开始时间
+              if user_types == User::TYPES[:PPT] #用户类型为PPT
+                if current_task.update_attributes(:status => assigned_task_status, :ppt_doer => user_id, :ppt_start_time => time_now)
+                  count+=1
+                end
+              elsif user_types == User::TYPES[:FLASH] #用户类型为FLASH
+                if current_task.update_attributes(:status => assigned_task_status, :flash_doer => user_id, :flash_start_time => time_now)
+                  count+=1
+                end
+              end
             end
           end
-        else
         end
-        count+=1
+        if count > 0
+          status = "true"
+        else
+          status = "false"
+        end
+      else
+        status = "limit"
       end
     end
+    status
   end
 
   #统计PPT和FLASH领取，在领取后二十四内小时未提交的任务
