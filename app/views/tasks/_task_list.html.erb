@@ -4,32 +4,63 @@
   <th style="width: auto;">任务名称</th>
   <th style="width: auto;">任务批次</th>
   <th style="width: 100px">任务状态</th>
+  <th style="width: 100px">创建时间</th>
+  <% if @user.types != User::TYPES[:CHECKER] %>
   <th style="width: 240px">领取时间</th>
+  <% end %>
   <th style="width: 240px">最近更新</th>
   </thead>
   <tbody>
-  <% if @tasks.nil? || @tasks.length == 0 %>
+  <% if @tasks.present? %>
+      <% count = 0 %>
+      <% @tasks.each do |task| %>
+          <% if count%2==0 %>
+              <tr>
+                <td><a href="/tasks/<%= task.id %>" target="_blank" title="点击查看任务详情" ><%= task.name %></a></td>
+                <td><a href="/task_tags/<%= task.task_tag.id %>" target="_blank"><%= task.task_tag.name %></a></td>
+                <td><%= Task::STATUS_NAME[task.status] %></td>
+                <td><%= task.created_at.to_s[0,19] %></td>
+                <% if @user.types != User::TYPES[:CHECKER] %>
+                    <td>
+                      <% if @user.types == User::TYPES[:PPT] %>
+                          <%= task.ppt_start_time.to_s[0,19] %>
+                      <% elsif @user.types == User::TYPES[:FLASH] %>
+                          <%= task.flash_start_time.to_s[0,19] %>
+                      <% elsif @user.types == User::TYPES[:CHECKER] %>
+                          <%= task.updated_at.to_s[0,19] %>
+                      <% end %>
+                    </td>
+                <% end %>
+                <td><%= task.updated_at.to_s[0,19] %></td>
+              </tr>
+          <% else %>
+              <tr style="background-color: lightgray">
+                <td><a href="/tasks/<%= task.id %>" target="_blank" title="点击查看任务详情" ><%= task.name %></a></td>
+                <td><a href="/task_tags/<%= task.task_tag.id %>" target="_blank"><%= task.task_tag.name %></a></td>
+                <td><%= Task::STATUS_NAME[task.status] %></td>
+                <td><%= task.created_at.to_s[0,19] %></td>
+                <% if @user.types != User::TYPES[:CHECKER] %>
+                    <td>
+                      <% if @user.types == User::TYPES[:PPT] %>
+                          <%= task.ppt_start_time.to_s[0,19] %>
+                      <% elsif @user.types == User::TYPES[:FLASH] %>
+                          <%= task.flash_start_time.to_s[0,19] %>
+                      <% elsif @user.types == User::TYPES[:CHECKER] %>
+                          <%= task.updated_at.to_s[0,19] %>
+                      <% end %>
+                    </td>
+                <% end %>
+                <td><%= task.updated_at.to_s[0,19] %></td>
+              </tr>
+          <% end %>
+          <% count+=1 %>
+      <% end %>
+  <% else %>
       <tr style="width: auto;">
         <td style="width: auto; border-bottom: none" colspan="5">
           当前没有进行中的任务
         </td>
       </tr>
-  <% else %>
-      <% count = 0 %>
-      <% @tasks.each do |task| %>
-          <% if count%2==0 %>
-              <tr>
-          <% else %>
-              <tr style="background-color: lightgray">
-          <% end %>
-          <td><a href="/tasks/<%= task.id %>" target="_blank" title="点击查看任务详情" ><%= task.name %></a></td>
-          <td><a href="/task_tags/<%= task.task_tag.id %>" target="_blank"><%= task.task_tag.name %></a></td>
-          <td><%= Task::STATUS_NAME[task.status] %></td>
-          <td><%= task.ppt_start_time.to_s[0,19] %></td>
-          <td><%= task.updated_at.to_s[0,19] %></td>
-          </tr>
-          <% count+=1 %>
-      <% end %>
   <% end %>
   </tbody>
 </table>

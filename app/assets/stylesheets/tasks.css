@@ -39,13 +39,13 @@ body{ background-color:#edf0f1; }
     margin: 0 auto;
     width: 80%;
     height: 40px;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
     background-color: beige;
 }
 
 .item{
-    margin: 10px auto 10px 4%;
-    width: 300px;
+    margin: 10px auto 10px 10%;
+    width: 200px;
     height: 20px;
     float: left;
     vertical-align: middle;
@@ -250,7 +250,7 @@ label{
     z-index: 3;
 }
 
-.accessory_name{width:250px; height:20px; margin:6px auto; float:left;}
+.accessory_name{width:210px; height:20px; margin:6px auto; float:left;}
 
 .files_list_panel fieldset .list_div div a{
     margin: 5px auto auto auto;

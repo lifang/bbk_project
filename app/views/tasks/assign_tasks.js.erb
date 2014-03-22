@@ -1,3 +1,5 @@
-alert("领取完成！");
-<% @tasks = @info[:tasks] %>
-$(".data_list").html('<%= escape_javascript(render :partial => "tasks/task_list")%>');
+<% if @status == "true "%>
+    $(".data_list").html('<%= escape_javascript(render :partial => "tasks/task_list")%>');
+<% else %>
+    alert('<%= @notice  %>');
+<% end %>

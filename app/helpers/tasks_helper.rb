@@ -46,7 +46,15 @@ module TasksHelper
     case task.status
       when Task::STATUS[:WAIT_UPLOAD_PPT]
         if user_types == User::TYPES[:PPT]
-          checker = User.find_by_status_and_types(User::STATUS[:NORMAL], User::TYPES[:CHECKER])
+          tasks = User.find_by_sql("select u.id, t.numbers from (select id from bbk_project.users where status != 1 and types = 1) u left join (select checker, count(*) as numbers from tasks where status not in (1,8,9) group by checker) t on u.id = t.checker")
+          count_checker_tasks = []
+          tasks.each do |task|
+            task_numbers = task.numbers
+            task_numbers = 0 if task_numbers.nil?  
+            count_checker_tasks << [task_numbers, task.id]        
+          end
+          count_checker_tasks = count_checker_tasks.sort
+          checker = User.find_by_id(count_checker_tasks[0][1])
           task.update_attributes(:status => Task::STATUS[:WAIT_FIRST_CHECK], :checker => checker.id)
         end  
       when Task::STATUS[:WAIT_PUB_FLASH]

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" hash="911743254">
-    <data-source source="LOCAL" name="Rails bbk_project: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="9567138e-b9a6-4adb-a04f-08fbba7b22e9">
+    <data-source source="LOCAL" name="Rails bbk_project: test" uuid="9567138e-b9a6-4adb-a04f-08fbba7b22e9">
+      <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/bbk_project_test</jdbc-url>
       <user-name>root</user-name>
@@ -12,7 +13,8 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails bbk_project: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="b92629b7-a7b9-4770-8aa7-078ac320ee01">
+    <data-source source="LOCAL" name="Rails bbk_project: production" uuid="b92629b7-a7b9-4770-8aa7-078ac320ee01">
+      <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/bbk_project_production</jdbc-url>
       <user-name>root</user-name>
@@ -23,12 +25,11 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails bbk_project: development" product="MySQL" version="5.5.34-0ubuntu0.13.10.1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="849a8223-893d-4e0c-ab03-8699249b17cf">
-      <extra-name-characters>#@</extra-name-characters>
-      <identifier-quote-string>`</identifier-quote-string>
+    <data-source source="LOCAL" name="Rails bbk_project: development" uuid="849a8223-893d-4e0c-ab03-8699249b17cf">
+      <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/bbk_project</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1/bbk_project</jdbc-url>
       <user-name>root</user-name>
       <user-password>dfc9dfc5dfc7dfcedfc5df98df9adf9bdf98</user-password>
       <schema-pattern>bbk_project.*</schema-pattern>
