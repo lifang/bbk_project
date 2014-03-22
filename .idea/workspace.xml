@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="651a9324-b421-41a9-9115-ad78c0a693a7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_task_list.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_task_list.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb" afterPath="$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bbk_project.iml" afterPath="$PROJECT_DIR$/.idea/bbk_project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/task.rb" afterPath="$PROJECT_DIR$/app/models/task.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -37,19 +31,19 @@
       <file leaf-file-name="tasks_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="17" selection-start="2542" selection-end="2549" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1530">
+            <state line="66" column="20" selection-start="2528" selection-end="2528" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1530">
               <folding>
                 <element signature="e#82#946#0" expanded="true" />
-                <element signature="e#6560#7365#0" expanded="true" />
+                <element signature="e#6564#7369#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="assign_tasks.js.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="assign_tasks.js.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="22" selection-start="151" selection-end="151" vertical-scroll-proportion="0.08629441" vertical-offset="0" max-vertical-offset="591">
+            <state line="1" column="29" selection-start="56" selection-end="56" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="170">
               <folding />
             </state>
           </provider>
@@ -64,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_task_list.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_task_list.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/tasks/_task_list.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="70" selection-start="1252" selection-end="1252" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="1224">
+            <state line="59" column="63" selection-start="2715" selection-end="2715" vertical-scroll-proportion="0.6260575" vertical-offset="633" max-vertical-offset="1224">
               <folding>
                 <element signature="n#style#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
@@ -88,7 +82,7 @@
       <file leaf-file-name="task.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/task.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="8" selection-start="666" selection-end="672" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="2448">
+            <state line="73" column="26" selection-start="3601" selection-end="3601" vertical-scroll-proportion="0.0" vertical-offset="785" max-vertical-offset="2448">
               <folding />
             </state>
           </provider>
@@ -108,10 +102,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/config/database.yml" />
-        <option value="$PROJECT_DIR$/app/views/tasks/_task_list.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb" />
         <option value="$PROJECT_DIR$/app/models/task.rb" />
         <option value="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/_task_list.html.erb" />
       </list>
     </option>
   </component>
@@ -552,7 +546,7 @@
         <state line="64" column="0" selection-start="2493" selection-end="2493" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="578">
           <folding>
             <element signature="e#82#946#0" expanded="true" />
-            <element signature="e#6560#7365#0" expanded="true" />
+            <element signature="e#6564#7369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -562,7 +556,7 @@
         <state line="102" column="5" selection-start="3733" selection-end="3733" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="578">
           <folding>
             <element signature="e#82#946#0" expanded="true" />
-            <element signature="e#6560#7365#0" expanded="true" />
+            <element signature="e#6564#7369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -593,37 +587,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_task_list.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/task.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="70" selection-start="1252" selection-end="1252" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="1224">
-          <folding>
-            <element signature="n#style#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="73" column="26" selection-start="3601" selection-end="3601" vertical-scroll-proportion="0.0" vertical-offset="785" max-vertical-offset="2448">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/task.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="8" selection-start="666" selection-end="672" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="2448">
+        <state line="1" column="29" selection-start="56" selection-end="56" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="170">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="17" selection-start="2542" selection-end="2549" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1530">
+        <state line="66" column="20" selection-start="2528" selection-end="2528" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1530">
           <folding>
             <element signature="e#82#946#0" expanded="true" />
-            <element signature="e#6560#7365#0" expanded="true" />
+            <element signature="e#6564#7369#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/assign_tasks.js.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_task_list.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="22" selection-start="151" selection-end="151" vertical-scroll-proportion="0.08629441" vertical-offset="0" max-vertical-offset="591">
-          <folding />
+        <state line="59" column="63" selection-start="2715" selection-end="2715" vertical-scroll-proportion="0.6260575" vertical-offset="633" max-vertical-offset="1224">
+          <folding>
+            <element signature="n#style#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -64,7 +64,7 @@ class TasksController < ApplicationController
       @tasks = Task.list @user.id, @user.types
       @notice = "领取成功！"
     elsif @status == "false"
-      @notice = "领取失败！"
+      @notice = "暂无可领取的任务！"
     elsif @status == "limit"
       @notice = "已达任务领取上线：#{Task::CONFIG[:TASK_LIMIT]}个！"
     end

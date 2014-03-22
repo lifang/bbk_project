@@ -14,7 +14,7 @@ class Task < ActiveRecord::Base
   IS_CALCULATE = {:YSE =>1,:NO => 0 }
   IS_UPLOAD_SOURCE = {:YES =>1,:NO => 0 }
 
-  CONFIG = {:TASK_LIMIT => 3, :RELEASE_HOURS => 24, :OVER_TIME_HOURS => 48}
+  CONFIG = {:TASK_LIMIT => 5, :RELEASE_HOURS => 24, :OVER_TIME_HOURS => 48}
 
   #获取用户相关的任务数据
   def self.list user_id,user_types
