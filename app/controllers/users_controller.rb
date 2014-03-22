@@ -60,6 +60,7 @@ class UsersController < ApplicationController
     file_upload = params[:file_upload]
     filename = file_upload.original_filename
     filename_body =  filename.split(".")[0]
+    FileUtils.mkdir_p "#{File.expand_path(Rails.root)}/public/accessories/#{filename_body}" if !(File.exist?("#{File.expand_path(Rails.root)}/public/accessories/#{filename_body}"))
     zip_url = "#{Rails.root}/public/accessories/#{filename_body}"
     File.open("#{zip_url}.zip","wb") do |f|
       f.write(file_upload.read)
@@ -67,32 +68,41 @@ class UsersController < ApplicationController
     @successornot = '上传成功'
     begin
       #解压
-      Archive::Zip.extract("#{zip_url}.zip","#{Rails.root}/public/accessories")
+      FileUtils.mkdir_p "#{File.expand_path(Rails.root)}/public/accessories" if !(File.exist?("#{File.expand_path(Rails.root)}/public/accessories"))
+      Archive::Zip.extract("#{zip_url}.zip",zip_url)
       `convmv -f gbk -t utf-8 -r --notest  #{Rails.root}/public/accessories`
-      File.delete "#{zip_url}.zip"
-      task_tags = TaskTag.create(:name => filename_body, :status => 0)
-      newfilename = "task_tag_" << task_tags.id.to_s
-      FileUtils.mkdir_p "#{File.expand_path(Rails.root)}/public/accessories/#{newfilename}" if !(File.exist?("#{File.expand_path(Rails.root)}/public/accessories/#{newfilename}"))
+      File.delete "#{zip_url}.zip" if File.exist?("#{zip_url}.zip")
+      file_path = ""
       Dir.foreach(zip_url) do |file|
-        suffix = file.split(".")[1].to_s
-        ppt_name = file.split(".")[0].to_s
-        if suffix.eql?("ppt")
-          file_old_url = zip_url + '/' + file
-          origin_ppt_url = "/" + newfilename +"/" + file
-          tasks = Task.create(:name => ppt_name,:is_upload_source => 0,:origin_ppt_url => origin_ppt_url,:status => 0,:task_tag_id => task_tags.id,:is_calculate => 1)
-          tasks_id = tasks.id
-          # 任务包名
-          task_url = "#{File.expand_path(Rails.root)}/public/accessories/#{newfilename}" + "/task_" + tasks_id.to_s + "/origin"
-          FileUtils.mkdir_p "#{File.expand_path(task_url)}" if !(File.exist?("#{File.expand_path(task_url)}"))
-          FileUtils.mv file_old_url,task_url,:force => true
-          ppt_sql_save = "/accessories/#{newfilename}" + "/task_" + tasks_id.to_s + "/origin/" + file
-          tasks.update_attributes(:origin_ppt_url => ppt_sql_save)
+        if file != "." && file != ".."
+          file_path = zip_url + "/" + file
+        end
+      end
+      TaskTag.transaction do
+        task_tags = TaskTag.create(:name => filename_body, :status => 0)
+        newfilename = "task_tag_" << task_tags.id.to_s
+        FileUtils.mkdir_p "#{File.expand_path(Rails.root)}/public/accessories/#{newfilename}" if !(File.exist?("#{File.expand_path(Rails.root)}/public/accessories/#{newfilename}"))
+        Dir.foreach(file_path.blank? ? zip_url : file_path) do |file|
+          suffix = file.split(".")[1].to_s
+          ppt_name = file.split(".")[0].to_s
+          if suffix.eql?("ppt")|| suffix.eql?("pptx")
+            file_old_url = file_path.blank? ? zip_url + '/' + file : file_path + "/" + file
+            origin_ppt_url = "/" + newfilename +"/" + file
+            tasks = Task.create(:name => ppt_name,:is_upload_source => 0,:origin_ppt_url => origin_ppt_url,:status => 0,:task_tag_id => task_tags.id,:is_calculate => 1)
+            tasks_id = tasks.id
+            # 任务包名
+            task_url = "#{File.expand_path(Rails.root)}/public/accessories/#{newfilename}" + "/task_" + tasks_id.to_s + "/origin"
+            FileUtils.mkdir_p "#{File.expand_path(task_url)}" if !(File.exist?("#{File.expand_path(task_url)}"))
+            FileUtils.mv file_old_url,task_url,:force => true
+            ppt_sql_save = "/accessories/#{newfilename}" + "/task_" + tasks_id.to_s + "/origin/" + file
+            tasks.update_attributes(:origin_ppt_url => ppt_sql_save)
+          end
         end
       end
       FileUtils.rm_rf "#{zip_url}"
     rescue
       @successornot = '上传失败'
-      File.delete "#{zip_url}.zip"
+      File.delete "#{zip_url}.zip" if File.exist?("#{zip_url}.zip")
       FileUtils.rm_rf "#{zip_url}"
     end
     status = params[:status].nil? || params[:status].strip.blank? ? "1=1" : ["url = ?", params[:status].strip]
@@ -111,7 +121,8 @@ class UsersController < ApplicationController
       accessory = Accessory.find_by_sql("SELECT  * from accessories where task_id = #{task_id} ORDER BY created_at DESC limit 1")
       if !accessory.blank?
         accessory_url = accessory[0].accessory_url
-        file_url = "#{Rails.root}/public" + accessory_url
+        file_url = "#{Rails.root}/public" + accessory_url.to_s
+
         Archive::Zip.archive("#{zip_url}1234.zip","#{file_url}")
       end
     end
